@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA787C1B2316DCBA000AC250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA787C1A2316DCBA000AC250 /* AppDelegate.swift */; };
+		EA787C1D2316DCBA000AC250 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA787C1C2316DCBA000AC250 /* ViewController.swift */; };
+		EA787C202316DCBA000AC250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA787C1E2316DCBA000AC250 /* Main.storyboard */; };
+		EA787C232316DCBA000AC250 /* GelecekBilimde.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA787C212316DCBA000AC250 /* GelecekBilimde.xcdatamodeld */; };
+		EA787C252316DCBB000AC250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA787C242316DCBB000AC250 /* Assets.xcassets */; };
+		EA787C282316DCBB000AC250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA787C262316DCBB000AC250 /* LaunchScreen.storyboard */; };
+		EA787C332316DCBB000AC250 /* GelecekBilimdeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA787C322316DCBB000AC250 /* GelecekBilimdeTests.swift */; };
+		EA787C3E2316DCBC000AC250 /* GelecekBilimdeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA787C3D2316DCBC000AC250 /* GelecekBilimdeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA787C2F2316DCBB000AC250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA787C0F2316DCBA000AC250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA787C162316DCBA000AC250;
+			remoteInfo = GelecekBilimde;
+		};
+		EA787C3A2316DCBC000AC250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA787C0F2316DCBA000AC250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA787C162316DCBA000AC250;
+			remoteInfo = GelecekBilimde;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA787C172316DCBA000AC250 /* GelecekBilimde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GelecekBilimde.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA787C1A2316DCBA000AC250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA787C1C2316DCBA000AC250 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA787C1F2316DCBA000AC250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA787C222316DCBA000AC250 /* GelecekBilimde.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GelecekBilimde.xcdatamodel; sourceTree = "<group>"; };
+		EA787C242316DCBB000AC250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA787C272316DCBB000AC250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA787C292316DCBB000AC250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA787C2E2316DCBB000AC250 /* GelecekBilimdeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GelecekBilimdeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA787C322316DCBB000AC250 /* GelecekBilimdeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelecekBilimdeTests.swift; sourceTree = "<group>"; };
+		EA787C342316DCBB000AC250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA787C392316DCBC000AC250 /* GelecekBilimdeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GelecekBilimdeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA787C3D2316DCBC000AC250 /* GelecekBilimdeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelecekBilimdeUITests.swift; sourceTree = "<group>"; };
+		EA787C3F2316DCBC000AC250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA787C142316DCBA000AC250 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA787C2B2316DCBB000AC250 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA787C362316DCBC000AC250 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA787C0E2316DCBA000AC250 = {
+			isa = PBXGroup;
+			children = (
+				EA787C192316DCBA000AC250 /* GelecekBilimde */,
+				EA787C312316DCBB000AC250 /* GelecekBilimdeTests */,
+				EA787C3C2316DCBC000AC250 /* GelecekBilimdeUITests */,
+				EA787C182316DCBA000AC250 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA787C182316DCBA000AC250 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA787C172316DCBA000AC250 /* GelecekBilimde.app */,
+				EA787C2E2316DCBB000AC250 /* GelecekBilimdeTests.xctest */,
+				EA787C392316DCBC000AC250 /* GelecekBilimdeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA787C192316DCBA000AC250 /* GelecekBilimde */ = {
+			isa = PBXGroup;
+			children = (
+				EA787C1A2316DCBA000AC250 /* AppDelegate.swift */,
+				EA787C1C2316DCBA000AC250 /* ViewController.swift */,
+				EA787C1E2316DCBA000AC250 /* Main.storyboard */,
+				EA787C242316DCBB000AC250 /* Assets.xcassets */,
+				EA787C262316DCBB000AC250 /* LaunchScreen.storyboard */,
+				EA787C292316DCBB000AC250 /* Info.plist */,
+				EA787C212316DCBA000AC250 /* GelecekBilimde.xcdatamodeld */,
+			);
+			path = GelecekBilimde;
+			sourceTree = "<group>";
+		};
+		EA787C312316DCBB000AC250 /* GelecekBilimdeTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA787C322316DCBB000AC250 /* GelecekBilimdeTests.swift */,
+				EA787C342316DCBB000AC250 /* Info.plist */,
+			);
+			path = GelecekBilimdeTests;
+			sourceTree = "<group>";
+		};
+		EA787C3C2316DCBC000AC250 /* GelecekBilimdeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA787C3D2316DCBC000AC250 /* GelecekBilimdeUITests.swift */,
+				EA787C3F2316DCBC000AC250 /* Info.plist */,
+			);
+			path = GelecekBilimdeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA787C162316DCBA000AC250 /* GelecekBilimde */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA787C422316DCBC000AC250 /* Build configuration list for PBXNativeTarget "GelecekBilimde" */;
+			buildPhases = (
+				EA787C132316DCBA000AC250 /* Sources */,
+				EA787C142316DCBA000AC250 /* Frameworks */,
+				EA787C152316DCBA000AC250 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GelecekBilimde;
+			productName = GelecekBilimde;
+			productReference = EA787C172316DCBA000AC250 /* GelecekBilimde.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA787C2D2316DCBB000AC250 /* GelecekBilimdeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA787C452316DCBC000AC250 /* Build configuration list for PBXNativeTarget "GelecekBilimdeTests" */;
+			buildPhases = (
+				EA787C2A2316DCBB000AC250 /* Sources */,
+				EA787C2B2316DCBB000AC250 /* Frameworks */,
+				EA787C2C2316DCBB000AC250 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA787C302316DCBB000AC250 /* PBXTargetDependency */,
+			);
+			name = GelecekBilimdeTests;
+			productName = GelecekBilimdeTests;
+			productReference = EA787C2E2316DCBB000AC250 /* GelecekBilimdeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA787C382316DCBC000AC250 /* GelecekBilimdeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA787C482316DCBC000AC250 /* Build configuration list for PBXNativeTarget "GelecekBilimdeUITests" */;
+			buildPhases = (
+				EA787C352316DCBC000AC250 /* Sources */,
+				EA787C362316DCBC000AC250 /* Frameworks */,
+				EA787C372316DCBC000AC250 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA787C3B2316DCBC000AC250 /* PBXTargetDependency */,
+			);
+			name = GelecekBilimdeUITests;
+			productName = GelecekBilimdeUITests;
+			productReference = EA787C392316DCBC000AC250 /* GelecekBilimdeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA787C0F2316DCBA000AC250 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Burak Furkan Asilturk";
+				TargetAttributes = {
+					EA787C162316DCBA000AC250 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					EA787C2D2316DCBB000AC250 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = EA787C162316DCBA000AC250;
+					};
+					EA787C382316DCBC000AC250 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = EA787C162316DCBA000AC250;
+					};
+				};
+			};
+			buildConfigurationList = EA787C122316DCBA000AC250 /* Build configuration list for PBXProject "GelecekBilimde" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA787C0E2316DCBA000AC250;
+			productRefGroup = EA787C182316DCBA000AC250 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA787C162316DCBA000AC250 /* GelecekBilimde */,
+				EA787C2D2316DCBB000AC250 /* GelecekBilimdeTests */,
+				EA787C382316DCBC000AC250 /* GelecekBilimdeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA787C152316DCBA000AC250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA787C282316DCBB000AC250 /* LaunchScreen.storyboard in Resources */,
+				EA787C252316DCBB000AC250 /* Assets.xcassets in Resources */,
+				EA787C202316DCBA000AC250 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA787C2C2316DCBB000AC250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA787C372316DCBC000AC250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA787C132316DCBA000AC250 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA787C1D2316DCBA000AC250 /* ViewController.swift in Sources */,
+				EA787C1B2316DCBA000AC250 /* AppDelegate.swift in Sources */,
+				EA787C232316DCBA000AC250 /* GelecekBilimde.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA787C2A2316DCBB000AC250 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA787C332316DCBB000AC250 /* GelecekBilimdeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA787C352316DCBC000AC250 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA787C3E2316DCBC000AC250 /* GelecekBilimdeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA787C302316DCBB000AC250 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA787C162316DCBA000AC250 /* GelecekBilimde */;
+			targetProxy = EA787C2F2316DCBB000AC250 /* PBXContainerItemProxy */;
+		};
+		EA787C3B2316DCBC000AC250 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA787C162316DCBA000AC250 /* GelecekBilimde */;
+			targetProxy = EA787C3A2316DCBC000AC250 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA787C1E2316DCBA000AC250 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA787C1F2316DCBA000AC250 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA787C262316DCBB000AC250 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA787C272316DCBB000AC250 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA787C402316DCBC000AC250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA787C412316DCBC000AC250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA787C432316DCBC000AC250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GelecekBilimde/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelecekbilimde.GelecekBilimde;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA787C442316DCBC000AC250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GelecekBilimde/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelecekbilimde.GelecekBilimde;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA787C462316DCBC000AC250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GelecekBilimdeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelecekbilimde.GelecekBilimdeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GelecekBilimde.app/GelecekBilimde";
+			};
+			name = Debug;
+		};
+		EA787C472316DCBC000AC250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GelecekBilimdeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelecekbilimde.GelecekBilimdeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GelecekBilimde.app/GelecekBilimde";
+			};
+			name = Release;
+		};
+		EA787C492316DCBC000AC250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GelecekBilimdeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelecekbilimde.GelecekBilimdeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GelecekBilimde;
+			};
+			name = Debug;
+		};
+		EA787C4A2316DCBC000AC250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GelecekBilimdeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelecekbilimde.GelecekBilimdeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GelecekBilimde;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA787C122316DCBA000AC250 /* Build configuration list for PBXProject "GelecekBilimde" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA787C402316DCBC000AC250 /* Debug */,
+				EA787C412316DCBC000AC250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA787C422316DCBC000AC250 /* Build configuration list for PBXNativeTarget "GelecekBilimde" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA787C432316DCBC000AC250 /* Debug */,
+				EA787C442316DCBC000AC250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA787C452316DCBC000AC250 /* Build configuration list for PBXNativeTarget "GelecekBilimdeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA787C462316DCBC000AC250 /* Debug */,
+				EA787C472316DCBC000AC250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA787C482316DCBC000AC250 /* Build configuration list for PBXNativeTarget "GelecekBilimdeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA787C492316DCBC000AC250 /* Debug */,
+				EA787C4A2316DCBC000AC250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA787C212316DCBA000AC250 /* GelecekBilimde.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA787C222316DCBA000AC250 /* GelecekBilimde.xcdatamodel */,
+			);
+			currentVersion = EA787C222316DCBA000AC250 /* GelecekBilimde.xcdatamodel */;
+			path = GelecekBilimde.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EA787C0F2316DCBA000AC250 /* Project object */;
+}
