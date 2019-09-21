@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		847FFCD72336A0250013363F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FFCD62336A0250013363F /* LoginViewController.swift */; };
+		847FFCDB2336A4200013363F /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847FFCD92336A4200013363F /* SF-Pro-Display-Medium.otf */; };
+		847FFCDC2336A4200013363F /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847FFCDA2336A4200013363F /* SF-Pro-Display-Regular.otf */; };
+		847FFCDE2336A7CD0013363F /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847FFCDD2336A7CD0013363F /* Initial.storyboard */; };
+		847FFCE02336AB100013363F /* Articles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847FFCDF2336AB100013363F /* Articles.storyboard */; };
+		847FFCE32336AD7D0013363F /* Videos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847FFCE22336AD7D0013363F /* Videos.storyboard */; };
+		847FFCE52336AEB70013363F /* Bookmarks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847FFCE42336AEB70013363F /* Bookmarks.storyboard */; };
+		847FFCE72336AF220013363F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847FFCE62336AF220013363F /* Profile.storyboard */; };
+		847FFCE92336B3490013363F /* InitialTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FFCE82336B3490013363F /* InitialTabBarViewController.swift */; };
+		847FFCEC2336BF960013363F /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FFCEB2336BF960013363F /* ArticlesTableViewController.swift */; };
+		847FFCEE2336C2110013363F /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FFCED2336C2110013363F /* ArticleTableViewCell.swift */; };
 		EA787C1B2316DCBA000AC250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA787C1A2316DCBA000AC250 /* AppDelegate.swift */; };
-		EA787C1D2316DCBA000AC250 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA787C1C2316DCBA000AC250 /* ViewController.swift */; };
-		EA787C202316DCBA000AC250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA787C1E2316DCBA000AC250 /* Main.storyboard */; };
+		EA787C202316DCBA000AC250 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA787C1E2316DCBA000AC250 /* Login.storyboard */; };
 		EA787C232316DCBA000AC250 /* GelecekBilimde.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA787C212316DCBA000AC250 /* GelecekBilimde.xcdatamodeld */; };
 		EA787C252316DCBB000AC250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA787C242316DCBB000AC250 /* Assets.xcassets */; };
 		EA787C282316DCBB000AC250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA787C262316DCBB000AC250 /* LaunchScreen.storyboard */; };
@@ -35,10 +45,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		847FFCD62336A0250013363F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		847FFCD92336A4200013363F /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		847FFCDA2336A4200013363F /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		847FFCDD2336A7CD0013363F /* Initial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Initial.storyboard; sourceTree = "<group>"; };
+		847FFCDF2336AB100013363F /* Articles.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Articles.storyboard; sourceTree = "<group>"; };
+		847FFCE22336AD7D0013363F /* Videos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Videos.storyboard; sourceTree = "<group>"; };
+		847FFCE42336AEB70013363F /* Bookmarks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookmarks.storyboard; sourceTree = "<group>"; };
+		847FFCE62336AF220013363F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		847FFCE82336B3490013363F /* InitialTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTabBarViewController.swift; sourceTree = "<group>"; };
+		847FFCEB2336BF960013363F /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
+		847FFCED2336C2110013363F /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		EA787C172316DCBA000AC250 /* GelecekBilimde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GelecekBilimde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA787C1A2316DCBA000AC250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA787C1C2316DCBA000AC250 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EA787C1F2316DCBA000AC250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA787C1F2316DCBA000AC250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		EA787C222316DCBA000AC250 /* GelecekBilimde.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GelecekBilimde.xcdatamodel; sourceTree = "<group>"; };
 		EA787C242316DCBB000AC250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA787C272316DCBB000AC250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +96,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		847FFCD423369F830013363F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EA787C1E2316DCBA000AC250 /* Login.storyboard */,
+				847FFCDD2336A7CD0013363F /* Initial.storyboard */,
+				847FFCDF2336AB100013363F /* Articles.storyboard */,
+				847FFCE22336AD7D0013363F /* Videos.storyboard */,
+				847FFCE42336AEB70013363F /* Bookmarks.storyboard */,
+				847FFCE62336AF220013363F /* Profile.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		847FFCD523369F8F0013363F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				847FFCD62336A0250013363F /* LoginViewController.swift */,
+				847FFCE82336B3490013363F /* InitialTabBarViewController.swift */,
+				847FFCEB2336BF960013363F /* ArticlesTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		847FFCD82336A3C30013363F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				847FFCD92336A4200013363F /* SF-Pro-Display-Medium.otf */,
+				847FFCDA2336A4200013363F /* SF-Pro-Display-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		847FFCEA2336B59A0013363F /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				847FFCED2336C2110013363F /* ArticleTableViewCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
 		EA787C0E2316DCBA000AC250 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +159,11 @@
 		EA787C192316DCBA000AC250 /* GelecekBilimde */ = {
 			isa = PBXGroup;
 			children = (
+				847FFCEA2336B59A0013363F /* Custom Cells */,
+				847FFCD82336A3C30013363F /* Fonts */,
+				847FFCD523369F8F0013363F /* Controllers */,
+				847FFCD423369F830013363F /* Storyboards */,
 				EA787C1A2316DCBA000AC250 /* AppDelegate.swift */,
-				EA787C1C2316DCBA000AC250 /* ViewController.swift */,
-				EA787C1E2316DCBA000AC250 /* Main.storyboard */,
 				EA787C242316DCBB000AC250 /* Assets.xcassets */,
 				EA787C262316DCBB000AC250 /* LaunchScreen.storyboard */,
 				EA787C292316DCBB000AC250 /* Info.plist */,
@@ -232,9 +294,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847FFCDB2336A4200013363F /* SF-Pro-Display-Medium.otf in Resources */,
+				847FFCE52336AEB70013363F /* Bookmarks.storyboard in Resources */,
+				847FFCE72336AF220013363F /* Profile.storyboard in Resources */,
 				EA787C282316DCBB000AC250 /* LaunchScreen.storyboard in Resources */,
+				847FFCE32336AD7D0013363F /* Videos.storyboard in Resources */,
+				847FFCE02336AB100013363F /* Articles.storyboard in Resources */,
 				EA787C252316DCBB000AC250 /* Assets.xcassets in Resources */,
-				EA787C202316DCBA000AC250 /* Main.storyboard in Resources */,
+				847FFCDE2336A7CD0013363F /* Initial.storyboard in Resources */,
+				847FFCDC2336A4200013363F /* SF-Pro-Display-Regular.otf in Resources */,
+				EA787C202316DCBA000AC250 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +328,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA787C1D2316DCBA000AC250 /* ViewController.swift in Sources */,
+				847FFCEC2336BF960013363F /* ArticlesTableViewController.swift in Sources */,
+				847FFCD72336A0250013363F /* LoginViewController.swift in Sources */,
 				EA787C1B2316DCBA000AC250 /* AppDelegate.swift in Sources */,
 				EA787C232316DCBA000AC250 /* GelecekBilimde.xcdatamodeld in Sources */,
+				847FFCEE2336C2110013363F /* ArticleTableViewCell.swift in Sources */,
+				847FFCE92336B3490013363F /* InitialTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +369,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EA787C1E2316DCBA000AC250 /* Main.storyboard */ = {
+		EA787C1E2316DCBA000AC250 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EA787C1F2316DCBA000AC250 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		EA787C262316DCBB000AC250 /* LaunchScreen.storyboard */ = {
@@ -445,7 +517,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gelecekbilimde.GelecekBilimde;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -462,7 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gelecekbilimde.GelecekBilimde;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

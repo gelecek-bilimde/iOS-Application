@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dHa-g9-2a2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="5pW-UE-JPa">
+            <objects>
+                <viewController title="Login View Controller" id="dHa-g9-2a2" customClass="LoginViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AIf-lV-f93">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GelecekBilimdeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-m3-ZC9">
+                                <rect key="frame" x="82" y="194" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="L4I-wU-fb2"/>
+                                    <constraint firstAttribute="width" constant="250" id="eab-LT-tHG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoşgeldiniz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NV-e5-8Ao">
+                                <rect key="frame" x="128" y="484" width="158" height="39"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="32"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07G-4a-SPu">
+                                <rect key="frame" x="69.5" y="543" width="275" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="r2Y-Pu-ILD"/>
+                                    <constraint firstAttribute="height" constant="1" id="rLz-xA-Vwu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XGE-m3-ZC9" firstAttribute="top" secondItem="NWB-Xe-1Ym" secondAttribute="top" constant="150" id="275-oN-OII"/>
+                            <constraint firstItem="5NV-e5-8Ao" firstAttribute="centerX" secondItem="NWB-Xe-1Ym" secondAttribute="centerX" id="5vZ-D9-svK"/>
+                            <constraint firstItem="07G-4a-SPu" firstAttribute="top" secondItem="5NV-e5-8Ao" secondAttribute="bottom" constant="20" id="Cmv-g9-nGF"/>
+                            <constraint firstItem="XGE-m3-ZC9" firstAttribute="centerX" secondItem="NWB-Xe-1Ym" secondAttribute="centerX" id="gki-bq-Ly4"/>
+                            <constraint firstItem="07G-4a-SPu" firstAttribute="centerX" secondItem="NWB-Xe-1Ym" secondAttribute="centerX" id="vxO-G8-ssm"/>
+                            <constraint firstItem="5NV-e5-8Ao" firstAttribute="top" secondItem="XGE-m3-ZC9" secondAttribute="bottom" constant="40" id="x7R-rb-zvC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NWB-Xe-1Ym"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHu-CN-D3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3513" y="-512"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GelecekBilimdeLogo" width="1000" height="1000"/>
+    </resources>
+</document>
