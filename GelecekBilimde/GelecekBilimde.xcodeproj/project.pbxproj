@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		843A86912337E86500D35507 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A86902337E86500D35507 /* VideosTableViewController.swift */; };
 		843A86932337EE7300D35507 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A86922337EE7300D35507 /* VideoTableViewCell.swift */; };
+		843A86952337F43200D35507 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A86942337F43200D35507 /* BookmarksViewController.swift */; };
+		843A86972337F77E00D35507 /* BookmarkedArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A86962337F77E00D35507 /* BookmarkedArticlesTableViewController.swift */; };
+		843A86992337F7A300D35507 /* BookmarkedVideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A86982337F7A300D35507 /* BookmarkedVideosTableViewController.swift */; };
 		847FFCD72336A0250013363F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FFCD62336A0250013363F /* LoginViewController.swift */; };
 		847FFCDB2336A4200013363F /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847FFCD92336A4200013363F /* SF-Pro-Display-Medium.otf */; };
 		847FFCDC2336A4200013363F /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847FFCDA2336A4200013363F /* SF-Pro-Display-Regular.otf */; };
@@ -49,6 +52,9 @@
 /* Begin PBXFileReference section */
 		843A86902337E86500D35507 /* VideosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewController.swift; sourceTree = "<group>"; };
 		843A86922337EE7300D35507 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		843A86942337F43200D35507 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		843A86962337F77E00D35507 /* BookmarkedArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkedArticlesTableViewController.swift; sourceTree = "<group>"; };
+		843A86982337F7A300D35507 /* BookmarkedVideosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkedVideosTableViewController.swift; sourceTree = "<group>"; };
 		847FFCD62336A0250013363F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		847FFCD92336A4200013363F /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		847FFCDA2336A4200013363F /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
@@ -120,6 +126,9 @@
 				847FFCE82336B3490013363F /* InitialTabBarViewController.swift */,
 				847FFCEB2336BF960013363F /* ArticlesTableViewController.swift */,
 				843A86902337E86500D35507 /* VideosTableViewController.swift */,
+				843A86942337F43200D35507 /* BookmarksViewController.swift */,
+				843A86962337F77E00D35507 /* BookmarkedArticlesTableViewController.swift */,
+				843A86982337F7A300D35507 /* BookmarkedVideosTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -334,11 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843A86952337F43200D35507 /* BookmarksViewController.swift in Sources */,
 				847FFCEC2336BF960013363F /* ArticlesTableViewController.swift in Sources */,
 				847FFCD72336A0250013363F /* LoginViewController.swift in Sources */,
 				EA787C1B2316DCBA000AC250 /* AppDelegate.swift in Sources */,
 				EA787C232316DCBA000AC250 /* GelecekBilimde.xcdatamodeld in Sources */,
+				843A86972337F77E00D35507 /* BookmarkedArticlesTableViewController.swift in Sources */,
 				843A86912337E86500D35507 /* VideosTableViewController.swift in Sources */,
+				843A86992337F7A300D35507 /* BookmarkedVideosTableViewController.swift in Sources */,
 				843A86932337EE7300D35507 /* VideoTableViewCell.swift in Sources */,
 				847FFCEE2336C2110013363F /* ArticleTableViewCell.swift in Sources */,
 				847FFCE92336B3490013363F /* InitialTabBarViewController.swift in Sources */,
