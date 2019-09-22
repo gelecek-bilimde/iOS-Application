@@ -1,14 +1,14 @@
 //
-//  ArticlesTableViewController.swift
+//  VideosTableViewController.swift
 //  GelecekBilimde
 //
-//  Created by Alperen Ünal on 21.09.2019.
+//  Created by Alperen Ünal on 22.09.2019.
 //  Copyright © 2019 Burak Furkan Asilturk. All rights reserved.
 //
 
 import UIKit
 
-class ArticlesTableViewController: UITableViewController {
+class VideosTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

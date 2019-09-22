@@ -6,23 +6,99 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Table View Controller-->
+        <!--Videolar-->
         <scene sceneID="6ro-u4-b3L">
             <objects>
-                <tableViewController id="C82-JR-B2K" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sMg-Oj-Uea">
+                <tableViewController id="C82-JR-B2K" customClass="VideosTableViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sMg-Oj-Uea">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="A7Y-Rd-XfL">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="350" id="A7Y-Rd-XfL" customClass="VideoTableViewCell" customModule="GelecekBilimde" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A7Y-Rd-XfL" id="PwW-bH-j2z">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0YL-BN-Toh">
+                                            <rect key="frame" x="32" y="25" width="350" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="350" id="0SK-vj-lpU"/>
+                                                <constraint firstAttribute="height" constant="200" id="DTU-IX-ZS0"/>
+                                                <constraint firstAttribute="width" secondItem="0YL-BN-Toh" secondAttribute="height" multiplier="7:4" id="V8X-cY-8ae"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GelecekBilimdeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jjL-nz-MBf">
+                                            <rect key="frame" x="28" y="255" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="NTg-iO-qm1"/>
+                                                <constraint firstAttribute="height" constant="65" id="TWd-0c-g05"/>
+                                                <constraint firstAttribute="width" secondItem="jjL-nz-MBf" secondAttribute="height" multiplier="1:1" id="rtw-Z6-x2o"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcz-o7-mLo">
+                                            <rect key="frame" x="123" y="277.5" width="175" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="175" id="7Th-qd-R9v"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unbookmarked" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-sD-hZX">
+                                            <rect key="frame" x="342" y="241" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="Ip6-zB-PeQ"/>
+                                                <constraint firstAttribute="height" constant="40" id="ZxZ-dX-ABG"/>
+                                                <constraint firstAttribute="width" secondItem="Nfb-sD-hZX" secondAttribute="height" multiplier="1:1" id="i8m-Ta-dng"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2h-R3-dXZ">
+                                            <rect key="frame" x="315" y="309" width="79" height="21"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whitePlayButton" translatesAutoresizingMaskIntoConstraints="NO" id="NcE-Xr-uQ3">
+                                            <rect key="frame" x="167" y="85" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="74G-59-SgG"/>
+                                                <constraint firstAttribute="height" constant="80" id="c0h-FI-0Hj"/>
+                                                <constraint firstAttribute="width" secondItem="NcE-Xr-uQ3" secondAttribute="height" multiplier="1:1" id="saq-hR-dEK"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Nfb-sD-hZX" secondAttribute="trailing" constant="32" id="6CA-Ga-abM"/>
+                                        <constraint firstItem="0YL-BN-Toh" firstAttribute="centerX" secondItem="PwW-bH-j2z" secondAttribute="centerX" id="98Z-eP-gFH"/>
+                                        <constraint firstItem="Nfb-sD-hZX" firstAttribute="top" secondItem="0YL-BN-Toh" secondAttribute="bottom" constant="16" id="DVX-CI-TAd"/>
+                                        <constraint firstItem="NcE-Xr-uQ3" firstAttribute="centerX" secondItem="PwW-bH-j2z" secondAttribute="centerX" id="FgO-oS-3wY"/>
+                                        <constraint firstItem="jjL-nz-MBf" firstAttribute="leading" secondItem="PwW-bH-j2z" secondAttribute="leading" constant="28" id="SxZ-xC-mTa"/>
+                                        <constraint firstItem="Xcz-o7-mLo" firstAttribute="leading" secondItem="jjL-nz-MBf" secondAttribute="trailing" constant="30" id="TF6-4B-6xl"/>
+                                        <constraint firstAttribute="trailing" secondItem="i2h-R3-dXZ" secondAttribute="trailing" constant="20" id="ZUl-XD-f6b"/>
+                                        <constraint firstItem="0YL-BN-Toh" firstAttribute="top" secondItem="PwW-bH-j2z" secondAttribute="top" constant="25" id="dea-L4-3eM"/>
+                                        <constraint firstItem="NcE-Xr-uQ3" firstAttribute="centerY" secondItem="0YL-BN-Toh" secondAttribute="centerY" id="dup-5F-MlE"/>
+                                        <constraint firstItem="Xcz-o7-mLo" firstAttribute="centerY" secondItem="jjL-nz-MBf" secondAttribute="centerY" id="kdu-I7-Jyc"/>
+                                        <constraint firstAttribute="bottom" secondItem="i2h-R3-dXZ" secondAttribute="bottom" constant="20" id="nmy-Pu-HcR"/>
+                                        <constraint firstItem="jjL-nz-MBf" firstAttribute="top" secondItem="0YL-BN-Toh" secondAttribute="bottom" constant="30" id="ugQ-tj-pY6"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="videoBookmarkImageView" destination="Nfb-sD-hZX" id="fY6-pc-6m1"/>
+                                    <outlet property="videoDateLabel" destination="i2h-R3-dXZ" id="1Pc-Vq-plB"/>
+                                    <outlet property="videoThumbnailImageView" destination="0YL-BN-Toh" id="ApZ-aq-TpU"/>
+                                    <outlet property="videoTitleLabel" destination="Xcz-o7-mLo" id="FeH-OK-YSU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,7 +106,7 @@
                             <outlet property="delegate" destination="C82-JR-B2K" id="H5n-bK-4EJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="VSc-ZU-SNH"/>
+                    <navigationItem key="navigationItem" title="Videolar" id="VSc-ZU-SNH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QcP-gu-xWW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,6 +122,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uVD-Mq-dKz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.01176470588" green="0.10980392160000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -58,6 +138,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GelecekBilimdeLogo" width="1000" height="1000"/>
+        <image name="unbookmarked" width="96" height="96"/>
         <image name="videos" width="45" height="45"/>
+        <image name="whitePlayButton" width="100" height="100"/>
     </resources>
 </document>
