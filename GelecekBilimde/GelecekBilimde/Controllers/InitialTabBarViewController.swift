@@ -9,12 +9,6 @@
 import UIKit
 
 class InitialTabBarViewController: UITabBarController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.tabBar.unselectedItemTintColor = .white
-    }
     
     //This functions for tab bar item animation
     private var bounceAnimation: CAKeyframeAnimation = {
@@ -24,6 +18,16 @@ class InitialTabBarViewController: UITabBarController {
         bounceAnimation.calculationMode = CAAnimationCalculationMode.cubic
         return bounceAnimation
     }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tabBar.unselectedItemTintColor = .white
+    }
+    
+}
+
+// MARK: - TabBar Delegates
+extension InitialTabBarViewController {
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         // find index if the selected tab bar item, then find the corresponding view and get its image, the view position is offset by 1 because the first item is the background (at least in this case)
@@ -33,5 +37,4 @@ class InitialTabBarViewController: UITabBarController {
         
         imageView.layer.add(bounceAnimation, forKey: nil)
     }
-
 }

@@ -30,6 +30,10 @@
 		EA787C282316DCBB000AC250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA787C262316DCBB000AC250 /* LaunchScreen.storyboard */; };
 		EA787C332316DCBB000AC250 /* GelecekBilimdeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA787C322316DCBB000AC250 /* GelecekBilimdeTests.swift */; };
 		EA787C3E2316DCBC000AC250 /* GelecekBilimdeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA787C3D2316DCBC000AC250 /* GelecekBilimdeUITests.swift */; };
+		EA99566B23426187006C91FE /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA99566A23426187006C91FE /* Destination.swift */; };
+		EA99566E234265BC006C91FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA99566D234265BC006C91FE /* ProfileViewController.swift */; };
+		EA995671234266A6006C91FE /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA995670234266A6006C91FE /* UIColor+CustomColors.swift */; };
+		EA995679234272FD006C91FE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA995678234272FD006C91FE /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		EA787C392316DCBC000AC250 /* GelecekBilimdeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GelecekBilimdeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA787C3D2316DCBC000AC250 /* GelecekBilimdeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelecekBilimdeUITests.swift; sourceTree = "<group>"; };
 		EA787C3F2316DCBC000AC250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA99566A23426187006C91FE /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		EA99566D234265BC006C91FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EA995670234266A6006C91FE /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
+		EA995678234272FD006C91FE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +137,7 @@
 				843A86942337F43200D35507 /* BookmarksViewController.swift */,
 				843A86962337F77E00D35507 /* BookmarkedArticlesTableViewController.swift */,
 				843A86982337F7A300D35507 /* BookmarkedVideosTableViewController.swift */,
+				EA99566D234265BC006C91FE /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,15 +183,12 @@
 		EA787C192316DCBA000AC250 /* GelecekBilimde */ = {
 			isa = PBXGroup;
 			children = (
+				EA787C1A2316DCBA000AC250 /* AppDelegate.swift */,
+				EA787C292316DCBB000AC250 /* Info.plist */,
+				EA99567323426890006C91FE /* Core */,
 				847FFCEA2336B59A0013363F /* Custom Cells */,
-				847FFCD82336A3C30013363F /* Fonts */,
 				847FFCD523369F8F0013363F /* Controllers */,
 				847FFCD423369F830013363F /* Storyboards */,
-				EA787C1A2316DCBA000AC250 /* AppDelegate.swift */,
-				EA787C242316DCBB000AC250 /* Assets.xcassets */,
-				EA787C262316DCBB000AC250 /* LaunchScreen.storyboard */,
-				EA787C292316DCBB000AC250 /* Info.plist */,
-				EA787C212316DCBA000AC250 /* GelecekBilimde.xcdatamodeld */,
 			);
 			path = GelecekBilimde;
 			sourceTree = "<group>";
@@ -203,6 +209,52 @@
 				EA787C3F2316DCBC000AC250 /* Info.plist */,
 			);
 			path = GelecekBilimdeUITests;
+			sourceTree = "<group>";
+		};
+		EA9956692342617D006C91FE /* Destination */ = {
+			isa = PBXGroup;
+			children = (
+				EA99566A23426187006C91FE /* Destination.swift */,
+			);
+			path = Destination;
+			sourceTree = "<group>";
+		};
+		EA99566F23426691006C91FE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EA995670234266A6006C91FE /* UIColor+CustomColors.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		EA99567223426880006C91FE /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EA787C242316DCBB000AC250 /* Assets.xcassets */,
+				EA787C262316DCBB000AC250 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		EA99567323426890006C91FE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA995677234272F1006C91FE /* CoreData */,
+				847FFCD82336A3C30013363F /* Fonts */,
+				EA9956692342617D006C91FE /* Destination */,
+				EA99566F23426691006C91FE /* Helper */,
+				EA99567223426880006C91FE /* SupportingFiles */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EA995677234272F1006C91FE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EA995678234272FD006C91FE /* CoreDataManager.swift */,
+				EA787C212316DCBA000AC250 /* GelecekBilimde.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +397,9 @@
 			files = (
 				843A86952337F43200D35507 /* BookmarksViewController.swift in Sources */,
 				847FFCEC2336BF960013363F /* ArticlesTableViewController.swift in Sources */,
+				EA99566B23426187006C91FE /* Destination.swift in Sources */,
+				EA995679234272FD006C91FE /* CoreDataManager.swift in Sources */,
+				EA995671234266A6006C91FE /* UIColor+CustomColors.swift in Sources */,
 				847FFCD72336A0250013363F /* LoginViewController.swift in Sources */,
 				EA787C1B2316DCBA000AC250 /* AppDelegate.swift in Sources */,
 				EA787C232316DCBA000AC250 /* GelecekBilimde.xcdatamodeld in Sources */,
@@ -352,6 +407,7 @@
 				843A86912337E86500D35507 /* VideosTableViewController.swift in Sources */,
 				843A86992337F7A300D35507 /* BookmarkedVideosTableViewController.swift in Sources */,
 				843A86932337EE7300D35507 /* VideoTableViewCell.swift in Sources */,
+				EA99566E234265BC006C91FE /* ProfileViewController.swift in Sources */,
 				847FFCEE2336C2110013363F /* ArticleTableViewCell.swift in Sources */,
 				847FFCE92336B3490013363F /* InitialTabBarViewController.swift in Sources */,
 			);
@@ -529,7 +585,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTMVBPSRA5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GelecekBilimde/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,7 +603,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTMVBPSRA5;
+				DEVELOPMENT_TEAM = UWB8G3K7AK;
 				INFOPLIST_FILE = GelecekBilimde/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

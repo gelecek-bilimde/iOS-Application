@@ -1,0 +1,17 @@
+version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+options: "45f0072f61483e2e1c1a009e1b96b3e6"
+build_time: [1569864159, 806174000]
+inputs:
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Controllers/BookmarksViewController.swift": [1569860955, 409907989]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Controllers/ArticlesTableViewController.swift": [1569861592, 67028312]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Core/Destination/Destination.swift": [1569861266, 543586102]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Core/Helper/UIColor+CustomColors.swift": [1569862021, 57214390]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Controllers/LoginViewController.swift": [1569861548, 564308982]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Core/AppDelegate/AppDelegate.swift": [1569863919, 861219860]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Controllers/BookmarkedArticlesTableViewController.swift": [1569864002, 146162644]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Controllers/VideosTableViewController.swift": [1569861586, 351866802]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Controllers/BookmarkedVideosTableViewController.swift": [1569863993, 175925191]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Custom Cells/VideoTableViewCell.swift": [1569859993, 654281973]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Controllers/ProfileViewController.swift": [1569861604, 432637266]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Custom Cells/ArticleTableViewCell.swift": [1569860671, 624438016]
+  "/Users/asilturk/Developer/Projects/GelecekBilimde/GelecekBilimde/GelecekBilimde/Controllers/InitialTabBarViewController.swift": [1569861587, 288054737]

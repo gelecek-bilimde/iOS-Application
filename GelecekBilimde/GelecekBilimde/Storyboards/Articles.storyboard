@@ -15,7 +15,7 @@
         <!--Articles Table View Controller-->
         <scene sceneID="hc3-e9-wQe">
             <objects>
-                <tableViewController title="Articles Table View Controller" id="5A2-jI-LYO" customClass="ArticlesTableViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="articlesTableViewController" title="Articles Table View Controller" id="5A2-jI-LYO" customClass="ArticlesTableViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nk6-Kq-pQQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -15,7 +15,7 @@
         <!--Videolar-->
         <scene sceneID="6ro-u4-b3L">
             <objects>
-                <tableViewController id="C82-JR-B2K" customClass="VideosTableViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="videosTableViewController" id="C82-JR-B2K" customClass="VideosTableViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sMg-Oj-Uea">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

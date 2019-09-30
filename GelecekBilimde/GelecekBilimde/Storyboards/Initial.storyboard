@@ -50,7 +50,7 @@
         <!--Initial Tab Bar View Controller-->
         <scene sceneID="J9p-ob-9Ie">
             <objects>
-                <tabBarController id="Hzb-48-FQw" customClass="InitialTabBarViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="initialTabBarViewController" id="Hzb-48-FQw" customClass="InitialTabBarViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AEJ-54-Qc3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

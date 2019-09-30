@@ -16,7 +16,7 @@
         <!--Login View Controller-->
         <scene sceneID="5pW-UE-JPa">
             <objects>
-                <viewController title="Login View Controller" id="dHa-g9-2a2" customClass="LoginViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" title="Login View Controller" id="dHa-g9-2a2" customClass="LoginViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AIf-lV-f93">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

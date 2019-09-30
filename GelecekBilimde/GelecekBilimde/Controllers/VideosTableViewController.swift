@@ -14,11 +14,14 @@ class VideosTableViewController: UITableViewController {
         super.viewDidLoad()
 
         //This is for setting table view's background color
-        self.tableView.backgroundColor = UIColor(red:0.00, green:0.20, blue:0.40, alpha:1.0)
+        self.tableView.backgroundColor = UIColor.tableViewBgColor
     }
+}
 
-    // MARK: - Table view data source
 
+// MARK: - Table view data source
+extension VideosTableViewController {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
@@ -28,5 +31,5 @@ class VideosTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-
+    
 }
