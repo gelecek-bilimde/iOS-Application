@@ -1,0 +1,1255 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		020FB8D15F077A838A8B5DE5CFA87CB8 /* AeroGearHttp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6C35DD0D73795BD446A4B55FF1CEC4 /* AeroGearHttp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		024B5998E35988C67C73B0171B1600C4 /* JsonResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BDC2DF22EC9D3E8372F760D7DF75E5 /* JsonResponseSerializer.swift */; };
+		02B0306FB9040E59318CD104A40B6CF6 /* AeroGearHttp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEE1EEE91AC2C57D12DAA34C56E7AAE /* AeroGearHttp-dummy.m */; };
+		0B626390CAACA17D0B45EC509B4235F5 /* UntrustedMemoryOAuth2Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E91FF4A6F3680FFFF18DAC04BDA57 /* UntrustedMemoryOAuth2Session.swift */; };
+		16339E4CBDAD3195822FA7D7C682F8A3 /* OAuth2WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E2EEF5561EFA751AF760B09B1DCD68 /* OAuth2WebViewController.swift */; };
+		16DEBAD23279D357B4E57003982CF63C /* OAuth2Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC73EF6F1E47EBD1311F54A9FB14237 /* OAuth2Session.swift */; };
+		180476CD0213C8B9E15EDE71E4E95D22 /* TrustedPersistantOAuth2Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAC6EE68FDFA1AA7DD776DAD50C7B0 /* TrustedPersistantOAuth2Session.swift */; };
+		2009FA07E67B7C6FCA7391E4A4ED9982 /* AeroGearOAuth2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8999676CF4E32123F5BE32FAEA486FB /* AeroGearOAuth2-dummy.m */; };
+		2AAD34381A2E81711D3556B70EC66E8B /* MultiPartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504AF6BECAF7399957031E18A2FB655 /* MultiPartData.swift */; };
+		3467A4BEF8EFD504C690B2DAFBCCF402 /* KeycloakOAuth2Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DA2E9EE3F8BBE4CCE9718A463A2459 /* KeycloakOAuth2Module.swift */; };
+		37BCC7A8443F088FEBD65FC5165CBC19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0F026B2F8626253EFCEB4F6E647F7D /* Foundation.framework */; };
+		3D495D6189F283E829C48C6C83B281AC /* OpenIdClaim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2F628A3D19B3F7926B0ABA15633C3C /* OpenIdClaim.swift */; };
+		42C06B15B79D2F1E87672A02423C92E6 /* RequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52368D6AA56243EA5D452BBDE4B9A7EE /* RequestSerializer.swift */; };
+		42CB8A7222F64755B94B2B25D095A851 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB14CC6A635E7CCC7D0FFCC328482A /* DateUtils.swift */; };
+		48AB0095A3188BAE6CE754609D2F2A47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0F026B2F8626253EFCEB4F6E647F7D /* Foundation.framework */; };
+		4CF04651D2B863EEC7FEE908F85A7563 /* OAuth2Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCAADC0BA219A6575BB29F31A72F446 /* OAuth2Module.swift */; };
+		4D8B3BC43C6B5C69768B5C40D50A3AB9 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A78744A1F6615554FBFE02B0998CDE /* Http.swift */; };
+		5DC8EFE4950F013BADAAE0B44B3E663B /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B921F90C4339823DFADED52C9772139 /* AccountManager.swift */; };
+		63E6D9C2F992D2451AE51438D74EA547 /* Pods-GelecekBilimde-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3145023D9E73975FE861C199FDFF56B8 /* Pods-GelecekBilimde-dummy.m */; };
+		67D890FFEB2F55E03E01C60C2816EDC9 /* JsonRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B250434A0C2C00BC5FE20F6571C5 /* JsonRequestSerializer.swift */; };
+		6A2160CBF95FEE936A6C17A4EF229EFD /* AeroGearOAuth2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2089549E026501516A3AD74B1A59105 /* AeroGearOAuth2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7909DCDD9AA0EB076469860EE92F37A4 /* Pods-GelecekBilimde-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA03696DA4173EF4D4D1584529C7DDCD /* Pods-GelecekBilimde-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8025F219D765BB2739A5B12194E63880 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F3BC8656C4B1B202E958D6E3564DB /* Utils.swift */; };
+		87EB40E6D71A51A086EE7B02C7DFC728 /* Pods-GelecekBilimdeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBED4D72282F5BD3A6905B0F399165C /* Pods-GelecekBilimdeTests-dummy.m */; };
+		8A8417485A99D790662F93595BB55894 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0F026B2F8626253EFCEB4F6E647F7D /* Foundation.framework */; };
+		8B35B757B5426C5DE79651A0A22743C1 /* AeroGearHttp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D0AF6DA5064942B6E21E984BBFDAA4 /* AeroGearHttp.framework */; };
+		9C4E0023B3460CD553C0F6FFED169581 /* Pods-GelecekBilimde-GelecekBilimdeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FA56E35EB365866A44E05A0467BC40D /* Pods-GelecekBilimde-GelecekBilimdeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB0015C605F0FA3041C496A91A7E54C /* Pods-GelecekBilimdeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2274F5EF38B1BC4FA5BB310568F48017 /* Pods-GelecekBilimdeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEC915B461D10972594514B05F940B41 /* FacebookOAuth2Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57324B1B779FE772791A8C8F6D03AFAB /* FacebookOAuth2Module.swift */; };
+		C91E2D6FCA0EDBFB671DA066530DB8B5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9555BAA74C66D5B2C380E685AD75236 /* Config.swift */; };
+		D4D22F31CF8BADAA8B87E80CE94DBB4B /* Pods-GelecekBilimde-GelecekBilimdeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7FEC5EC9F9BBFF1F1936175D7A32EB /* Pods-GelecekBilimde-GelecekBilimdeUITests-dummy.m */; };
+		D7352732D81F3FE285C9878D530473C2 /* ResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACAFF3AF4D027E654466036A1F74F7 /* ResponseSerializer.swift */; };
+		D9EEFC8AF063C9AACA254C84B60BAC2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0F026B2F8626253EFCEB4F6E647F7D /* Foundation.framework */; };
+		E1696B72E93114FF26FE7901AC0083DC /* AuthzModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FC80C371483FEF0B5409BFEE14AC37 /* AuthzModule.swift */; };
+		E230A3D52DB1AD73E4BAA80D3E2306DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0F026B2F8626253EFCEB4F6E647F7D /* Foundation.framework */; };
+		E91314354B92EA254867FAA2D07274FB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B7A9462A3D4F600C7B927606A64997 /* Security.framework */; };
+		F8B3ED817B2371AA8CEDFBD14413F2AF /* StringResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C5A0A331293E199E9AFB81E224C85 /* StringResponseSerializer.swift */; };
+		F9DE8E0A46ED4E2DA5BDF47D07DA389B /* HttpRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1961F1C8DFA06DA38B5C6E17A5258 /* HttpRequestSerializer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A6BE0570F91244AF6DEFCCA343D323D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4888D21EBE19648A20B645C1D881A681;
+			remoteInfo = AeroGearHttp;
+		};
+		1B2F49DDF1C2AFFB15B3A4707330CF38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4808B28B3A54BA906C295F4D65B06933;
+			remoteInfo = AeroGearOAuth2;
+		};
+		1BA2045237792420F6A7A189019D87A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3B1FFC1B289F1FB76DA0FBEBA3811E7;
+			remoteInfo = "Pods-GelecekBilimde";
+		};
+		4764105955342409B568E42C9619594F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4808B28B3A54BA906C295F4D65B06933;
+			remoteInfo = AeroGearOAuth2;
+		};
+		4EA9CA3D1B840603CDF2D4D22E1FB900 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4888D21EBE19648A20B645C1D881A681;
+			remoteInfo = AeroGearHttp;
+		};
+		B8EB0EC984D3C4E2A50AF1526A73ECAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4888D21EBE19648A20B645C1D881A681;
+			remoteInfo = AeroGearHttp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		020C5A0A331293E199E9AFB81E224C85 /* StringResponseSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringResponseSerializer.swift; path = AeroGearHttp/StringResponseSerializer.swift; sourceTree = "<group>"; };
+		0C2699B4874F3AC174532842E76D9CDB /* AeroGearOAuth2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AeroGearOAuth2-prefix.pch"; sourceTree = "<group>"; };
+		15F64EE809517B5752435FC1ED8BC612 /* Pods_GelecekBilimdeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GelecekBilimdeTests.framework; path = "Pods-GelecekBilimdeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1710470DB33C6962504066C5B4E27735 /* Pods-GelecekBilimdeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GelecekBilimdeTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		21B7A9462A3D4F600C7B927606A64997 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		2274F5EF38B1BC4FA5BB310568F48017 /* Pods-GelecekBilimdeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GelecekBilimdeTests-umbrella.h"; sourceTree = "<group>"; };
+		28A78744A1F6615554FBFE02B0998CDE /* Http.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Http.swift; path = AeroGearHttp/Http.swift; sourceTree = "<group>"; };
+		2B921F90C4339823DFADED52C9772139 /* AccountManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccountManager.swift; path = AeroGearOAuth2/AccountManager.swift; sourceTree = "<group>"; };
+		3145023D9E73975FE861C199FDFF56B8 /* Pods-GelecekBilimde-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GelecekBilimde-dummy.m"; sourceTree = "<group>"; };
+		35BDC2DF22EC9D3E8372F760D7DF75E5 /* JsonResponseSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JsonResponseSerializer.swift; path = AeroGearHttp/JsonResponseSerializer.swift; sourceTree = "<group>"; };
+		3DCAADC0BA219A6575BB29F31A72F446 /* OAuth2Module.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Module.swift; path = AeroGearOAuth2/OAuth2Module.swift; sourceTree = "<group>"; };
+		4081B250434A0C2C00BC5FE20F6571C5 /* JsonRequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JsonRequestSerializer.swift; path = AeroGearHttp/JsonRequestSerializer.swift; sourceTree = "<group>"; };
+		47B358D702DE2E0CB00E9088118389C9 /* Pods-GelecekBilimde.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GelecekBilimde.modulemap"; sourceTree = "<group>"; };
+		4AB10D69E0F626BCE4EF5843D6FD571C /* Pods-GelecekBilimde-GelecekBilimdeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GelecekBilimde-GelecekBilimdeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		505718A41EE2EA8A54391CC840D98764 /* AeroGearHttp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AeroGearHttp-prefix.pch"; sourceTree = "<group>"; };
+		52368D6AA56243EA5D452BBDE4B9A7EE /* RequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestSerializer.swift; path = AeroGearHttp/RequestSerializer.swift; sourceTree = "<group>"; };
+		53FFEF6A4DC34AD6EBBB195A8A4F0729 /* AeroGearHttp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AeroGearHttp.xcconfig; sourceTree = "<group>"; };
+		558268E7A981E873CAC1B6D5EC3D9A2D /* Pods-GelecekBilimde-GelecekBilimdeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GelecekBilimde-GelecekBilimdeUITests-frameworks.sh"; sourceTree = "<group>"; };
+		56FC80C371483FEF0B5409BFEE14AC37 /* AuthzModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthzModule.swift; path = AeroGearHttp/AuthzModule.swift; sourceTree = "<group>"; };
+		57324B1B779FE772791A8C8F6D03AFAB /* FacebookOAuth2Module.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FacebookOAuth2Module.swift; path = AeroGearOAuth2/FacebookOAuth2Module.swift; sourceTree = "<group>"; };
+		58108FAF11B40332DE51FC2BB8CFDBF3 /* AeroGearHttp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AeroGearHttp-Info.plist"; sourceTree = "<group>"; };
+		5F86C4DD99DC75B74899DEB455B89B41 /* AeroGearOAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AeroGearOAuth2.framework; path = AeroGearOAuth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68F5CECDDDFB027FAAF50CA6A00748B4 /* Pods-GelecekBilimdeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GelecekBilimdeTests.release.xcconfig"; sourceTree = "<group>"; };
+		6FA56E35EB365866A44E05A0467BC40D /* Pods-GelecekBilimde-GelecekBilimdeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GelecekBilimde-GelecekBilimdeUITests-umbrella.h"; sourceTree = "<group>"; };
+		70D0AF6DA5064942B6E21E984BBFDAA4 /* AeroGearHttp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AeroGearHttp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BEE1EEE91AC2C57D12DAA34C56E7AAE /* AeroGearHttp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AeroGearHttp-dummy.m"; sourceTree = "<group>"; };
+		7E2F628A3D19B3F7926B0ABA15633C3C /* OpenIdClaim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenIdClaim.swift; path = AeroGearOAuth2/OpenIdClaim.swift; sourceTree = "<group>"; };
+		7FBED4D72282F5BD3A6905B0F399165C /* Pods-GelecekBilimdeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GelecekBilimdeTests-dummy.m"; sourceTree = "<group>"; };
+		808EC41397AA3461B02951EC6506A129 /* Pods-GelecekBilimdeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GelecekBilimdeTests.modulemap"; sourceTree = "<group>"; };
+		81A1961F1C8DFA06DA38B5C6E17A5258 /* HttpRequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpRequestSerializer.swift; path = AeroGearHttp/HttpRequestSerializer.swift; sourceTree = "<group>"; };
+		87594079DC1788135AAA24B2D7E07A8A /* Pods-GelecekBilimde-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GelecekBilimde-Info.plist"; sourceTree = "<group>"; };
+		8864F2764D2F69B4B19280D5A3E0D610 /* Pods-GelecekBilimde-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GelecekBilimde-frameworks.sh"; sourceTree = "<group>"; };
+		8F0F026B2F8626253EFCEB4F6E647F7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		905C81224C4D7216F9410B594F1331D5 /* Pods-GelecekBilimde-GelecekBilimdeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GelecekBilimde-GelecekBilimdeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		90AB14CC6A635E7CCC7D0FFCC328482A /* DateUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateUtils.swift; path = AeroGearOAuth2/DateUtils.swift; sourceTree = "<group>"; };
+		924E91FF4A6F3680FFFF18DAC04BDA57 /* UntrustedMemoryOAuth2Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UntrustedMemoryOAuth2Session.swift; path = AeroGearOAuth2/UntrustedMemoryOAuth2Session.swift; sourceTree = "<group>"; };
+		9381B9C7048AAB27D8D4A693B7701702 /* Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		95BC0C5AAB0470569BAE7CA7AD430C5E /* Pods-GelecekBilimdeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GelecekBilimdeTests-Info.plist"; sourceTree = "<group>"; };
+		9B09BAD8A2A7C1622C823CAA67D27B59 /* Pods-GelecekBilimde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GelecekBilimde.debug.xcconfig"; sourceTree = "<group>"; };
+		9BE32E378BF32AF4B143EC1E6EAE6352 /* Pods-GelecekBilimde-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GelecekBilimde-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EC73EF6F1E47EBD1311F54A9FB14237 /* OAuth2Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Session.swift; path = AeroGearOAuth2/OAuth2Session.swift; sourceTree = "<group>"; };
+		A616534BB3FFC2C1EE184CD6E0C20E8D /* Pods_GelecekBilimde_GelecekBilimdeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GelecekBilimde_GelecekBilimdeUITests.framework; path = "Pods-GelecekBilimde-GelecekBilimdeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2089549E026501516A3AD74B1A59105 /* AeroGearOAuth2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AeroGearOAuth2-umbrella.h"; sourceTree = "<group>"; };
+		B3E2EEF5561EFA751AF760B09B1DCD68 /* OAuth2WebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2WebViewController.swift; path = AeroGearOAuth2/OAuth2WebViewController.swift; sourceTree = "<group>"; };
+		BA03696DA4173EF4D4D1584529C7DDCD /* Pods-GelecekBilimde-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GelecekBilimde-umbrella.h"; sourceTree = "<group>"; };
+		C504AF6BECAF7399957031E18A2FB655 /* MultiPartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiPartData.swift; path = AeroGearHttp/MultiPartData.swift; sourceTree = "<group>"; };
+		C71AD3DE6BA1525114329E330D0E7EED /* Pods-GelecekBilimdeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GelecekBilimdeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C90022FCEFF5EC5203AC1387B5F3AB1A /* Pods-GelecekBilimdeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GelecekBilimdeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CE6C35DD0D73795BD446A4B55FF1CEC4 /* AeroGearHttp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AeroGearHttp-umbrella.h"; sourceTree = "<group>"; };
+		D2161FAFCA1BD0A483261531E16510FD /* AeroGearHttp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AeroGearHttp.framework; path = AeroGearHttp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27BA949E488E6CA7CFA2DD2F53C580A /* Pods_GelecekBilimde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GelecekBilimde.framework; path = "Pods-GelecekBilimde.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2ACAFF3AF4D027E654466036A1F74F7 /* ResponseSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerializer.swift; path = AeroGearHttp/ResponseSerializer.swift; sourceTree = "<group>"; };
+		D5DA2E9EE3F8BBE4CCE9718A463A2459 /* KeycloakOAuth2Module.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeycloakOAuth2Module.swift; path = AeroGearOAuth2/KeycloakOAuth2Module.swift; sourceTree = "<group>"; };
+		D6B5D439A1DBF6A4D35A29F5943A5BA5 /* Pods-GelecekBilimde-GelecekBilimdeUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GelecekBilimde-GelecekBilimdeUITests-Info.plist"; sourceTree = "<group>"; };
+		D6E4BBAC76F2F816753A68C123AB3119 /* AeroGearOAuth2-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AeroGearOAuth2-Info.plist"; sourceTree = "<group>"; };
+		D885BB8175863019D7CBB12A1410BB4B /* AeroGearOAuth2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AeroGearOAuth2.modulemap; sourceTree = "<group>"; };
+		D9555BAA74C66D5B2C380E685AD75236 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = AeroGearOAuth2/Config.swift; sourceTree = "<group>"; };
+		DAD6D24F555938D36BCCAB6E2D4F1613 /* AeroGearOAuth2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AeroGearOAuth2.xcconfig; sourceTree = "<group>"; };
+		DEDAC6EE68FDFA1AA7DD776DAD50C7B0 /* TrustedPersistantOAuth2Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrustedPersistantOAuth2Session.swift; path = AeroGearOAuth2/TrustedPersistantOAuth2Session.swift; sourceTree = "<group>"; };
+		E1EAB7B207947C4FA6DD213737CA0B05 /* Pods-GelecekBilimde-GelecekBilimdeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GelecekBilimde-GelecekBilimdeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E82F3BC8656C4B1B202E958D6E3564DB /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = AeroGearHttp/Utils.swift; sourceTree = "<group>"; };
+		EA154420E67611B02281869BC3DBD488 /* Pods-GelecekBilimde-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GelecekBilimde-acknowledgements.plist"; sourceTree = "<group>"; };
+		EA4BEBD18537359352F1E35AC12AE76D /* AeroGearHttp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AeroGearHttp.modulemap; sourceTree = "<group>"; };
+		EB72849DB0B50D9592AF41937FB76B60 /* Pods-GelecekBilimde-GelecekBilimdeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GelecekBilimde-GelecekBilimdeUITests.modulemap"; sourceTree = "<group>"; };
+		F23EBF3CF8905F97602ECB1CD6C4B350 /* Pods-GelecekBilimde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GelecekBilimde.release.xcconfig"; sourceTree = "<group>"; };
+		F8999676CF4E32123F5BE32FAEA486FB /* AeroGearOAuth2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AeroGearOAuth2-dummy.m"; sourceTree = "<group>"; };
+		FF7FEC5EC9F9BBFF1F1936175D7A32EB /* Pods-GelecekBilimde-GelecekBilimdeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GelecekBilimde-GelecekBilimdeUITests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A8417866E57C072B68318A7870F8CDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B35B757B5426C5DE79651A0A22743C1 /* AeroGearHttp.framework in Frameworks */,
+				48AB0095A3188BAE6CE754609D2F2A47 /* Foundation.framework in Frameworks */,
+				E91314354B92EA254867FAA2D07274FB /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781449654362225CA936B62B2B5BAFBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A8417485A99D790662F93595BB55894 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B76F8A620A70610D8AB14DAD12642E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37BCC7A8443F088FEBD65FC5165CBC19 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AACEA42F287F71488E4A25B50FCEAC3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E230A3D52DB1AD73E4BAA80D3E2306DC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE6301E20E26A01679C4EA485218DFA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9EEFC8AF063C9AACA254C84B60BAC2B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2499C258A3E0DA40BE93020E5C5AA4A5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				921553E2D06DB8CE13D09606EC458FA6 /* Pods-GelecekBilimde */,
+				804C8DFAE079EBAAD912C399B45C864F /* Pods-GelecekBilimde-GelecekBilimdeUITests */,
+				F1DEF8B275636FAFC1C98DBD0E725C65 /* Pods-GelecekBilimdeTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		44177330C2E89F8174D8F9ADF1C80FD6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA4BEBD18537359352F1E35AC12AE76D /* AeroGearHttp.modulemap */,
+				53FFEF6A4DC34AD6EBBB195A8A4F0729 /* AeroGearHttp.xcconfig */,
+				7BEE1EEE91AC2C57D12DAA34C56E7AAE /* AeroGearHttp-dummy.m */,
+				58108FAF11B40332DE51FC2BB8CFDBF3 /* AeroGearHttp-Info.plist */,
+				505718A41EE2EA8A54391CC840D98764 /* AeroGearHttp-prefix.pch */,
+				CE6C35DD0D73795BD446A4B55FF1CEC4 /* AeroGearHttp-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AeroGearHttp";
+			sourceTree = "<group>";
+		};
+		6A179F8C882E62751F9242625FD55B89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70D0AF6DA5064942B6E21E984BBFDAA4 /* AeroGearHttp.framework */,
+				F4EA26347B93A4A632C30B58BC286F71 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AFF9512A312607BA0E9C2F83289AE5D /* AeroGearOAuth2 */ = {
+			isa = PBXGroup;
+			children = (
+				2B921F90C4339823DFADED52C9772139 /* AccountManager.swift */,
+				D9555BAA74C66D5B2C380E685AD75236 /* Config.swift */,
+				90AB14CC6A635E7CCC7D0FFCC328482A /* DateUtils.swift */,
+				57324B1B779FE772791A8C8F6D03AFAB /* FacebookOAuth2Module.swift */,
+				D5DA2E9EE3F8BBE4CCE9718A463A2459 /* KeycloakOAuth2Module.swift */,
+				3DCAADC0BA219A6575BB29F31A72F446 /* OAuth2Module.swift */,
+				9EC73EF6F1E47EBD1311F54A9FB14237 /* OAuth2Session.swift */,
+				B3E2EEF5561EFA751AF760B09B1DCD68 /* OAuth2WebViewController.swift */,
+				7E2F628A3D19B3F7926B0ABA15633C3C /* OpenIdClaim.swift */,
+				DEDAC6EE68FDFA1AA7DD776DAD50C7B0 /* TrustedPersistantOAuth2Session.swift */,
+				924E91FF4A6F3680FFFF18DAC04BDA57 /* UntrustedMemoryOAuth2Session.swift */,
+				D2655762CBF3DE7B73FBE4CA1E6AE7DF /* Support Files */,
+			);
+			name = AeroGearOAuth2;
+			path = AeroGearOAuth2;
+			sourceTree = "<group>";
+		};
+		804C8DFAE079EBAAD912C399B45C864F /* Pods-GelecekBilimde-GelecekBilimdeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EB72849DB0B50D9592AF41937FB76B60 /* Pods-GelecekBilimde-GelecekBilimdeUITests.modulemap */,
+				4AB10D69E0F626BCE4EF5843D6FD571C /* Pods-GelecekBilimde-GelecekBilimdeUITests-acknowledgements.markdown */,
+				905C81224C4D7216F9410B594F1331D5 /* Pods-GelecekBilimde-GelecekBilimdeUITests-acknowledgements.plist */,
+				FF7FEC5EC9F9BBFF1F1936175D7A32EB /* Pods-GelecekBilimde-GelecekBilimdeUITests-dummy.m */,
+				558268E7A981E873CAC1B6D5EC3D9A2D /* Pods-GelecekBilimde-GelecekBilimdeUITests-frameworks.sh */,
+				D6B5D439A1DBF6A4D35A29F5943A5BA5 /* Pods-GelecekBilimde-GelecekBilimdeUITests-Info.plist */,
+				6FA56E35EB365866A44E05A0467BC40D /* Pods-GelecekBilimde-GelecekBilimdeUITests-umbrella.h */,
+				E1EAB7B207947C4FA6DD213737CA0B05 /* Pods-GelecekBilimde-GelecekBilimdeUITests.debug.xcconfig */,
+				9381B9C7048AAB27D8D4A693B7701702 /* Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig */,
+			);
+			name = "Pods-GelecekBilimde-GelecekBilimdeUITests";
+			path = "Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests";
+			sourceTree = "<group>";
+		};
+		921553E2D06DB8CE13D09606EC458FA6 /* Pods-GelecekBilimde */ = {
+			isa = PBXGroup;
+			children = (
+				47B358D702DE2E0CB00E9088118389C9 /* Pods-GelecekBilimde.modulemap */,
+				9BE32E378BF32AF4B143EC1E6EAE6352 /* Pods-GelecekBilimde-acknowledgements.markdown */,
+				EA154420E67611B02281869BC3DBD488 /* Pods-GelecekBilimde-acknowledgements.plist */,
+				3145023D9E73975FE861C199FDFF56B8 /* Pods-GelecekBilimde-dummy.m */,
+				8864F2764D2F69B4B19280D5A3E0D610 /* Pods-GelecekBilimde-frameworks.sh */,
+				87594079DC1788135AAA24B2D7E07A8A /* Pods-GelecekBilimde-Info.plist */,
+				BA03696DA4173EF4D4D1584529C7DDCD /* Pods-GelecekBilimde-umbrella.h */,
+				9B09BAD8A2A7C1622C823CAA67D27B59 /* Pods-GelecekBilimde.debug.xcconfig */,
+				F23EBF3CF8905F97602ECB1CD6C4B350 /* Pods-GelecekBilimde.release.xcconfig */,
+			);
+			name = "Pods-GelecekBilimde";
+			path = "Target Support Files/Pods-GelecekBilimde";
+			sourceTree = "<group>";
+		};
+		A35B45DF31F6F3E2ECDA97078393B889 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5BCC9F23BD016388BB1262A3C0BFDAB /* AeroGearHttp */,
+				7AFF9512A312607BA0E9C2F83289AE5D /* AeroGearOAuth2 */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C5AA75BC5944FB20675D9D0B42FA8738 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2161FAFCA1BD0A483261531E16510FD /* AeroGearHttp.framework */,
+				5F86C4DD99DC75B74899DEB455B89B41 /* AeroGearOAuth2.framework */,
+				D27BA949E488E6CA7CFA2DD2F53C580A /* Pods_GelecekBilimde.framework */,
+				A616534BB3FFC2C1EE184CD6E0C20E8D /* Pods_GelecekBilimde_GelecekBilimdeUITests.framework */,
+				15F64EE809517B5752435FC1ED8BC612 /* Pods_GelecekBilimdeTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5BCC9F23BD016388BB1262A3C0BFDAB /* AeroGearHttp */ = {
+			isa = PBXGroup;
+			children = (
+				56FC80C371483FEF0B5409BFEE14AC37 /* AuthzModule.swift */,
+				28A78744A1F6615554FBFE02B0998CDE /* Http.swift */,
+				81A1961F1C8DFA06DA38B5C6E17A5258 /* HttpRequestSerializer.swift */,
+				4081B250434A0C2C00BC5FE20F6571C5 /* JsonRequestSerializer.swift */,
+				35BDC2DF22EC9D3E8372F760D7DF75E5 /* JsonResponseSerializer.swift */,
+				C504AF6BECAF7399957031E18A2FB655 /* MultiPartData.swift */,
+				52368D6AA56243EA5D452BBDE4B9A7EE /* RequestSerializer.swift */,
+				D2ACAFF3AF4D027E654466036A1F74F7 /* ResponseSerializer.swift */,
+				020C5A0A331293E199E9AFB81E224C85 /* StringResponseSerializer.swift */,
+				E82F3BC8656C4B1B202E958D6E3564DB /* Utils.swift */,
+				44177330C2E89F8174D8F9ADF1C80FD6 /* Support Files */,
+			);
+			name = AeroGearHttp;
+			path = AeroGearHttp;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				6A179F8C882E62751F9242625FD55B89 /* Frameworks */,
+				A35B45DF31F6F3E2ECDA97078393B889 /* Pods */,
+				C5AA75BC5944FB20675D9D0B42FA8738 /* Products */,
+				2499C258A3E0DA40BE93020E5C5AA4A5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D2655762CBF3DE7B73FBE4CA1E6AE7DF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D885BB8175863019D7CBB12A1410BB4B /* AeroGearOAuth2.modulemap */,
+				DAD6D24F555938D36BCCAB6E2D4F1613 /* AeroGearOAuth2.xcconfig */,
+				F8999676CF4E32123F5BE32FAEA486FB /* AeroGearOAuth2-dummy.m */,
+				D6E4BBAC76F2F816753A68C123AB3119 /* AeroGearOAuth2-Info.plist */,
+				0C2699B4874F3AC174532842E76D9CDB /* AeroGearOAuth2-prefix.pch */,
+				B2089549E026501516A3AD74B1A59105 /* AeroGearOAuth2-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AeroGearOAuth2";
+			sourceTree = "<group>";
+		};
+		F1DEF8B275636FAFC1C98DBD0E725C65 /* Pods-GelecekBilimdeTests */ = {
+			isa = PBXGroup;
+			children = (
+				808EC41397AA3461B02951EC6506A129 /* Pods-GelecekBilimdeTests.modulemap */,
+				C90022FCEFF5EC5203AC1387B5F3AB1A /* Pods-GelecekBilimdeTests-acknowledgements.markdown */,
+				1710470DB33C6962504066C5B4E27735 /* Pods-GelecekBilimdeTests-acknowledgements.plist */,
+				7FBED4D72282F5BD3A6905B0F399165C /* Pods-GelecekBilimdeTests-dummy.m */,
+				95BC0C5AAB0470569BAE7CA7AD430C5E /* Pods-GelecekBilimdeTests-Info.plist */,
+				2274F5EF38B1BC4FA5BB310568F48017 /* Pods-GelecekBilimdeTests-umbrella.h */,
+				C71AD3DE6BA1525114329E330D0E7EED /* Pods-GelecekBilimdeTests.debug.xcconfig */,
+				68F5CECDDDFB027FAAF50CA6A00748B4 /* Pods-GelecekBilimdeTests.release.xcconfig */,
+			);
+			name = "Pods-GelecekBilimdeTests";
+			path = "Target Support Files/Pods-GelecekBilimdeTests";
+			sourceTree = "<group>";
+		};
+		F4EA26347B93A4A632C30B58BC286F71 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8F0F026B2F8626253EFCEB4F6E647F7D /* Foundation.framework */,
+				21B7A9462A3D4F600C7B927606A64997 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0C0E1C206FB8106F308F26F6E03137C8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A2160CBF95FEE936A6C17A4EF229EFD /* AeroGearOAuth2-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848C02D0426AD03FA26101EF9C8C4C03 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAB0015C605F0FA3041C496A91A7E54C /* Pods-GelecekBilimdeTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFA3AEDFA705E17F71A4CF501A295115 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7909DCDD9AA0EB076469860EE92F37A4 /* Pods-GelecekBilimde-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D18FA0CCB50A87AE512E0062993D3696 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				020FB8D15F077A838A8B5DE5CFA87CB8 /* AeroGearHttp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9C1CA40F39F65C91D22435D5BF7DED6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4E0023B3460CD553C0F6FFED169581 /* Pods-GelecekBilimde-GelecekBilimdeUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4808B28B3A54BA906C295F4D65B06933 /* AeroGearOAuth2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE0F26FF7B60732D41EFD10BAD5EBC21 /* Build configuration list for PBXNativeTarget "AeroGearOAuth2" */;
+			buildPhases = (
+				0C0E1C206FB8106F308F26F6E03137C8 /* Headers */,
+				3EC6BFC21CC65FFF51E92895A733013D /* Sources */,
+				1A8417866E57C072B68318A7870F8CDA /* Frameworks */,
+				1691042A434ED84752622F1EE79729BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67396945308D39FE71AB2E206C99D93C /* PBXTargetDependency */,
+			);
+			name = AeroGearOAuth2;
+			productName = AeroGearOAuth2;
+			productReference = 5F86C4DD99DC75B74899DEB455B89B41 /* AeroGearOAuth2.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4888D21EBE19648A20B645C1D881A681 /* AeroGearHttp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F45093E293A2CA16320408A92F2AD855 /* Build configuration list for PBXNativeTarget "AeroGearHttp" */;
+			buildPhases = (
+				D18FA0CCB50A87AE512E0062993D3696 /* Headers */,
+				0E547F3ED28DCB33AA61F790BFF5A304 /* Sources */,
+				781449654362225CA936B62B2B5BAFBB /* Frameworks */,
+				8015A4D70B6464D4EBC26182C79464D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AeroGearHttp;
+			productName = AeroGearHttp;
+			productReference = D2161FAFCA1BD0A483261531E16510FD /* AeroGearHttp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		755BC53D52D28F6527D94D6EB6E3ECF6 /* Pods-GelecekBilimde-GelecekBilimdeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75F53901B64DDA4E1940D66DD6B288CD /* Build configuration list for PBXNativeTarget "Pods-GelecekBilimde-GelecekBilimdeUITests" */;
+			buildPhases = (
+				E9C1CA40F39F65C91D22435D5BF7DED6 /* Headers */,
+				B460D8FADB9EEE7005011F045CB8CA60 /* Sources */,
+				AACEA42F287F71488E4A25B50FCEAC3A /* Frameworks */,
+				BC960496BFE4071B9F575DAC8C5AEBAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEB052ADBCD37C88D7AC84AD7D7D17BE /* PBXTargetDependency */,
+				596BDD26F3DCAD377CFEF18B8B4B8487 /* PBXTargetDependency */,
+			);
+			name = "Pods-GelecekBilimde-GelecekBilimdeUITests";
+			productName = "Pods-GelecekBilimde-GelecekBilimdeUITests";
+			productReference = A616534BB3FFC2C1EE184CD6E0C20E8D /* Pods_GelecekBilimde_GelecekBilimdeUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A2CAA04493F01FE7144291371D3DC5DB /* Pods-GelecekBilimdeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76C41635D4118AABD93056E43D4338CF /* Build configuration list for PBXNativeTarget "Pods-GelecekBilimdeTests" */;
+			buildPhases = (
+				848C02D0426AD03FA26101EF9C8C4C03 /* Headers */,
+				2269AE54FB32AE2715775060B2C95F7D /* Sources */,
+				BE6301E20E26A01679C4EA485218DFA0 /* Frameworks */,
+				5D89C7D7D10F558CFE983726459AE2B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11866B16154BD7F7BCB991864DB57190 /* PBXTargetDependency */,
+			);
+			name = "Pods-GelecekBilimdeTests";
+			productName = "Pods-GelecekBilimdeTests";
+			productReference = 15F64EE809517B5752435FC1ED8BC612 /* Pods_GelecekBilimdeTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3B1FFC1B289F1FB76DA0FBEBA3811E7 /* Pods-GelecekBilimde */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5FAB679DA23632E363CDF2A7A4B864A /* Build configuration list for PBXNativeTarget "Pods-GelecekBilimde" */;
+			buildPhases = (
+				CFA3AEDFA705E17F71A4CF501A295115 /* Headers */,
+				EBD0505CEE255942A2EC1898916620B2 /* Sources */,
+				8B76F8A620A70610D8AB14DAD12642E0 /* Frameworks */,
+				AE0FFA49A153A1B09093BB9534AFF92E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A4775A72DD272C8530D97F8D13A2E4F /* PBXTargetDependency */,
+				B930AA4AEA16FDAF077FAB2E0B239B8F /* PBXTargetDependency */,
+			);
+			name = "Pods-GelecekBilimde";
+			productName = "Pods-GelecekBilimde";
+			productReference = D27BA949E488E6CA7CFA2DD2F53C580A /* Pods_GelecekBilimde.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C5AA75BC5944FB20675D9D0B42FA8738 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4888D21EBE19648A20B645C1D881A681 /* AeroGearHttp */,
+				4808B28B3A54BA906C295F4D65B06933 /* AeroGearOAuth2 */,
+				F3B1FFC1B289F1FB76DA0FBEBA3811E7 /* Pods-GelecekBilimde */,
+				755BC53D52D28F6527D94D6EB6E3ECF6 /* Pods-GelecekBilimde-GelecekBilimdeUITests */,
+				A2CAA04493F01FE7144291371D3DC5DB /* Pods-GelecekBilimdeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1691042A434ED84752622F1EE79729BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D89C7D7D10F558CFE983726459AE2B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8015A4D70B6464D4EBC26182C79464D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE0FFA49A153A1B09093BB9534AFF92E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC960496BFE4071B9F575DAC8C5AEBAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E547F3ED28DCB33AA61F790BFF5A304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02B0306FB9040E59318CD104A40B6CF6 /* AeroGearHttp-dummy.m in Sources */,
+				E1696B72E93114FF26FE7901AC0083DC /* AuthzModule.swift in Sources */,
+				4D8B3BC43C6B5C69768B5C40D50A3AB9 /* Http.swift in Sources */,
+				F9DE8E0A46ED4E2DA5BDF47D07DA389B /* HttpRequestSerializer.swift in Sources */,
+				67D890FFEB2F55E03E01C60C2816EDC9 /* JsonRequestSerializer.swift in Sources */,
+				024B5998E35988C67C73B0171B1600C4 /* JsonResponseSerializer.swift in Sources */,
+				2AAD34381A2E81711D3556B70EC66E8B /* MultiPartData.swift in Sources */,
+				42C06B15B79D2F1E87672A02423C92E6 /* RequestSerializer.swift in Sources */,
+				D7352732D81F3FE285C9878D530473C2 /* ResponseSerializer.swift in Sources */,
+				F8B3ED817B2371AA8CEDFBD14413F2AF /* StringResponseSerializer.swift in Sources */,
+				8025F219D765BB2739A5B12194E63880 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2269AE54FB32AE2715775060B2C95F7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87EB40E6D71A51A086EE7B02C7DFC728 /* Pods-GelecekBilimdeTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC6BFC21CC65FFF51E92895A733013D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC8EFE4950F013BADAAE0B44B3E663B /* AccountManager.swift in Sources */,
+				2009FA07E67B7C6FCA7391E4A4ED9982 /* AeroGearOAuth2-dummy.m in Sources */,
+				C91E2D6FCA0EDBFB671DA066530DB8B5 /* Config.swift in Sources */,
+				42CB8A7222F64755B94B2B25D095A851 /* DateUtils.swift in Sources */,
+				AEC915B461D10972594514B05F940B41 /* FacebookOAuth2Module.swift in Sources */,
+				3467A4BEF8EFD504C690B2DAFBCCF402 /* KeycloakOAuth2Module.swift in Sources */,
+				4CF04651D2B863EEC7FEE908F85A7563 /* OAuth2Module.swift in Sources */,
+				16DEBAD23279D357B4E57003982CF63C /* OAuth2Session.swift in Sources */,
+				16339E4CBDAD3195822FA7D7C682F8A3 /* OAuth2WebViewController.swift in Sources */,
+				3D495D6189F283E829C48C6C83B281AC /* OpenIdClaim.swift in Sources */,
+				180476CD0213C8B9E15EDE71E4E95D22 /* TrustedPersistantOAuth2Session.swift in Sources */,
+				0B626390CAACA17D0B45EC509B4235F5 /* UntrustedMemoryOAuth2Session.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B460D8FADB9EEE7005011F045CB8CA60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D22F31CF8BADAA8B87E80CE94DBB4B /* Pods-GelecekBilimde-GelecekBilimdeUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBD0505CEE255942A2EC1898916620B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E6D9C2F992D2451AE51438D74EA547 /* Pods-GelecekBilimde-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11866B16154BD7F7BCB991864DB57190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-GelecekBilimde";
+			target = F3B1FFC1B289F1FB76DA0FBEBA3811E7 /* Pods-GelecekBilimde */;
+			targetProxy = 1BA2045237792420F6A7A189019D87A1 /* PBXContainerItemProxy */;
+		};
+		596BDD26F3DCAD377CFEF18B8B4B8487 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AeroGearOAuth2;
+			target = 4808B28B3A54BA906C295F4D65B06933 /* AeroGearOAuth2 */;
+			targetProxy = 1B2F49DDF1C2AFFB15B3A4707330CF38 /* PBXContainerItemProxy */;
+		};
+		67396945308D39FE71AB2E206C99D93C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AeroGearHttp;
+			target = 4888D21EBE19648A20B645C1D881A681 /* AeroGearHttp */;
+			targetProxy = 0A6BE0570F91244AF6DEFCCA343D323D /* PBXContainerItemProxy */;
+		};
+		8A4775A72DD272C8530D97F8D13A2E4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AeroGearHttp;
+			target = 4888D21EBE19648A20B645C1D881A681 /* AeroGearHttp */;
+			targetProxy = 4EA9CA3D1B840603CDF2D4D22E1FB900 /* PBXContainerItemProxy */;
+		};
+		B930AA4AEA16FDAF077FAB2E0B239B8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AeroGearOAuth2;
+			target = 4808B28B3A54BA906C295F4D65B06933 /* AeroGearOAuth2 */;
+			targetProxy = 4764105955342409B568E42C9619594F /* PBXContainerItemProxy */;
+		};
+		FEB052ADBCD37C88D7AC84AD7D7D17BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AeroGearHttp;
+			target = 4888D21EBE19648A20B645C1D881A681 /* AeroGearHttp */;
+			targetProxy = B8EB0EC984D3C4E2A50AF1526A73ECAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08729E383E9C48A790B6D2478B200E15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B09BAD8A2A7C1622C823CAA67D27B59 /* Pods-GelecekBilimde.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		13194ACD967A280248F294FFFADB3A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F5CECDDDFB027FAAF50CA6A00748B4 /* Pods-GelecekBilimdeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GelecekBilimdeTests/Pods-GelecekBilimdeTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GelecekBilimdeTests/Pods-GelecekBilimdeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1413154ACD395DF96D531C46162ACA73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAD6D24F555938D36BCCAB6E2D4F1613 /* AeroGearOAuth2.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AeroGearOAuth2/AeroGearOAuth2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AeroGearOAuth2/AeroGearOAuth2-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AeroGearOAuth2/AeroGearOAuth2.modulemap";
+				PRODUCT_MODULE_NAME = AeroGearOAuth2;
+				PRODUCT_NAME = AeroGearOAuth2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		145B9C302DB3BA2ACC67FC3338E886F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C71AD3DE6BA1525114329E330D0E7EED /* Pods-GelecekBilimdeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GelecekBilimdeTests/Pods-GelecekBilimdeTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GelecekBilimdeTests/Pods-GelecekBilimdeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2A0A928EAA5873A2396A4AF4D838C8F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAD6D24F555938D36BCCAB6E2D4F1613 /* AeroGearOAuth2.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AeroGearOAuth2/AeroGearOAuth2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AeroGearOAuth2/AeroGearOAuth2-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AeroGearOAuth2/AeroGearOAuth2.modulemap";
+				PRODUCT_MODULE_NAME = AeroGearOAuth2;
+				PRODUCT_NAME = AeroGearOAuth2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2C6CF2EC1A4A42CC655B04F3D0C7FA04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53FFEF6A4DC34AD6EBBB195A8A4F0729 /* AeroGearHttp.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AeroGearHttp/AeroGearHttp-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AeroGearHttp/AeroGearHttp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AeroGearHttp/AeroGearHttp.modulemap";
+				PRODUCT_MODULE_NAME = AeroGearHttp;
+				PRODUCT_NAME = AeroGearHttp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		540DC882D091D3E7007F7FF6AC71AFFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9381B9C7048AAB27D8D4A693B7701702 /* Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8FADA1D6856E33D9EEAC113A293FE10D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1EAB7B207947C4FA6DD213737CA0B05 /* Pods-GelecekBilimde-GelecekBilimdeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9CF75D33EB440D074A9F3213E6C07729 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F23EBF3CF8905F97602ECB1CD6C4B350 /* Pods-GelecekBilimde.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DCF2EF92296B988092CFD5706F5D301D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53FFEF6A4DC34AD6EBBB195A8A4F0729 /* AeroGearHttp.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AeroGearHttp/AeroGearHttp-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AeroGearHttp/AeroGearHttp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AeroGearHttp/AeroGearHttp.modulemap";
+				PRODUCT_MODULE_NAME = AeroGearHttp;
+				PRODUCT_NAME = AeroGearHttp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75F53901B64DDA4E1940D66DD6B288CD /* Build configuration list for PBXNativeTarget "Pods-GelecekBilimde-GelecekBilimdeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FADA1D6856E33D9EEAC113A293FE10D /* Debug */,
+				540DC882D091D3E7007F7FF6AC71AFFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76C41635D4118AABD93056E43D4338CF /* Build configuration list for PBXNativeTarget "Pods-GelecekBilimdeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				145B9C302DB3BA2ACC67FC3338E886F3 /* Debug */,
+				13194ACD967A280248F294FFFADB3A9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE0F26FF7B60732D41EFD10BAD5EBC21 /* Build configuration list for PBXNativeTarget "AeroGearOAuth2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A0A928EAA5873A2396A4AF4D838C8F9 /* Debug */,
+				1413154ACD395DF96D531C46162ACA73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5FAB679DA23632E363CDF2A7A4B864A /* Build configuration list for PBXNativeTarget "Pods-GelecekBilimde" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08729E383E9C48A790B6D2478B200E15 /* Debug */,
+				9CF75D33EB440D074A9F3213E6C07729 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F45093E293A2CA16320408A92F2AD855 /* Build configuration list for PBXNativeTarget "AeroGearHttp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF2EF92296B988092CFD5706F5D301D /* Debug */,
+				2C6CF2EC1A4A42CC655B04F3D0C7FA04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
