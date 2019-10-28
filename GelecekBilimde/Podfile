@@ -1,0 +1,20 @@
+platform :ios, '9.0'
+
+target 'GelecekBilimde' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for GelecekBilimde
+    pod 'AeroGearOAuth2'
+    
+    
+  target 'GelecekBilimdeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'GelecekBilimdeUITests' do
+    # Pods for testing
+  end
+
+end

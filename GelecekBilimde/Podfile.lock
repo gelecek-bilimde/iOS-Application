@@ -1,0 +1,20 @@
+PODS:
+  - AeroGearHttp (2.0.0)
+  - AeroGearOAuth2 (2.0.0):
+    - AeroGearHttp (= 2.0.0)
+
+DEPENDENCIES:
+  - AeroGearOAuth2
+
+SPEC REPOS:
+  trunk:
+    - AeroGearHttp
+    - AeroGearOAuth2
+
+SPEC CHECKSUMS:
+  AeroGearHttp: 65bf374aefd3521e1d8d33547e4db96047b745aa
+  AeroGearOAuth2: 759cd8f9a8bc0395021d21724cc8f8d0fac34eb6
+
+PODFILE CHECKSUM: 2d3fd4ba9178549702f971436b9168fd0d6fd49a
+
+COCOAPODS: 1.8.4
