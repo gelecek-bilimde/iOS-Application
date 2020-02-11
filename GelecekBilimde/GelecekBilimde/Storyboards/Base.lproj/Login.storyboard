@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dHa-g9-2a2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DJB-I1-XXR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,6 +13,25 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="3Lo-DT-lOW">
+            <objects>
+                <viewController id="DJB-I1-XXR" customClass="OnboardingViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8KW-Te-tVU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dEy-bL-g7o"/>
+                    </view>
+                    <connections>
+                        <segue destination="dHa-g9-2a2" kind="presentation" identifier="goToLoginPage" modalPresentationStyle="fullScreen" id="A4c-QD-Bco"/>
+                        <segue destination="lT3-o4-Ua1" kind="presentation" identifier="goToApp" modalPresentationStyle="fullScreen" id="adO-kb-xn6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQG-dr-X3G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4501" y="-512"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="5pW-UE-JPa">
             <objects>
@@ -54,13 +73,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NWB-Xe-1Ym"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OED-XO-T3d"/>
                     <connections>
+                        <outlet property="horizontalView" destination="07G-4a-SPu" id="LiY-Nz-6uv"/>
                         <segue destination="lT3-o4-Ua1" kind="presentation" identifier="goToInitialPage" modalPresentationStyle="fullScreen" id="CDV-Mx-bZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHu-CN-D3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3513" y="-512"/>
+            <point key="canvasLocation" x="-3513.04347826087" y="-512.27678571428567"/>
         </scene>
         <!--Initial-->
         <scene sceneID="usE-yp-99z">
@@ -68,10 +89,13 @@
                 <viewControllerPlaceholder storyboardName="Initial" id="lT3-o4-Ua1" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vk-Fy-t5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2704" y="-512"/>
+            <point key="canvasLocation" x="-4083" y="52"/>
         </scene>
     </scenes>
     <resources>
         <image name="GelecekBilimdeLogo" width="1000" height="1000"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="adO-kb-xn6"/>
+    </inferredMetricsTieBreakers>
 </document>

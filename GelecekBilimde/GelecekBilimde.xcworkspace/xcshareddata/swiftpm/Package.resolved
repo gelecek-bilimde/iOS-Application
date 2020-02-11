@@ -2,12 +2,21 @@
   "object": {
     "pins": [
       {
-        "package": "KeychainSwift",
-        "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
+        "package": "JGProgressHUD",
+        "repositoryURL": "https://github.com/JonasGessner/JGProgressHUD",
         "state": {
           "branch": null,
-          "revision": "e2b52071483eec7b18c521d6cc74e24983804722",
-          "version": "17.0.0"
+          "revision": "08d130dd614a743f813286f096804c43a6ffa3f6",
+          "version": "2.1.0"
+        }
+      },
+      {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios",
+        "state": {
+          "branch": null,
+          "revision": "8f81de8d81da8631fd95ff81a9db133b76e13ea4",
+          "version": "3.1.6"
         }
       }
     ]
