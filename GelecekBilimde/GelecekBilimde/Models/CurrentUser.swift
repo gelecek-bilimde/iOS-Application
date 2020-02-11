@@ -9,18 +9,18 @@
 import Foundation
 
 class CurrentUser {
-    static var currentUser = User(accessToken: "", name: "", email: "")
+    static var currentUser = AppUser(name: "", photoURL: "", email: "")
     
     private init(){}
     
-    static func addCurrentUser(accessToken: String, name: String, email: String) {
-        currentUser.accessToken = accessToken
+    static func addCurrentUser(name: String, photoURL: String, email: String) {
+        currentUser.photoURL = photoURL
         currentUser.name = name
         currentUser.email = email
     }
     
     static func clearCurrentUser() {
-        currentUser.accessToken = ""
+        currentUser.photoURL = ""
         currentUser.name = ""
         currentUser.email = ""
     }

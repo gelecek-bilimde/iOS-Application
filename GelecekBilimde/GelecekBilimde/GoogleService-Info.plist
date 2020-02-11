@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>528854357550-snrma3rqfv3n2gk3eh23crvd9cvkmgh2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.528854357550-snrma3rqfv3n2gk3eh23crvd9cvkmgh2</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>528854357550-deulefgtb1up666th5u18nkag8keppre.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDQHrTPhjnqULhRc2VjSJ83Z9eNfqfbe7c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>528854357550</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gelecekbilimde.GelecekBilimde</string>
+	<key>PROJECT_ID</key>
+	<string>gelecekbilimde-30829</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gelecekbilimde-30829.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:528854357550:ios:4b88c3e8d107786664b1bf</string>
+	<key>DATABASE_URL</key>
+	<string>https://gelecekbilimde-30829.firebaseio.com</string>
+</dict>
+</plist>
