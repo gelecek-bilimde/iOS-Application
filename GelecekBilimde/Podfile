@@ -5,8 +5,7 @@ target 'GelecekBilimde' do
   use_frameworks!
 
   # Pods for GelecekBilimde
-    pod 'AeroGearOAuth2'
-    
+  
     
   target 'GelecekBilimdeTests' do
     inherit! :search_paths

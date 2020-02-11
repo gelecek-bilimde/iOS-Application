@@ -22,7 +22,6 @@ private struct _Storyboard {
 /// This class used for store and manage view controller classes from one point
 /// Sample usage: let targetVC = Destination().targetVC
 struct Destination {
-    
     let Bookmarks = _Storyboard.Bookmarks.instantiateViewController(withIdentifier: "bookmarksViewController") as! BookmarksViewController
     let BookmarkedArticles = _Storyboard.Bookmarks.instantiateViewController(withIdentifier: "bookmarkedArticles") as! BookmarkedArticlesTableViewController
     let BookmarkedVideos = _Storyboard.Bookmarks.instantiateViewController(withIdentifier: "bookmarkedVideos") as! BookmarkedVideosTableViewController

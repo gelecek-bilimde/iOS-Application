@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AeroGearOAuth2
 
 @UIApplicationMain
 class AppDelegate: UIResponder {
@@ -22,20 +21,6 @@ extension AppDelegate: UIApplicationDelegate {
         setTabbarCostumuzation()
         setUserAgentForGoogleSignIn()
         return true
-    }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        //For return to app after login
-        let notification = Notification(name: Notification.Name(AGAppLaunchedWithURLNotification),
-                                        object:nil,
-                                        userInfo:[UIApplication.LaunchOptionsKey.url:url])
-        NotificationCenter.default.post(notification)
-        
-        return true
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        CoreDataManager.shared.saveContext()
     }
 }
 

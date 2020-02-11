@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dHa-g9-2a2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dHa-g9-2a2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,30 +42,15 @@
                                     <constraint firstAttribute="height" constant="1" id="rLz-xA-Vwu"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imb-qv-9fi" customClass="CustomAuthButton" customModule="GelecekBilimde" customModuleProvider="target">
-                                <rect key="frame" x="80" y="604" width="254" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="t3A-7c-KcR"/>
-                                </constraints>
-                                <state key="normal" title="Giriş Yap"/>
-                                <connections>
-                                    <action selector="authButtonClicked:" destination="dHa-g9-2a2" eventType="touchUpInside" id="TDh-65-HQr"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XGE-m3-ZC9" firstAttribute="top" secondItem="NWB-Xe-1Ym" secondAttribute="top" constant="130" id="275-oN-OII"/>
                             <constraint firstItem="5NV-e5-8Ao" firstAttribute="centerX" secondItem="NWB-Xe-1Ym" secondAttribute="centerX" id="5vZ-D9-svK"/>
-                            <constraint firstItem="NWB-Xe-1Ym" firstAttribute="trailing" secondItem="Imb-qv-9fi" secondAttribute="trailing" constant="80" id="BZO-Cu-RNE"/>
                             <constraint firstItem="07G-4a-SPu" firstAttribute="top" secondItem="5NV-e5-8Ao" secondAttribute="bottom" constant="20" id="Cmv-g9-nGF"/>
-                            <constraint firstItem="Imb-qv-9fi" firstAttribute="leading" secondItem="NWB-Xe-1Ym" secondAttribute="leading" constant="80" id="X3E-OK-gCC"/>
                             <constraint firstItem="XGE-m3-ZC9" firstAttribute="centerX" secondItem="NWB-Xe-1Ym" secondAttribute="centerX" id="gki-bq-Ly4"/>
-                            <constraint firstItem="NWB-Xe-1Ym" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Imb-qv-9fi" secondAttribute="bottom" constant="35" id="uM3-gH-6qM"/>
-                            <constraint firstItem="Imb-qv-9fi" firstAttribute="centerX" secondItem="NWB-Xe-1Ym" secondAttribute="centerX" id="uz4-da-6TB"/>
                             <constraint firstItem="07G-4a-SPu" firstAttribute="centerX" secondItem="NWB-Xe-1Ym" secondAttribute="centerX" id="vxO-G8-ssm"/>
                             <constraint firstItem="5NV-e5-8Ao" firstAttribute="top" secondItem="XGE-m3-ZC9" secondAttribute="bottom" constant="40" id="x7R-rb-zvC"/>
-                            <constraint firstItem="Imb-qv-9fi" firstAttribute="top" secondItem="07G-4a-SPu" secondAttribute="bottom" constant="80" id="y68-wv-iWK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NWB-Xe-1Ym"/>
                     </view>
