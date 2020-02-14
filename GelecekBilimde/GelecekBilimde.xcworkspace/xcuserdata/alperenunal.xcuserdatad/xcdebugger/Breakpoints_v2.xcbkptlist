@@ -14,11 +14,14 @@
             symbolName = "*0x1054af5e8">
             <Locations>
                <Location
+                  uuid = "56C63AA7-DBD2-423D-BF23-48263687DCFE - d07b5007d3a5a2cf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
+                  symbolName = "char const* std::__1::basic_regex&lt;char, std::__1::regex_traits&lt;char&gt; &gt;::__parse_character_class_escape&lt;char const*&gt;(char const*, char const*)"
+                  moduleName = "GelecekBilimde"
                   usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
+                  offsetFromSymbolStart = "284">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -33,11 +36,14 @@
             symbolName = "*0x1054af5e0">
             <Locations>
                <Location
+                  uuid = "EE72E5F2-F4B6-4AF1-85BF-F5E2DF2AAD0D - d07b5007d3a5a2cf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
+                  symbolName = "char const* std::__1::basic_regex&lt;char, std::__1::regex_traits&lt;char&gt; &gt;::__parse_character_class_escape&lt;char const*&gt;(char const*, char const*)"
+                  moduleName = "GelecekBilimde"
                   usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
+                  offsetFromSymbolStart = "276">
                </Location>
             </Locations>
          </BreakpointContent>
