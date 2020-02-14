@@ -24,6 +24,7 @@ class ArticlesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshArticles), name: NSNotification.Name(rawValue: "articleBookmarkChangeFromBookmark"), object: nil)
         articleViewModel = ArticleViewModel()
         articleViewModel.loadArticlesCache()
         //This is for setting table view's background color
@@ -39,6 +40,10 @@ class ArticlesTableViewController: UITableViewController {
 }
 // MARK: - Auxiliary Methods
 extension ArticlesTableViewController {
+    @objc func refreshArticles(){
+        articleViewModel.loadArticlesCache()
+        tableView.reloadData()
+    }
     
     @objc func getFreshData(){
         currentPage = 1
@@ -89,6 +94,7 @@ extension ArticlesTableViewController {
         let currentArticle = articleViewModel.articlesCache?[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleTableViewCell
         guard let article = currentArticle else { return UITableViewCell() }
+        cell.delegate = self
         cell.setArticle(article: article)
         return cell
     }
@@ -111,6 +117,22 @@ extension ArticlesTableViewController {
                 
                 destinationVC.currentArticle = content
             }
+        }
+    }
+}
+//MARK: Article Cell Delegate
+extension ArticlesTableViewController: ArticleCellDelegate {
+    func didTapBookmark(article: ArticleCache) {
+        if article.bookmarked {
+            //Set False
+            articleViewModel.changeArticleBookmark(article: article, state: false)
+            articleViewModel.loadArticlesCache()
+            tableView.reloadData()
+        } else {
+            //Set True
+            articleViewModel.changeArticleBookmark(article: article, state: true)
+            articleViewModel.loadArticlesCache()
+            tableView.reloadData()
         }
     }
 }

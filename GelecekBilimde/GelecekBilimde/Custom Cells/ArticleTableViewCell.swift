@@ -9,6 +9,10 @@
 import UIKit
 import SDWebImage
 
+protocol ArticleCellDelegate {
+    func didTapBookmark(article: ArticleCache)
+}
+
 class ArticleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var articleBookmarkImageView: UIImageView!
@@ -16,6 +20,10 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var articleTitleLabel: UILabel!
     @IBOutlet weak var articleDescriptionLabel: UILabel!
     @IBOutlet weak var articleAddedDateLabel: UILabel!
+    
+    var currentArticle: ArticleCache!
+    var delegate: ArticleCellDelegate?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,6 +43,7 @@ class ArticleTableViewCell: UITableViewCell {
     }
     
     func setArticle(article: ArticleCache) {
+        currentArticle = article
         articleMainImageView.image = UIImage(named: "GelecekBilimdeLogo")
         articleTitleLabel.text = article.title
         articleDescriptionLabel.text = "\(String(cleanString(from: article.excrpt).prefix(75)))..."
@@ -56,7 +65,7 @@ class ArticleTableViewCell: UITableViewCell {
     }
     
     @objc func bookmarkClicked(){
-        print("Click")
+        delegate?.didTapBookmark(article: currentArticle)
     }
     
 }
