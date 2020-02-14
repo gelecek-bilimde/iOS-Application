@@ -124,6 +124,9 @@
                         <barButtonItem key="backBarButtonItem" title="Geri" id="HYi-ee-CoI"/>
                         <barButtonItem key="rightBarButtonItem" image="share" id="FSW-hF-hW1">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="nKo-kY-ZK2" id="v8S-Lt-Z8M"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>

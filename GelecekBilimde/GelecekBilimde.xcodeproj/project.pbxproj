@@ -31,6 +31,9 @@
 		847FFCE92336B3490013363F /* InitialTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FFCE82336B3490013363F /* InitialTabBarViewController.swift */; };
 		847FFCEC2336BF960013363F /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FFCEB2336BF960013363F /* ArticlesTableViewController.swift */; };
 		847FFCEE2336C2110013363F /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FFCED2336C2110013363F /* ArticleTableViewCell.swift */; };
+		84823E1823F6992B00AC832D /* VideoCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823E1723F6992B00AC832D /* VideoCache.swift */; };
+		84823E1B23F69B5300AC832D /* VideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823E1A23F69B5300AC832D /* VideosViewModel.swift */; };
+		84823E1F23F6BD9F00AC832D /* VideoContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823E1E23F6BD9F00AC832D /* VideoContentViewController.swift */; };
 		8488C6B123F2E7B800575C33 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8488C6B023F2E7B800575C33 /* GoogleService-Info.plist */; };
 		8488C6B423F2EB4E00575C33 /* GoogleSignInAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C6B323F2EB4E00575C33 /* GoogleSignInAuth.swift */; };
 		84B77A4723672B2D00AF81D2 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B77A4623672B2D00AF81D2 /* AppUser.swift */; };
@@ -104,6 +107,9 @@
 		847FFCE82336B3490013363F /* InitialTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTabBarViewController.swift; sourceTree = "<group>"; };
 		847FFCEB2336BF960013363F /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		847FFCED2336C2110013363F /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		84823E1723F6992B00AC832D /* VideoCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCache.swift; sourceTree = "<group>"; };
+		84823E1A23F69B5300AC832D /* VideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewModel.swift; sourceTree = "<group>"; };
+		84823E1E23F6BD9F00AC832D /* VideoContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentViewController.swift; sourceTree = "<group>"; };
 		8488C6B023F2E7B800575C33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8488C6B323F2EB4E00575C33 /* GoogleSignInAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInAuth.swift; sourceTree = "<group>"; };
 		84A9E94023F326C0000C7D88 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +218,7 @@
 		841B3CF523F2F5560007A75E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				84823E1C23F6BD8000AC832D /* Video Content */,
 				840E7F0E23F5E480008DE850 /* Article Content */,
 				843D086A23F31C5100DBF6E8 /* Onboarding */,
 				841B3D0023F2F62F0007A75E /* Bookmarks */,
@@ -276,6 +283,7 @@
 		841B3CFC23F2F5EA0007A75E /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				84823E1923F69B3F00AC832D /* ViewModel */,
 				841B3CFD23F2F6030007A75E /* Controller */,
 			);
 			path = Videos;
@@ -376,6 +384,30 @@
 				843A86922337EE7300D35507 /* VideoTableViewCell.swift */,
 			);
 			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		84823E1923F69B3F00AC832D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84823E1A23F69B5300AC832D /* VideosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84823E1C23F6BD8000AC832D /* Video Content */ = {
+			isa = PBXGroup;
+			children = (
+				84823E1D23F6BD8B00AC832D /* Controller */,
+			);
+			path = "Video Content";
+			sourceTree = "<group>";
+		};
+		84823E1D23F6BD8B00AC832D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84823E1E23F6BD9F00AC832D /* VideoContentViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		8488C6B223F2EB0E00575C33 /* Authentication */ = {
@@ -483,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				84C7B29423F555CD00821044 /* ArticleCache.swift */,
+				84823E1723F6992B00AC832D /* VideoCache.swift */,
 			);
 			path = "Cache Models";
 			sourceTree = "<group>";
@@ -854,6 +887,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84823E1F23F6BD9F00AC832D /* VideoContentViewController.swift in Sources */,
+				84823E1823F6992B00AC832D /* VideoCache.swift in Sources */,
 				840E7F1123F5E4BE008DE850 /* ArticleContentViewController.swift in Sources */,
 				84C7B27C23F54A9D00821044 /* NetworkLogger.swift in Sources */,
 				843A86952337F43200D35507 /* BookmarksViewController.swift in Sources */,
@@ -886,6 +921,7 @@
 				847FFCEE2336C2110013363F /* ArticleTableViewCell.swift in Sources */,
 				84C7B28923F54BC900821044 /* ArticleEndPoint.swift in Sources */,
 				847FFCE92336B3490013363F /* InitialTabBarViewController.swift in Sources */,
+				84823E1B23F69B5300AC832D /* VideosViewModel.swift in Sources */,
 				84C7B28E23F54D3700821044 /* ArticleResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

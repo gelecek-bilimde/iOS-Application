@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ArticleContentViewController: UIViewController {
+class ArticleContentViewController: UIViewController, UIDocumentInteractionControllerDelegate {
     
     var webView: WKWebView!
     var currentArticle: ArticleCache!
@@ -46,5 +46,11 @@ class ArticleContentViewController: UIViewController {
         webView.loadHTMLString(html, baseURL: nil)
         hud.stop()
     }
-
+    
+    
+    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
+        let activityController = UIActivityViewController(activityItems: [currentArticle.link], applicationActivities: nil)
+        present(activityController, animated: true)
+    }
+    
 }
