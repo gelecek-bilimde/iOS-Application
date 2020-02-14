@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fAU-wF-KDl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fAU-wF-KDl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
         <array key="SF-Pro-Display-Regular.otf">
             <string>SFProDisplay-Regular</string>
         </array>
@@ -21,21 +25,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="g4s-fp-QmA">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" red="0.01176470588" green="0.10980392160000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="4nV-Y2-wsc" customClass="ArticleTableViewCell" customModule="GelecekBilimde" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="150" id="4nV-Y2-wsc" customClass="ArticleTableViewCell" customModule="GelecekBilimde" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4nV-Y2-wsc" id="0Ak-sE-jFw">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1lh-yl-Daz">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GelecekBilimdeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="1lh-yl-Daz">
                                             <rect key="frame" x="12" y="30" width="90" height="90"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="1lh-yl-Daz" secondAttribute="height" multiplier="1:1" id="7Xx-Ns-Ugb"/>
@@ -44,23 +42,23 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJp-9E-dY7">
-                                            <rect key="frame" x="127" y="45" width="150" height="20"/>
+                                            <rect key="frame" x="127" y="25" width="202" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="eaO-sJ-3KN"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwT-mE-TjC">
-                                            <rect key="frame" x="127" y="85" width="81.5" height="20"/>
-                                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwT-mE-TjC">
+                                            <rect key="frame" x="127" y="55" width="222" height="18"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pR8-I1-0KL">
-                                            <rect key="frame" x="302.5" y="119" width="76.5" height="20"/>
-                                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                            <rect key="frame" x="316" y="122" width="63" height="17"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -78,10 +76,12 @@
                                         <constraint firstAttribute="trailing" secondItem="3kW-3s-eOU" secondAttribute="trailing" constant="25" id="0Lk-t4-Wg7"/>
                                         <constraint firstAttribute="bottom" secondItem="pR8-I1-0KL" secondAttribute="bottom" constant="11" id="Brm-e7-4Nw"/>
                                         <constraint firstItem="3kW-3s-eOU" firstAttribute="top" secondItem="0Ak-sE-jFw" secondAttribute="top" constant="25" id="KZK-Bn-3Ir"/>
-                                        <constraint firstItem="RwT-mE-TjC" firstAttribute="top" secondItem="FJp-9E-dY7" secondAttribute="bottom" constant="20" id="SA1-DM-HJ1"/>
+                                        <constraint firstItem="3kW-3s-eOU" firstAttribute="leading" secondItem="FJp-9E-dY7" secondAttribute="trailing" constant="20" id="MoT-cN-1gW"/>
+                                        <constraint firstItem="RwT-mE-TjC" firstAttribute="top" secondItem="FJp-9E-dY7" secondAttribute="bottom" constant="10" id="SA1-DM-HJ1"/>
+                                        <constraint firstAttribute="trailing" secondItem="RwT-mE-TjC" secondAttribute="trailing" constant="65" id="bjF-dW-MVE"/>
                                         <constraint firstAttribute="trailing" secondItem="pR8-I1-0KL" secondAttribute="trailing" constant="35" id="d3h-YW-iir"/>
                                         <constraint firstItem="FJp-9E-dY7" firstAttribute="leading" secondItem="1lh-yl-Daz" secondAttribute="trailing" constant="25" id="hxB-i1-brF"/>
-                                        <constraint firstItem="FJp-9E-dY7" firstAttribute="top" secondItem="0Ak-sE-jFw" secondAttribute="top" constant="45" id="pbl-WW-qfA"/>
+                                        <constraint firstItem="FJp-9E-dY7" firstAttribute="top" secondItem="0Ak-sE-jFw" secondAttribute="top" constant="25" id="pbl-WW-qfA"/>
                                         <constraint firstItem="1lh-yl-Daz" firstAttribute="leading" secondItem="0Ak-sE-jFw" secondAttribute="leading" constant="12" id="pgu-5v-Swr"/>
                                         <constraint firstItem="RwT-mE-TjC" firstAttribute="leading" secondItem="1lh-yl-Daz" secondAttribute="trailing" constant="25" id="s5L-Oq-are"/>
                                     </constraints>
@@ -102,10 +102,34 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Makaleler" id="mGu-ck-k0L"/>
+                    <connections>
+                        <segue destination="nKo-kY-ZK2" kind="show" identifier="goToArticleContent" id="8Cd-hb-yTc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="an8-pW-NAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1213.0434782608697" y="164.73214285714286"/>
+        </scene>
+        <!--Makale Ismi-->
+        <scene sceneID="5sU-E9-obF">
+            <objects>
+                <viewController id="nKo-kY-ZK2" customClass="ArticleContentViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ubw-rH-ewO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="nwS-aQ-7xa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Makale Ismi" id="amv-eR-unb">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="HYi-ee-CoI"/>
+                        <barButtonItem key="rightBarButtonItem" image="share" id="FSW-hF-hW1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05Y-9c-zpw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081" y="165"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S0P-4z-WmJ">
@@ -117,6 +141,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qys-T3-XOc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.011764705882352941" green="0.10980392156862745" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,7 +158,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GelecekBilimdeLogo" width="1000" height="1000"/>
         <image name="articles" width="45" height="45"/>
+        <image name="share" width="30" height="30"/>
         <image name="unbookmarked" width="96" height="96"/>
     </resources>
 </document>
