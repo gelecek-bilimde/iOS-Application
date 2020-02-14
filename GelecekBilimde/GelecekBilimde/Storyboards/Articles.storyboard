@@ -113,7 +113,7 @@
         <!--Makale Ismi-->
         <scene sceneID="5sU-E9-obF">
             <objects>
-                <viewController id="nKo-kY-ZK2" customClass="ArticleContentViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleContentViewController" id="nKo-kY-ZK2" customClass="ArticleContentViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ubw-rH-ewO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

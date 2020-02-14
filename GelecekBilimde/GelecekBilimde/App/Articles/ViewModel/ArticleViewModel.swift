@@ -148,4 +148,18 @@ class ArticleViewModel {
               print("Error: \(error)")
           }
       }
+    func changeArticleBookmark(article: ArticleCache, state: Bool){
+        let article = realm.objects(ArticleCache.self).filter("id == %@", article.id).first
+        
+        do{
+            try realm.write {
+                article?.bookmarked = state
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "articleBookmarkChange"), object: nil,
+                userInfo: nil)
+            }
+        }
+        catch{
+            print("Error: \(error)")
+        }
+    }
 }
