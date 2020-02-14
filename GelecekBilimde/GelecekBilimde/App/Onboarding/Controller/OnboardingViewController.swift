@@ -13,6 +13,8 @@ import FirebaseDatabase
 
 class OnboardingViewController: UIViewController {
 
+    var animationView: AnimationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setAnimationView()
@@ -23,9 +25,14 @@ class OnboardingViewController: UIViewController {
         setAnimationView()
         checkIsAuthenticate()
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        animationView.stop()
+        animationView.removeFromSuperview()
+    }
     
     func setAnimationView(){
-        let animationView = AnimationView(name: "invites-sent")
+        animationView = AnimationView(name: "invites-sent")
         animationView.frame = self.view.frame
         animationView.center = self.view.center
         animationView.contentMode = .scaleAspectFill

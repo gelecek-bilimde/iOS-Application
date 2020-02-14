@@ -9,6 +9,7 @@ target 'GelecekBilimde' do
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
+    pod 'RealmSwift'
     
   target 'GelecekBilimdeTests' do
     inherit! :search_paths
