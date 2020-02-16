@@ -15,8 +15,8 @@ class VideosTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshVideos), name: NSNotification.Name(rawValue: "videoBookmarkChangeFromBookmark"), object: nil)
         videosViewModel = VideosViewModel()
-        //videosViewModel.clearVideosCache()
         videosViewModel.loadVideosCache()
         
         //This is for setting table view's background color
@@ -49,6 +49,11 @@ class VideosTableViewController: UITableViewController {
             }
         }
     }
+    
+    @objc func refreshVideos(){
+         videosViewModel.loadVideosCache()
+         tableView.reloadData()
+     }
 }
 
 // MARK: - Table view data source
@@ -66,6 +71,7 @@ extension VideosTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let currentVideo = videosViewModel.videosCache?[indexPath.row] else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as! VideoTableViewCell
+        cell.delegate = self
         cell.setVideo(videoCache: currentVideo)
         return cell
     }
@@ -89,6 +95,23 @@ extension VideosTableViewController {
                 
                 destinationVC.currentVideo = videoContent
             }
+        }
+    }
+}
+
+//MARK: Video Cell Delegate
+extension VideosTableViewController: VideoCellDelegate {
+    func didTapBookmark(video: VideoCache) {
+        if video.bookmarked {
+            //Set False
+            videosViewModel.changeVideoBookmark(video: video, state: false)
+            videosViewModel.loadVideosCache()
+            tableView.reloadData()
+        } else {
+            //Set True
+            videosViewModel.changeVideoBookmark(video: video, state: true)
+            videosViewModel.loadVideosCache()
+            tableView.reloadData()
         }
     }
 }

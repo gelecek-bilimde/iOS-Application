@@ -9,12 +9,19 @@
 import UIKit
 import SDWebImage
 
+protocol VideoCellDelegate {
+    func didTapBookmark(video: VideoCache)
+}
+
 class VideoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var videoThumbnailImageView: UIImageView!
     @IBOutlet weak var videoBookmarkImageView: UIImageView!
     @IBOutlet weak var videoTitleLabel: UILabel!
     @IBOutlet weak var videoDateLabel: UILabel!
+    
+    var currentVideo: VideoCache!
+    var delegate: VideoCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,10 +41,18 @@ class VideoTableViewCell: UITableViewCell {
     }
     
     @objc func bookmarkClicked(){
-        print("Click")
+        UIView.animate(withDuration: 0.2, delay: 0,  options: [], animations: {
+            self.videoBookmarkImageView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            DispatchQueue.main.async {
+                self.videoBookmarkImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            }
+        }) { (finished) in
+            self.delegate?.didTapBookmark(video: self.currentVideo)
+        }
     }
     
     func setVideo(videoCache: VideoCache){
+        currentVideo = videoCache
         videoThumbnailImageView.contentMode = .scaleAspectFill
         let dateComponent = findDateFromString(dateString: videoCache.videoDate)
         videoTitleLabel.text = videoCache.videoTitle

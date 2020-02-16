@@ -51,8 +51,6 @@ extension ArticleAPI: EndPointType {
             return .requestParameters(bodyParameters: nil,
                                       bodyEncoding: .urlEncoding,
             urlParameters: ["page":page])
-        default:
-            return .request
         }
     }
     

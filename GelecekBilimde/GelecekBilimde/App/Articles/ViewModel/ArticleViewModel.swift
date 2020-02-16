@@ -76,7 +76,7 @@ class ArticleViewModel {
         for article in articles {
             let existingPerson = realm.object(ofType: ArticleCache.self, forPrimaryKey: article.id)
             
-            if let existingPerson = existingPerson {
+            if let _ = existingPerson {
                 
             } else {
                 // Add article
@@ -106,7 +106,7 @@ class ArticleViewModel {
         
             let existingPerson = realm.object(ofType: ArticleCache.self, forPrimaryKey: article.id)
         
-            if let existingPerson = existingPerson {
+            if let _ = existingPerson {
                 
             } else {
                 // Add article

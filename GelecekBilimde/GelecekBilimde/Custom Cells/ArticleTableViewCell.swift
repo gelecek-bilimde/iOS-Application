@@ -65,7 +65,14 @@ class ArticleTableViewCell: UITableViewCell {
     }
     
     @objc func bookmarkClicked(){
-        delegate?.didTapBookmark(article: currentArticle)
+        UIView.animate(withDuration: 0.2, delay: 0,  options: [], animations: {
+            self.articleBookmarkImageView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            DispatchQueue.main.async {
+                self.articleBookmarkImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            }
+        }) { (finished) in
+            self.delegate?.didTapBookmark(article: self.currentArticle)
+        }
     }
     
 }
