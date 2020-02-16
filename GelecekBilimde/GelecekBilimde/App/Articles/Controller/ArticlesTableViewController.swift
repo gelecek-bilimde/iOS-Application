@@ -30,8 +30,10 @@ class ArticlesTableViewController: UITableViewController {
         //This is for setting table view's background color
         self.tableView.backgroundColor = UIColor.tableViewBgColor
         self.tableView.refreshControl = refresher
+        hud.play(view: view)
         articleViewModel.getArticles(page: currentPage) {
             DispatchQueue.main.async {
+                self.hud.stop()
                 self.articleViewModel.loadArticlesCache()
                 self.tableView.reloadData()
             }

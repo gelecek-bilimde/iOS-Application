@@ -107,7 +107,7 @@
         <!--Video Ismi-->
         <scene sceneID="YiC-Vv-evS">
             <objects>
-                <viewController id="lQY-n1-WrU" customClass="VideoContentViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoContentViewController" id="lQY-n1-WrU" customClass="VideoContentViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L26-ZS-vDa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

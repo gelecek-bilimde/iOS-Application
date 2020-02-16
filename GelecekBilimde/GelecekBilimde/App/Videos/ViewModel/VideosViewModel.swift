@@ -50,7 +50,7 @@ class VideosViewModel {
     func addToCache(videoCache: VideoCache){
         let existingVideo = realm.object(ofType: VideoCache.self, forPrimaryKey: videoCache.videoURLId)
         
-        if let existingVideo = existingVideo {
+        if let _ = existingVideo {
         } else {
             // Add video
             do{
@@ -69,6 +69,21 @@ class VideosViewModel {
                 loadVideosCache()
                 //And delete main page contents in cache
                 realm.delete(videosCache!)
+            }
+        }
+        catch{
+            print("Error: \(error)")
+        }
+    }
+    
+    func changeVideoBookmark(video: VideoCache, state: Bool){
+        let video = realm.objects(VideoCache.self).filter("videoURLId == %@", video.videoURLId).first
+        
+        do{
+            try realm.write {
+                video?.bookmarked = state
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "videoBookmarkChange"), object: nil,
+                userInfo: nil)
             }
         }
         catch{
