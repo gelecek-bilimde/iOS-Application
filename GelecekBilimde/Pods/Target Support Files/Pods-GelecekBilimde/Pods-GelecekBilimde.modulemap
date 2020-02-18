@@ -1,4 +1,4 @@
-module Pods_GelecekBilimde {
+framework module Pods_GelecekBilimde {
   umbrella header "Pods-GelecekBilimde-umbrella.h"
 
   export *

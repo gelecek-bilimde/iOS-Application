@@ -1,4 +1,4 @@
-module Pods_GelecekBilimde_GelecekBilimdeUITests {
+framework module Pods_GelecekBilimde_GelecekBilimdeUITests {
   umbrella header "Pods-GelecekBilimde-GelecekBilimdeUITests-umbrella.h"
 
   export *

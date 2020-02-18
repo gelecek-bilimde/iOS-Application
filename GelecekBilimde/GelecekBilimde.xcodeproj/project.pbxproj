@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CC5AFE31D6205AFB5955BD2 /* libPods-GelecekBilimde.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5433F571F549E6A1987E418 /* libPods-GelecekBilimde.a */; };
-		74B357917A83E89E0DC656B0 /* libPods-GelecekBilimdeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04072494AAD0562D92C54896 /* libPods-GelecekBilimdeTests.a */; };
+		1632CA4BB3BF58BB962C3CE6 /* Pods_GelecekBilimde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71FBA494C8441007AD0CC3C /* Pods_GelecekBilimde.framework */; };
 		840E7F1123F5E4BE008DE850 /* ArticleContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E7F1023F5E4BE008DE850 /* ArticleContentViewController.swift */; };
 		841B3D0423F2F7040007A75E /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 841B3D0323F2F7040007A75E /* JGProgressHUD */; };
 		843A86912337E86500D35507 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A86902337E86500D35507 /* VideosTableViewController.swift */; };
@@ -57,6 +56,7 @@
 		84C7B29523F555CD00821044 /* ArticleCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7B29423F555CD00821044 /* ArticleCache.swift */; };
 		84C7B29B23F565AD00821044 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 84C7B29A23F565AD00821044 /* SDWebImage */; };
 		84C7B29D23F565AD00821044 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 84C7B29C23F565AD00821044 /* SDWebImageMapKit */; };
+		9D777E3E7BBFAE2E09BF3234 /* Pods_GelecekBilimde_GelecekBilimdeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D512A83A52CBBB99FC94516D /* Pods_GelecekBilimde_GelecekBilimdeUITests.framework */; };
 		EA787C1B2316DCBA000AC250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA787C1A2316DCBA000AC250 /* AppDelegate.swift */; };
 		EA787C202316DCBA000AC250 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA787C1E2316DCBA000AC250 /* Login.storyboard */; };
 		EA787C252316DCBB000AC250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA787C242316DCBB000AC250 /* Assets.xcassets */; };
@@ -66,7 +66,7 @@
 		EA99566B23426187006C91FE /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA99566A23426187006C91FE /* Destination.swift */; };
 		EA99566E234265BC006C91FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA99566D234265BC006C91FE /* ProfileViewController.swift */; };
 		EA995671234266A6006C91FE /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA995670234266A6006C91FE /* UIColor+CustomColors.swift */; };
-		F632B538AD38182860563B76 /* libPods-GelecekBilimde-GelecekBilimdeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B01F6CD9D756C9C35A505AB8 /* libPods-GelecekBilimde-GelecekBilimdeUITests.a */; };
+		F73F1D4B3625F8AFEB802496 /* Pods_GelecekBilimdeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC516C8F24A25823F27AFD80 /* Pods_GelecekBilimdeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04072494AAD0562D92C54896 /* libPods-GelecekBilimdeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GelecekBilimdeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B127585DC0CFF2E3463C79 /* Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig"; path = "Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57767462EFE4EB65822407F7 /* Pods-GelecekBilimde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimde.release.xcconfig"; path = "Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde.release.xcconfig"; sourceTree = "<group>"; };
 		840E7F1023F5E4BE008DE850 /* ArticleContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentViewController.swift; sourceTree = "<group>"; };
@@ -140,9 +139,10 @@
 		963FF8D520FD9DABF82BF9BB /* Pods-GelecekBilimde-GelecekBilimdeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimde-GelecekBilimdeUITests.debug.xcconfig"; path = "Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BD33AF99B81AF0DC23FF204 /* Pods-GelecekBilimde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimde.debug.xcconfig"; path = "Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD2CDBAF8BBAD5F950186DB /* Pods-GelecekBilimdeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimdeTests.release.xcconfig"; path = "Target Support Files/Pods-GelecekBilimdeTests/Pods-GelecekBilimdeTests.release.xcconfig"; sourceTree = "<group>"; };
-		B01F6CD9D756C9C35A505AB8 /* libPods-GelecekBilimde-GelecekBilimdeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GelecekBilimde-GelecekBilimdeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC516C8F24A25823F27AFD80 /* Pods_GelecekBilimdeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GelecekBilimdeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0DFD65AE340F2538B6B9C2B /* Pods-GelecekBilimdeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimdeTests.debug.xcconfig"; path = "Target Support Files/Pods-GelecekBilimdeTests/Pods-GelecekBilimdeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E5433F571F549E6A1987E418 /* libPods-GelecekBilimde.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GelecekBilimde.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D512A83A52CBBB99FC94516D /* Pods_GelecekBilimde_GelecekBilimdeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GelecekBilimde_GelecekBilimdeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D71FBA494C8441007AD0CC3C /* Pods_GelecekBilimde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GelecekBilimde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA787C172316DCBA000AC250 /* GelecekBilimde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GelecekBilimde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA787C1A2316DCBA000AC250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA787C1F2316DCBA000AC250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 				84C7B29D23F565AD00821044 /* SDWebImageMapKit in Frameworks */,
 				843D086923F31AD300DBF6E8 /* Lottie in Frameworks */,
 				84C7B29B23F565AD00821044 /* SDWebImage in Frameworks */,
-				0CC5AFE31D6205AFB5955BD2 /* libPods-GelecekBilimde.a in Frameworks */,
+				1632CA4BB3BF58BB962C3CE6 /* Pods_GelecekBilimde.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74B357917A83E89E0DC656B0 /* libPods-GelecekBilimdeTests.a in Frameworks */,
+				F73F1D4B3625F8AFEB802496 /* Pods_GelecekBilimdeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F632B538AD38182860563B76 /* libPods-GelecekBilimde-GelecekBilimdeUITests.a in Frameworks */,
+				9D777E3E7BBFAE2E09BF3234 /* Pods_GelecekBilimde_GelecekBilimdeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,9 +543,9 @@
 				84A9E94A23F32B1B000C7D88 /* GTMAppAuth.framework */,
 				84A9E94623F32B08000C7D88 /* AppAuth.framework */,
 				84A9E94023F326C0000C7D88 /* AppAuth.framework */,
-				E5433F571F549E6A1987E418 /* libPods-GelecekBilimde.a */,
-				B01F6CD9D756C9C35A505AB8 /* libPods-GelecekBilimde-GelecekBilimdeUITests.a */,
-				04072494AAD0562D92C54896 /* libPods-GelecekBilimdeTests.a */,
+				D71FBA494C8441007AD0CC3C /* Pods_GelecekBilimde.framework */,
+				D512A83A52CBBB99FC94516D /* Pods_GelecekBilimde_GelecekBilimdeUITests.framework */,
+				AC516C8F24A25823F27AFD80 /* Pods_GelecekBilimdeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -657,6 +657,7 @@
 				EA787C142316DCBA000AC250 /* Frameworks */,
 				EA787C152316DCBA000AC250 /* Resources */,
 				62DAA85FDE6D65C3E1832E6C /* [CP] Copy Pods Resources */,
+				B75D3AAD7B1B42315D02C799 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -701,6 +702,7 @@
 				EA787C362316DCBC000AC250 /* Frameworks */,
 				EA787C372316DCBC000AC250 /* Resources */,
 				75500ED93AD0863CAF6764D9 /* [CP] Copy Pods Resources */,
+				5184C1C7C5E276E64894B41C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -819,6 +821,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5184C1C7C5E276E64894B41C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		62DAA85FDE6D65C3E1832E6C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -895,6 +914,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B75D3AAD7B1B42315D02C799 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
