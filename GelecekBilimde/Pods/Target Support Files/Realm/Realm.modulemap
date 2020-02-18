@@ -1,4 +1,4 @@
-module Realm {
+framework module Realm {
     umbrella header "Realm.h"
 
     export *
