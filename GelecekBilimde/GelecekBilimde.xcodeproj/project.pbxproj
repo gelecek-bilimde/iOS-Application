@@ -37,6 +37,7 @@
 		8488C6B423F2EB4E00575C33 /* GoogleSignInAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488C6B323F2EB4E00575C33 /* GoogleSignInAuth.swift */; };
 		849DAA4223F918E3003C106F /* BookmarkVideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DAA4123F918E3003C106F /* BookmarkVideoViewModel.swift */; };
 		849DAA4423F93799003C106F /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DAA4323F93799003C106F /* SettingTableViewCell.swift */; };
+		84A2CBA023FEFCA800220D63 /* SignInWithAppleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2CB9F23FEFCA800220D63 /* SignInWithAppleAuth.swift */; };
 		84AD06CF23F726BC0066FF9F /* BookmarkArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD06CE23F726BC0066FF9F /* BookmarkArticleViewModel.swift */; };
 		84B77A4723672B2D00AF81D2 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B77A4623672B2D00AF81D2 /* AppUser.swift */; };
 		84B77A4C236736A800AF81D2 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B77A4B236736A800AF81D2 /* UIFont+CustomFonts.swift */; };
@@ -116,6 +117,8 @@
 		8488C6B323F2EB4E00575C33 /* GoogleSignInAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInAuth.swift; sourceTree = "<group>"; };
 		849DAA4123F918E3003C106F /* BookmarkVideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkVideoViewModel.swift; sourceTree = "<group>"; };
 		849DAA4323F93799003C106F /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		84A2CB9E23FEFBBA00220D63 /* GelecekBilimde.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GelecekBilimde.entitlements; sourceTree = "<group>"; };
+		84A2CB9F23FEFCA800220D63 /* SignInWithAppleAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleAuth.swift; sourceTree = "<group>"; };
 		84A9E94023F326C0000C7D88 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A9E94623F32B08000C7D88 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A9E94A23F32B1B000C7D88 /* GTMAppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMAppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -422,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				8488C6B323F2EB4E00575C33 /* GoogleSignInAuth.swift */,
+				84A2CB9F23FEFCA800220D63 /* SignInWithAppleAuth.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -575,6 +579,7 @@
 		EA787C192316DCBA000AC250 /* GelecekBilimde */ = {
 			isa = PBXGroup;
 			children = (
+				84A2CB9E23FEFBBA00220D63 /* GelecekBilimde.entitlements */,
 				843D086E23F31D0E00DBF6E8 /* invites-sent.json */,
 				EA787C1A2316DCBA000AC250 /* AppDelegate.swift */,
 				EA787C292316DCBB000AC250 /* Info.plist */,
@@ -968,6 +973,7 @@
 				8488C6B423F2EB4E00575C33 /* GoogleSignInAuth.swift in Sources */,
 				843A86912337E86500D35507 /* VideosTableViewController.swift in Sources */,
 				843A86992337F7A300D35507 /* BookmarkedVideosTableViewController.swift in Sources */,
+				84A2CBA023FEFCA800220D63 /* SignInWithAppleAuth.swift in Sources */,
 				84AD06CF23F726BC0066FF9F /* BookmarkArticleViewModel.swift in Sources */,
 				843A86932337EE7300D35507 /* VideoTableViewCell.swift in Sources */,
 				84C7B28323F54B3000821044 /* JSONParameterEncoder.swift in Sources */,
@@ -1154,6 +1160,7 @@
 			baseConfigurationReference = 9BD33AF99B81AF0DC23FF204 /* Pods-GelecekBilimde.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GelecekBilimde/GelecekBilimde.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTMVBPSRA5;
 				INFOPLIST_FILE = GelecekBilimde/Info.plist;
@@ -1174,6 +1181,7 @@
 			baseConfigurationReference = 57767462EFE4EB65822407F7 /* Pods-GelecekBilimde.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GelecekBilimde/GelecekBilimde.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTMVBPSRA5;
 				INFOPLIST_FILE = GelecekBilimde/Info.plist;

@@ -25,13 +25,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         setView()
     }
-    
-//    @IBAction func logoutClicked(_ sender: UIButton) {
-//        try? Auth.auth().signOut()
-//        GIDSignIn.sharedInstance()?.signOut()
-//        CurrentUser.clearCurrentUser()
-//        dismiss(animated: true)
-//    }
 }
 
 
@@ -51,9 +44,10 @@ extension ProfileViewController {
         userImageView.layer.borderColor = UIColor.white.cgColor
         userImageView.layer.borderWidth = 1
         usernameLabel.text = CurrentUser.currentUser.name
-        guard let url = URL(string: CurrentUser.currentUser.photoURL) else { return }
-        userImageView.sd_setImage(with: url)
-        
+        if CurrentUser.currentUser.photoURL != "" {
+            guard let url = URL(string: CurrentUser.currentUser.photoURL) else { return }
+            userImageView.sd_setImage(with: url)
+        }
     }
 }
 

@@ -68,7 +68,7 @@
         <scene sceneID="xid-qS-68R">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pyv-E5-MUu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bookmarks" id="LwH-Km-CEe"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-bookmark" id="LwH-Km-CEe"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HgZ-LK-Ieu">
@@ -308,7 +308,7 @@
     </scenes>
     <resources>
         <image name="GelecekBilimdeLogo" width="1000" height="1000"/>
-        <image name="bookmarks" width="45" height="45"/>
+        <image name="icons8-bookmark" width="25" height="25"/>
         <image name="unbookmarked" width="96" height="96"/>
         <image name="youtubePlaceHolder" width="1200" height="1200"/>
     </resources>

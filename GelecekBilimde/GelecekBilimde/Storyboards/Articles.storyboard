@@ -138,7 +138,7 @@
         <scene sceneID="S0P-4z-WmJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fAU-wF-KDl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="articles" id="0V8-Eh-nSk"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-news" id="0V8-Eh-nSk"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qys-T3-XOc">
@@ -162,7 +162,7 @@
     </scenes>
     <resources>
         <image name="GelecekBilimdeLogo" width="1000" height="1000"/>
-        <image name="articles" width="45" height="45"/>
+        <image name="icons8-news" width="25" height="25"/>
         <image name="share" width="30" height="30"/>
         <image name="unbookmarked" width="96" height="96"/>
     </resources>

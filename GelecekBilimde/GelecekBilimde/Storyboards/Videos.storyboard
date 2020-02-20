@@ -154,7 +154,7 @@
         <scene sceneID="eBV-YE-DvL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u1L-R5-uMI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="videos" id="wpR-au-vnO"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-play-button" id="wpR-au-vnO"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uVD-Mq-dKz">
@@ -178,9 +178,9 @@
     </scenes>
     <resources>
         <image name="GelecekBilimdeLogo" width="1000" height="1000"/>
+        <image name="icons8-play-button" width="25" height="25"/>
         <image name="share" width="30" height="30"/>
         <image name="unbookmarked" width="96" height="96"/>
-        <image name="videos" width="45" height="45"/>
         <image name="youtubePlaceHolder" width="1200" height="1200"/>
     </resources>
 </document>
