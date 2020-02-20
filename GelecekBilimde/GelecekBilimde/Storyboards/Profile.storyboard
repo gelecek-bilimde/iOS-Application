@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sz3-1h-4YT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait_Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="sz3-1h-4YT">
                                 <rect key="frame" x="119.5" y="113" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sz3-1h-4YT" secondAttribute="height" multiplier="1:1" id="PL3-S3-nHy"/>
@@ -138,7 +138,7 @@
         <scene sceneID="wxn-eK-gYC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="834-mn-oeN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="profile" id="7m4-xr-feF"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-user" id="7m4-xr-feF"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="10O-G1-ulv">
@@ -160,6 +160,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profile" width="45" height="45"/>
+        <image name="Portrait_Placeholder" width="600" height="600"/>
+        <image name="icons8-user" width="25" height="25"/>
     </resources>
 </document>
