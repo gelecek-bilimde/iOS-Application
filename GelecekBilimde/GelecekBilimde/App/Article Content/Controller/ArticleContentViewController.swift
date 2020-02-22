@@ -38,7 +38,7 @@ class ArticleContentViewController: UIViewController, UIDocumentInteractionContr
         li { color: white; } h1 { color: white; } h2 { color: white; } h3 { color: white; } h4 { color: white; }
         </style>
         </head>
-        <body style="background-color:#0B3762;">
+        <body style="background-color:#0B3762;font-family:Arial">
         \(currentArticle.content)
         </body>
         </html>

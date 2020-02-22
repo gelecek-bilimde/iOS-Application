@@ -86,7 +86,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 openSiteOnSafari(url: "https://www.youtube.com/channel/UC03cpKIZShIWoSBhfVE5bog")
             }
         case "Twitch":
-            if !openInAppIsExist(url: "twitch://stream/gelecekbilimde") {
+            if !openInAppIsExist(url: "twitch://open?stream=gelecekbilimde") {
                 openSiteOnSafari(url: "https://www.twitch.tv/gelecekbilimde")
             }
         case "Twitter":
