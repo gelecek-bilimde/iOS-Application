@@ -14,11 +14,19 @@
             symbolName = "*0x1054af5e8">
             <Locations>
                <Location
+                  uuid = "56C63AA7-DBD2-423D-BF23-48263687DCFE - 6c12b6f7fb5cdc23"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
+                  symbolName = "Lottie.SingleValueProvider.value(frame: CoreGraphics.CGFloat) -&gt; Any"
+                  moduleName = "GelecekBilimde"
                   usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
+                  urlString = "file:///Users/alperenunal/Library/Developer/Xcode/DerivedData/GelecekBilimde-dslskqythadpilcqowfcwjtjsvuv/SourcePackages/checkouts/lottie-ios/lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/SingleValueProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "216">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -33,11 +41,19 @@
             symbolName = "*0x1054af5e0">
             <Locations>
                <Location
+                  uuid = "EE72E5F2-F4B6-4AF1-85BF-F5E2DF2AAD0D - 6c12b6f7fb5cdc23"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
+                  symbolName = "Lottie.SingleValueProvider.value(frame: CoreGraphics.CGFloat) -&gt; Any"
+                  moduleName = "GelecekBilimde"
                   usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
+                  urlString = "file:///Users/alperenunal/Library/Developer/Xcode/DerivedData/GelecekBilimde-dslskqythadpilcqowfcwjtjsvuv/SourcePackages/checkouts/lottie-ios/lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/SingleValueProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "208">
                </Location>
             </Locations>
          </BreakpointContent>

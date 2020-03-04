@@ -45,7 +45,7 @@ class ArticleTableViewCell: UITableViewCell {
     func setArticle(article: ArticleCache) {
         currentArticle = article
         articleMainImageView.image = UIImage(named: "GelecekBilimdeLogo")
-        articleTitleLabel.text = article.title
+        articleTitleLabel.text = convertHTMLEntities(stringToConvert: article.title)
         articleDescriptionLabel.text = "\(String(cleanString(from: article.excrpt).prefix(75)))..."
         let calender = Calendar.current
         let dateComponent = calender.dateComponents([.year, .month, .day], from: article.date)
@@ -62,6 +62,22 @@ class ArticleTableViewCell: UITableViewCell {
     func cleanString(from text: String) -> String {
         let cleanString = text.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         return cleanString
+    }
+    
+    func convertHTMLEntities(stringToConvert: String) -> String{
+        guard let data = stringToConvert.data(using: .utf8) else {
+            return ""
+        }
+
+        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+            .documentType: NSAttributedString.DocumentType.html,
+            .characterEncoding: String.Encoding.utf8.rawValue
+        ]
+
+        guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else {
+            return ""
+        }
+        return attributedString.string
     }
     
     @objc func bookmarkClicked(){

@@ -13,6 +13,8 @@ import FirebaseDatabase
 class VideosViewModel {
     let realm = try! Realm()
     var videosCache: Results<VideoCache>?
+    var dbLastVideo: VideoCache?
+    var lastVideo: VideoCache?
     
     func loadVideosCache() {
         videosCache = realm.objects(VideoCache.self).sorted(byKeyPath: "videoDate", ascending: false)
@@ -20,14 +22,14 @@ class VideosViewModel {
     
     func getVideos(completion: @escaping () -> ()){
         let videosRef = Database.database().reference().child("Videos")
-        let lastVideo = videosCache?.last
+        dbLastVideo = videosCache?.last
         var queryRef: DatabaseQuery
         if lastVideo == nil {
             queryRef = videosRef.queryOrdered(byChild: "videoDate").queryLimited(toLast: 10)
         } else {
-            queryRef = videosRef.queryOrdered(byChild: "videoDate").queryEnding(atValue: lastVideo!.videoDate).queryLimited(toLast: 10)
+            queryRef = videosRef.queryOrdered(byChild: "videoDate").queryEnding(atValue: dbLastVideo!.videoDate).queryLimited(toLast: 10)
         }
-        queryRef.observeSingleEvent(of: .value) { (snapshot) in
+        queryRef.observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
                 guard let childDatasnapshot = child as? DataSnapshot else { return }
                 if let userDic = childDatasnapshot.value as? NSDictionary {
@@ -40,11 +42,16 @@ class VideosViewModel {
                     videoCache.videoURLId = videoURLId
                     videoCache.videoTitle = videoTitle
                     videoCache.videoImageURL = videoImageURL
+                    self.lastVideo = videoCache
                     self.addToCache(videoCache: videoCache)
                 }
             }
             completion()
-        }
+        }, withCancel: { (error) in
+            DispatchQueue.main.async {
+                print(error)
+            }
+        })
     }
     
     func addToCache(videoCache: VideoCache){
