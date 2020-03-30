@@ -24,6 +24,11 @@ class ArticlesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //NavBar title customizations
+        navigationController?.navigationBar.barTintColor = UIColor.barTintColor
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = attributes
+        
         NotificationCenter.default.addObserver(self, selector: #selector(refreshArticles), name: NSNotification.Name(rawValue: "articleBookmarkChangeFromBookmark"), object: nil)
         articleViewModel = ArticleViewModel()
         articleViewModel.loadArticlesCache()

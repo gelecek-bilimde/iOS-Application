@@ -37,6 +37,10 @@ extension ProfileViewController {
 // MARK: - Auxiliary Methods
 extension ProfileViewController {
     func setView(){
+        //NavBar title customizations
+        navigationController?.navigationBar.barTintColor = UIColor.barTintColor
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = attributes
         tableView.delegate = self
         tableView.dataSource = self
         userImageView.layer.cornerRadius = userImageView.bounds.height / 2

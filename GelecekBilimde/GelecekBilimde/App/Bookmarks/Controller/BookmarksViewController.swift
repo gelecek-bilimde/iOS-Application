@@ -29,7 +29,10 @@ class BookmarksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //NavBar title customizations
+        navigationController?.navigationBar.barTintColor = UIColor.barTintColor
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = attributes
         //This function is setting bookmarked article and video table views in the container view
         self.setupView()
         
