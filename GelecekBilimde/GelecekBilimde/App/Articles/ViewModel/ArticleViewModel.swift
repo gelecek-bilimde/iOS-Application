@@ -35,18 +35,6 @@ class ArticleViewModel {
                     
                     self.articles.append(contentsOf: articles)
                     
-//                    for i in 0..<self.articles.count {
-//                        Database.database().reference().child("Articles").child(String(self.articles[i].id)).observe(.value) { (snapshot) in
-//                            if let userDic = snapshot.value as? NSDictionary {
-//                                if let articleImageURL = userDic["articleImageURL"] as? String {
-//                                    print(articleImageURL)
-//                                    self.articles[i].imageURL = articleImageURL
-//                                }
-//                            }
-//                            self.writeArticleToCache(article: self.articles[i])
-//                            completion()
-//                        }
-//                    }
                     self.writeAll()
                     self.updateArticleImages()
                     completion()

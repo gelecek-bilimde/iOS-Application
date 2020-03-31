@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct ArticleResponse: Decodable {
+struct ArticleResponse: Codable, Equatable {
+    
     var id: Int
     var date: String
     var link: String
@@ -16,15 +17,19 @@ struct ArticleResponse: Decodable {
     var title: Title
     var excerpt: Excerpt
     var imageURL: String?
+    
+    static func == (lhs: ArticleResponse, rhs: ArticleResponse) -> Bool {
+        return lhs.id == rhs.id && lhs.date == rhs.date && lhs.link == rhs.link && lhs.content == rhs.content && lhs.title == rhs.title && lhs.excerpt == rhs.excerpt && lhs.imageURL == rhs.imageURL
+    }
 }
 
-struct Content: Decodable {
+struct Content: Codable, Equatable {
     var rendered: String
 }
 
-struct Title: Decodable {
+struct Title: Codable, Equatable {
     var rendered: String
 }
-struct Excerpt: Decodable {
+struct Excerpt: Codable, Equatable {
     var rendered: String
 }

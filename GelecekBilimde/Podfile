@@ -15,6 +15,7 @@ target 'GelecekBilimde' do
   target 'GelecekBilimdeTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RealmSwift'
   end
 
   target 'GelecekBilimdeUITests' do
