@@ -12,6 +12,7 @@ import RealmSwift
 import UserNotifications
 import FirebaseMessaging
 import Siren
+import SafariServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder {
@@ -24,6 +25,9 @@ class AppDelegate: UIResponder {
 extension AppDelegate: UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         
         Siren.shared.wail()
         
@@ -124,7 +128,15 @@ extension AppDelegate {
         let dictionary = NSDictionary(object: "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36", forKey: "UserAgent" as NSCopying)
         UserDefaults.standard.register(defaults: dictionary as! [String : Any])
     }
-    
+    func getTopMostViewController() -> UIViewController? {
+          var topMostViewController = UIApplication.shared.keyWindow?.rootViewController
+
+          while let presentedViewController = topMostViewController?.presentedViewController {
+              topMostViewController = presentedViewController
+          }
+
+          return topMostViewController
+      }
 }
 
 @available(iOS 10, *)
@@ -162,6 +174,16 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
 
     // Print full message.
     print(userInfo)
+    
+    if let urlString = userInfo["url"] as? String {
+        //Open Url on the safari
+        guard let url = URL(string: urlString) else { return }
+        let config = SFSafariViewController.Configuration()
+
+        let vc = SFSafariViewController(url: url, configuration: config)
+        
+        self.getTopMostViewController()?.present(vc, animated: true)
+    }
 
     completionHandler()
   }

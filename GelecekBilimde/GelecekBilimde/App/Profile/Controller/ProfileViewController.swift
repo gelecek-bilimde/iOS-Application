@@ -110,7 +110,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func openSiteOnSafari(url: String){
         guard let siteURL = URL(string: url) else { return }
         let config = SFSafariViewController.Configuration()
-        config.entersReaderIfAvailable = true
+        config.entersReaderIfAvailable = false
 
         let vc = SFSafariViewController(url: siteURL, configuration: config)
         present(vc, animated: true)
