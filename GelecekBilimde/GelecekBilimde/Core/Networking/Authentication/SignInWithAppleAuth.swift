@@ -131,6 +131,7 @@ extension SignInWithAppleAuth {
                     return
                 } else {
                     guard let userResult = authUser?.user else { return }
+                    
                     if appleIDCredential.email != nil {
                         hud.stop()
                         self.defaults.set("\(String(describing: appleIDCredential.fullName!.givenName!)) \(String(describing: appleIDCredential.fullName!.familyName!))", forKey: "AppleDisplayName")
@@ -140,7 +141,7 @@ extension SignInWithAppleAuth {
                         hud.stop()
                         let name = self.defaults.string(forKey: "AppleDisplayName")
                         let email = self.defaults.string(forKey: "AppleEmail")
-                        CurrentUser.addCurrentUser(name: name!, photoURL: "", email: email!)
+                        CurrentUser.addCurrentUser(name: name ?? "", photoURL: "", email: email ?? "")
                         self.currentVC.performSegue(withIdentifier: "goToInitialPage", sender: nil)
                     }
                 }

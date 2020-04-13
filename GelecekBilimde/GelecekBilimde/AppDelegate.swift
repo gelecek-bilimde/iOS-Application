@@ -11,6 +11,7 @@ import Firebase
 import RealmSwift
 import UserNotifications
 import FirebaseMessaging
+import Siren
 
 @UIApplicationMain
 class AppDelegate: UIResponder {
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder {
 extension AppDelegate: UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        Siren.shared.wail()
         
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)

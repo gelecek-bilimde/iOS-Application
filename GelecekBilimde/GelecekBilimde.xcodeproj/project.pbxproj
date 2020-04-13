@@ -10,6 +10,7 @@
 		1632CA4BB3BF58BB962C3CE6 /* Pods_GelecekBilimde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71FBA494C8441007AD0CC3C /* Pods_GelecekBilimde.framework */; };
 		840E7F1123F5E4BE008DE850 /* ArticleContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E7F1023F5E4BE008DE850 /* ArticleContentViewController.swift */; };
 		841B3D0423F2F7040007A75E /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 841B3D0323F2F7040007A75E /* JGProgressHUD */; };
+		843A3F0824339EBA00356947 /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = 843A3F0724339EBA00356947 /* Siren */; };
 		843A86912337E86500D35507 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A86902337E86500D35507 /* VideosTableViewController.swift */; };
 		843A86932337EE7300D35507 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A86922337EE7300D35507 /* VideoTableViewCell.swift */; };
 		843A86952337F43200D35507 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A86942337F43200D35507 /* BookmarksViewController.swift */; };
@@ -175,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843A3F0824339EBA00356947 /* Siren in Frameworks */,
 				841B3D0423F2F7040007A75E /* JGProgressHUD in Frameworks */,
 				84C7B29D23F565AD00821044 /* SDWebImageMapKit in Frameworks */,
 				843D086923F31AD300DBF6E8 /* Lottie in Frameworks */,
@@ -709,6 +711,7 @@
 				843D086823F31AD300DBF6E8 /* Lottie */,
 				84C7B29A23F565AD00821044 /* SDWebImage */,
 				84C7B29C23F565AD00821044 /* SDWebImageMapKit */,
+				843A3F0724339EBA00356947 /* Siren */,
 			);
 			productName = GelecekBilimde;
 			productReference = EA787C172316DCBA000AC250 /* GelecekBilimde.app */;
@@ -792,6 +795,7 @@
 				841B3D0223F2F7030007A75E /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 				843D086723F31AD300DBF6E8 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				84C7B29923F565AD00821044 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				843A3F0624339EBA00356947 /* XCRemoteSwiftPackageReference "Siren" */,
 			);
 			productRefGroup = EA787C182316DCBA000AC250 /* Products */;
 			projectDirPath = "";
@@ -1226,7 +1230,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gelecekbilimde.GelecekBilimde;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1248,7 +1252,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gelecekbilimde.GelecekBilimde;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1393,6 +1397,14 @@
 				minimumVersion = 2.1.0;
 			};
 		};
+		843A3F0624339EBA00356947 /* XCRemoteSwiftPackageReference "Siren" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ArtSabintsev/Siren";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 		843D086723F31AD300DBF6E8 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -1416,6 +1428,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 841B3D0223F2F7030007A75E /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
 			productName = JGProgressHUD;
+		};
+		843A3F0724339EBA00356947 /* Siren */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 843A3F0624339EBA00356947 /* XCRemoteSwiftPackageReference "Siren" */;
+			productName = Siren;
 		};
 		843D086823F31AD300DBF6E8 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
