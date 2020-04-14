@@ -181,7 +181,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         let config = SFSafariViewController.Configuration()
 
         let vc = SFSafariViewController(url: url, configuration: config)
-        
+        vc.preferredBarTintColor = UIColor.barTintColor
+        vc.preferredControlTintColor = UIColor.customGreen
         self.getTopMostViewController()?.present(vc, animated: true)
     }
 

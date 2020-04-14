@@ -111,8 +111,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         guard let siteURL = URL(string: url) else { return }
         let config = SFSafariViewController.Configuration()
         config.entersReaderIfAvailable = false
-
+        
         let vc = SFSafariViewController(url: siteURL, configuration: config)
+        vc.preferredBarTintColor = UIColor.barTintColor
+        vc.preferredControlTintColor = UIColor.customGreen
         present(vc, animated: true)
     }
     func openInAppIsExist(url: String) -> Bool {
