@@ -11,9 +11,9 @@ import WebKit
 
 class ArticleContentViewController: UIViewController, UIDocumentInteractionControllerDelegate {
     
-    var webView: WKWebView!
+    private var webView: WKWebView!
     var currentArticle: ArticleCache!
-    var hud: CustomProgressHUD!
+    private var hud: CustomProgressHUD!
     
     override func loadView() {
         webView = WKWebView()

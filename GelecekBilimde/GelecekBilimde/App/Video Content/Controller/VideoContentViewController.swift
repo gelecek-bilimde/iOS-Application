@@ -12,6 +12,7 @@ import WebKit
 class VideoContentViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
+    
     var currentVideo: VideoCache!
 
     override func viewDidLoad() {

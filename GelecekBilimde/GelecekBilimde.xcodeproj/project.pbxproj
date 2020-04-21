@@ -62,6 +62,9 @@
 		84C7B29523F555CD00821044 /* ArticleCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7B29423F555CD00821044 /* ArticleCache.swift */; };
 		84C7B29B23F565AD00821044 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 84C7B29A23F565AD00821044 /* SDWebImage */; };
 		84C7B29D23F565AD00821044 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 84C7B29C23F565AD00821044 /* SDWebImageMapKit */; };
+		84DA9C67244F067A007C11D3 /* ArticleTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA9C66244F067A007C11D3 /* ArticleTableViewDelegate.swift */; };
+		84DA9C6A244F0959007C11D3 /* VideosTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA9C69244F0959007C11D3 /* VideosTableViewDelegate.swift */; };
+		84DA9C6D244F0A8D007C11D3 /* ProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA9C6C244F0A8D007C11D3 /* ProfileDelegate.swift */; };
 		9D777E3E7BBFAE2E09BF3234 /* Pods_GelecekBilimde_GelecekBilimdeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D512A83A52CBBB99FC94516D /* Pods_GelecekBilimde_GelecekBilimdeUITests.framework */; };
 		EA787C1B2316DCBA000AC250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA787C1A2316DCBA000AC250 /* AppDelegate.swift */; };
 		EA787C202316DCBA000AC250 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA787C1E2316DCBA000AC250 /* Login.storyboard */; };
@@ -148,6 +151,9 @@
 		84C7B28D23F54D3700821044 /* ArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponse.swift; sourceTree = "<group>"; };
 		84C7B29123F551C800821044 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		84C7B29423F555CD00821044 /* ArticleCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCache.swift; sourceTree = "<group>"; };
+		84DA9C66244F067A007C11D3 /* ArticleTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewDelegate.swift; sourceTree = "<group>"; };
+		84DA9C69244F0959007C11D3 /* VideosTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewDelegate.swift; sourceTree = "<group>"; };
+		84DA9C6C244F0A8D007C11D3 /* ProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDelegate.swift; sourceTree = "<group>"; };
 		963FF8D520FD9DABF82BF9BB /* Pods-GelecekBilimde-GelecekBilimdeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimde-GelecekBilimdeUITests.debug.xcconfig"; path = "Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BD33AF99B81AF0DC23FF204 /* Pods-GelecekBilimde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimde.debug.xcconfig"; path = "Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD2CDBAF8BBAD5F950186DB /* Pods-GelecekBilimdeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimdeTests.release.xcconfig"; path = "Target Support Files/Pods-GelecekBilimdeTests/Pods-GelecekBilimdeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -284,6 +290,7 @@
 		841B3CFA23F2F5B90007A75E /* Articles */ = {
 			isa = PBXGroup;
 			children = (
+				84DA9C65244F0656007C11D3 /* Table View Delegate */,
 				84C7B29023F551A300821044 /* ViewModel */,
 				841B3CFB23F2F5CB0007A75E /* Controller */,
 			);
@@ -301,6 +308,7 @@
 		841B3CFC23F2F5EA0007A75E /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				84DA9C68244F093E007C11D3 /* Table View Delegate */,
 				84823E1923F69B3F00AC832D /* ViewModel */,
 				841B3CFD23F2F6030007A75E /* Controller */,
 			);
@@ -318,6 +326,7 @@
 		841B3CFE23F2F60E0007A75E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				84DA9C6B244F0A2C007C11D3 /* Table View Delegate */,
 				841B3CFF23F2F6210007A75E /* Controller */,
 			);
 			path = Profile;
@@ -573,6 +582,30 @@
 				84823E1723F6992B00AC832D /* VideoCache.swift */,
 			);
 			path = "Cache Models";
+			sourceTree = "<group>";
+		};
+		84DA9C65244F0656007C11D3 /* Table View Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				84DA9C66244F067A007C11D3 /* ArticleTableViewDelegate.swift */,
+			);
+			path = "Table View Delegate";
+			sourceTree = "<group>";
+		};
+		84DA9C68244F093E007C11D3 /* Table View Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				84DA9C69244F0959007C11D3 /* VideosTableViewDelegate.swift */,
+			);
+			path = "Table View Delegate";
+			sourceTree = "<group>";
+		};
+		84DA9C6B244F0A2C007C11D3 /* Table View Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				84DA9C6C244F0A8D007C11D3 /* ProfileDelegate.swift */,
+			);
+			path = "Table View Delegate";
 			sourceTree = "<group>";
 		};
 		D22C1C5842682AB88E09DDFB /* Frameworks */ = {
@@ -1003,6 +1036,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DA9C6D244F0A8D007C11D3 /* ProfileDelegate.swift in Sources */,
 				84823E1F23F6BD9F00AC832D /* VideoContentViewController.swift in Sources */,
 				84A1A9E824336F3A0063FD05 /* RealmProvider.swift in Sources */,
 				84823E1823F6992B00AC832D /* VideoCache.swift in Sources */,
@@ -1012,10 +1046,12 @@
 				84C7B28123F54B1000821044 /* URLParameterEncoding.swift in Sources */,
 				847FFCEC2336BF960013363F /* ArticlesTableViewController.swift in Sources */,
 				EA99566B23426187006C91FE /* Destination.swift in Sources */,
+				84DA9C6A244F0959007C11D3 /* VideosTableViewDelegate.swift in Sources */,
 				84C7B29523F555CD00821044 /* ArticleCache.swift in Sources */,
 				EA995671234266A6006C91FE /* UIColor+CustomColors.swift in Sources */,
 				843D086C23F31C7B00DBF6E8 /* OnboardingViewController.swift in Sources */,
 				847FFCD72336A0250013363F /* LoginViewController.swift in Sources */,
+				84DA9C67244F067A007C11D3 /* ArticleTableViewDelegate.swift in Sources */,
 				84B77A4C236736A800AF81D2 /* UIFont+CustomFonts.swift in Sources */,
 				EA787C1B2316DCBA000AC250 /* AppDelegate.swift in Sources */,
 				84C7B27423F54A0D00821044 /* EndPointType.swift in Sources */,

@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 class OnboardingViewController: UIViewController {
 
-    var animationView: AnimationView!
+    private var animationView: AnimationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

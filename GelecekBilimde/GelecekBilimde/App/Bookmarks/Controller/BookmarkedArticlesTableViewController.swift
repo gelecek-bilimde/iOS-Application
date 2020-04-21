@@ -10,7 +10,7 @@ import UIKit
 
 class BookmarkedArticlesTableViewController: UITableViewController {
     
-    var bookmarkArticleVM: BookmarkArticleViewModel!
+    private var bookmarkArticleVM: BookmarkArticleViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

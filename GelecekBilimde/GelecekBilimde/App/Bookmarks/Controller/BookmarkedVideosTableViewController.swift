@@ -10,7 +10,7 @@ import UIKit
 
 class BookmarkedVideosTableViewController: UITableViewController {
 
-    var bookmarkVideoVM: BookmarkVideoViewModel!
+    private var bookmarkVideoVM: BookmarkVideoViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
