@@ -36,13 +36,16 @@ class ArticlesTableViewController: UITableViewController {
         self.tableView.backgroundColor = UIColor.tableViewBgColor
         self.tableView.refreshControl = refresher
         hud.play(view: view)
-        articleViewModel.getArticles(page: currentPage) {
-            DispatchQueue.main.async {
-                self.hud.stop()
-                self.articleViewModel.loadArticlesCache()
-                self.tableView.reloadData()
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.articleViewModel.getArticles(page: self?.currentPage ?? 1) {
+                DispatchQueue.main.async {
+                    self?.hud.stop()
+                    self?.articleViewModel.loadArticlesCache()
+                    self?.tableView.reloadData()
+                }
             }
         }
+        
     }
 }
 // MARK: - Auxiliary Methods
@@ -66,18 +69,21 @@ extension ArticlesTableViewController {
     func getMoreArticles(){
         fetchingMore = true
         currentPage += 1
-        articleViewModel.getArticles(page: currentPage) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.50 ){
-                self.fetchingMore = false
-                self.articleViewModel.loadArticlesCache()
-                self.tableView.reloadData()
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.articleViewModel.getArticles(page: self?.currentPage ?? 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.50 ){
+                    self?.fetchingMore = false
+                    self?.articleViewModel.loadArticlesCache()
+                    self?.tableView.reloadData()
+                }
             }
         }
+        
     }
     
     override func scrollViewDidScroll(_ scrollView:UIScrollView) {
-      let offsetY = scrollView.contentOffset.y
-      let contentHeight = scrollView.contentSize.height
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
         if offsetY > contentHeight - scrollView.frame.height * 4 {
             if !fetchingMore {
                 getMoreArticles()
@@ -88,7 +94,7 @@ extension ArticlesTableViewController {
 
 //MARK: Prepare for Segue
 extension ArticlesTableViewController {
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
         backItem.title = "Geri"
         navigationItem.backBarButtonItem = backItem

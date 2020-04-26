@@ -14,19 +14,11 @@
             symbolName = "*0x1054af5e8">
             <Locations>
                <Location
-                  uuid = "56C63AA7-DBD2-423D-BF23-48263687DCFE - 4617a7d4d6639c59"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static Lottie.LayerDebugStyle.shapeRenderLayerStyle() -&gt; Lottie.LayerDebugStyle"
-                  moduleName = "GelecekBilimde"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alperenunal/Library/Developer/Xcode/DerivedData/GelecekBilimde-dslskqythadpilcqowfcwjtjsvuv/SourcePackages/checkouts/lottie-ios/lottie-swift/src/Private/Utility/Debugging/LayerDebugging.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "2456">
+                  offsetFromSymbolStart = "0">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -41,19 +33,11 @@
             symbolName = "*0x1054af5e0">
             <Locations>
                <Location
-                  uuid = "EE72E5F2-F4B6-4AF1-85BF-F5E2DF2AAD0D - 4617a7d4d6639c59"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static Lottie.LayerDebugStyle.shapeRenderLayerStyle() -&gt; Lottie.LayerDebugStyle"
-                  moduleName = "GelecekBilimde"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alperenunal/Library/Developer/Xcode/DerivedData/GelecekBilimde-dslskqythadpilcqowfcwjtjsvuv/SourcePackages/checkouts/lottie-ios/lottie-swift/src/Private/Utility/Debugging/LayerDebugging.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "180"
-                  endingLineNumber = "180"
-                  offsetFromSymbolStart = "2448">
+                  offsetFromSymbolStart = "0">
                </Location>
             </Locations>
          </BreakpointContent>
