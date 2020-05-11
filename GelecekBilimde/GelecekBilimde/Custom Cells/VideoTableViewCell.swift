@@ -74,9 +74,14 @@ class VideoTableViewCell: UITableViewCell {
     
     func findDateFromString(dateString: String) -> DateComponents {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        let date = dateFormatter.date(from:dateString)!
+        let last4StringOfDate = String(dateString.suffix(4))
+        if last4StringOfDate == "000Z" {
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        } else {
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        }
         let calender = Calendar.current
+        guard let date = dateFormatter.date(from:dateString) else { return calender.dateComponents([.year, .month, .day], from: Date()) }
         let dateComponent = calender.dateComponents([.year, .month, .day], from: date)
         return dateComponent
     }
