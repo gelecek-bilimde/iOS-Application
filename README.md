@@ -6,4 +6,4 @@ Firstly, install pods from terminal
 ```bash
 cd GelecekBilimde && pod install
 ```
-And open "GelecekBilimde.xcworkspace" file and contribute :)
+Open "GelecekBilimde.xcworkspace" file and contribute :)
