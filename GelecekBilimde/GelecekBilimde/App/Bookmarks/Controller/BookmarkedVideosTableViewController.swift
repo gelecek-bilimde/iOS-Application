@@ -26,6 +26,20 @@ class BookmarkedVideosTableViewController: UITableViewController {
         bookmarkVideoVM.loadBookmarkedVideos()
         tableView.reloadData()
     }
+    
+    func didTapBookmark(video: VideoCache) {
+        if video.bookmarked {
+            //Set False
+            bookmarkVideoVM.changeVideoBookmark(video: video, state: false)
+            bookmarkVideoVM.loadBookmarkedVideos()
+            tableView.reloadData()
+        } else {
+            //Set True
+            bookmarkVideoVM.changeVideoBookmark(video: video, state: true)
+            bookmarkVideoVM.loadBookmarkedVideos()
+            tableView.reloadData()
+        }
+    }
 }
 
 // MARK: - Table view data source
@@ -43,13 +57,15 @@ extension BookmarkedVideosTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let currentVideo = bookmarkVideoVM.bookmarkedVideos?[indexPath.row] else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: "videoBookmarkCell", for: indexPath) as! VideoTableViewCell
-        cell.delegate = self
+        cell.didVideoBookmarked = { [weak self] video in
+            self?.didTapBookmark(video: video)
+        }
         cell.setVideo(videoCache: currentVideo)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToVideoContentFromBookmark", sender: nil)
+        performSegue(withIdentifier: UnwindIdentifier.identifier(for: .VideoContentFromBookMark), sender: nil)
     }
     
 }
@@ -71,21 +87,3 @@ extension BookmarkedVideosTableViewController {
         }
     }
 }
-
-//MARK: Article Cell Delegate
-extension BookmarkedVideosTableViewController: VideoCellDelegate {
-    func didTapBookmark(video: VideoCache) {
-        if video.bookmarked {
-            //Set False
-            bookmarkVideoVM.changeVideoBookmark(video: video, state: false)
-            bookmarkVideoVM.loadBookmarkedVideos()
-            tableView.reloadData()
-        } else {
-            //Set True
-            bookmarkVideoVM.changeVideoBookmark(video: video, state: true)
-            bookmarkVideoVM.loadBookmarkedVideos()
-            tableView.reloadData()
-        }
-    }
-}
-

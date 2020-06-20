@@ -60,10 +60,11 @@ class GoogleSignInAuth: NSObject, GIDSignInDelegate {
         GIDSignIn.sharedInstance()?.signIn()
     }
     func writeUserToDB(user: User) {
+        // Baris: Force unwrap.
         let appUser = AppUser(name: user.displayName!, photoURL: user.photoURL!.absoluteString, email: user.email!)
         let userDic: [String:Any] = ["displayName": user.displayName!, "email": user.email!, "photoURL": user.photoURL!.absoluteString, "providerID": user.providerID]
         Database.database().reference().child("Users").child(user.uid).setValue(userDic)
         CurrentUser.addCurrentUser(name: appUser.name, photoURL: appUser.photoURL, email: appUser.email)
-        self.currentVC.performSegue(withIdentifier: "goToInitialPage", sender: nil)
+        self.currentVC.performSegue(withIdentifier: UnwindIdentifier.identifier(for: .InitialPage), sender: nil)
     }
 }

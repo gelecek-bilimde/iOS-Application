@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1632CA4BB3BF58BB962C3CE6 /* Pods_GelecekBilimde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71FBA494C8441007AD0CC3C /* Pods_GelecekBilimde.framework */; };
+		5F1D17B2249EA261009C5040 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D17B1249EA261009C5040 /* String+Extensions.swift */; };
 		840E7F1123F5E4BE008DE850 /* ArticleContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E7F1023F5E4BE008DE850 /* ArticleContentViewController.swift */; };
 		841B3D0423F2F7040007A75E /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 841B3D0323F2F7040007A75E /* JGProgressHUD */; };
 		843A3F0824339EBA00356947 /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = 843A3F0724339EBA00356947 /* Siren */; };
@@ -97,6 +98,7 @@
 /* Begin PBXFileReference section */
 		19B127585DC0CFF2E3463C79 /* Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig"; path = "Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57767462EFE4EB65822407F7 /* Pods-GelecekBilimde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimde.release.xcconfig"; path = "Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde.release.xcconfig"; sourceTree = "<group>"; };
+		5F1D17B1249EA261009C5040 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		840E7F1023F5E4BE008DE850 /* ArticleContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentViewController.swift; sourceTree = "<group>"; };
 		843A86902337E86500D35507 /* VideosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewController.swift; sourceTree = "<group>"; };
 		843A86922337EE7300D35507 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
@@ -694,6 +696,7 @@
 				EA995670234266A6006C91FE /* UIColor+CustomColors.swift */,
 				84B77A4B236736A800AF81D2 /* UIFont+CustomFonts.swift */,
 				84A1A9E724336F3A0063FD05 /* RealmProvider.swift */,
+				5F1D17B1249EA261009C5040 /* String+Extensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1076,6 +1079,7 @@
 				EA99566E234265BC006C91FE /* ProfileViewController.swift in Sources */,
 				849DAA4223F918E3003C106F /* BookmarkVideoViewModel.swift in Sources */,
 				847FFCEE2336C2110013363F /* ArticleTableViewCell.swift in Sources */,
+				5F1D17B2249EA261009C5040 /* String+Extensions.swift in Sources */,
 				84C7B28923F54BC900821044 /* ArticleEndPoint.swift in Sources */,
 				847FFCE92336B3490013363F /* InitialTabBarViewController.swift in Sources */,
 				84823E1B23F69B5300AC832D /* VideosViewModel.swift in Sources */,

@@ -21,6 +21,7 @@ private struct _Storyboard {
 
 /// This class used for store and manage view controller classes from one point
 /// Sample usage: let targetVC = Destination().targetVC
+/// Team should consider here. Force unwrap is always risky.
 struct Destination {
     let Bookmarks = _Storyboard.Bookmarks.instantiateViewController(withIdentifier: "bookmarksViewController") as! BookmarksViewController
     let BookmarkedArticles = _Storyboard.Bookmarks.instantiateViewController(withIdentifier: "bookmarkedArticles") as! BookmarkedArticlesTableViewController
@@ -30,4 +31,20 @@ struct Destination {
     let Articles = _Storyboard.Articles.instantiateViewController(withIdentifier: "articlesTableViewController") as! ArticlesTableViewController
     let Videos = _Storyboard.Videos.instantiateViewController(withIdentifier: "videosTableViewController") as! VideosTableViewController
     let Profile = _Storyboard.Profile.instantiateViewController(withIdentifier: "profileViewController") as! ProfileViewController
+}
+
+struct UnwindIdentifier {
+    enum Route: String {
+        case LoginPage
+        case App
+        case ArticleContentFromBookMark
+        case VideoContentFromBookMark
+        case ArticleContent
+        case VideoContent
+        case InitialPage
+    }
+    
+    static func identifier(for route: Route) -> String {
+        "goTo" + route.rawValue
+    }
 }

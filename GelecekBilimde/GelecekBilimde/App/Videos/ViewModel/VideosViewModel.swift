@@ -20,7 +20,7 @@ class VideosViewModel {
         videosCache = realm.objects(VideoCache.self).sorted(byKeyPath: "videoDate", ascending: false)
     }
     
-    func getVideos(completion: @escaping () -> ()){
+    func getVideos(completion: @escaping () -> ()) {
         let videosRef = Database.database().reference().child("Videos")
         dbLastVideo = videosCache?.last
         var queryRef: DatabaseQuery
@@ -29,7 +29,8 @@ class VideosViewModel {
         } else {
             queryRef = videosRef.queryOrdered(byChild: "videoDate").queryEnding(atValue: dbLastVideo!.videoDate).queryLimited(toLast: 10)
         }
-        queryRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        queryRef.observeSingleEvent(of: .value, with: { [weak self] (snapshot) in
+            guard let self = self else { return }
             for child in snapshot.children {
                 guard let childDatasnapshot = child as? DataSnapshot else { return }
                 if let userDic = childDatasnapshot.value as? NSDictionary {

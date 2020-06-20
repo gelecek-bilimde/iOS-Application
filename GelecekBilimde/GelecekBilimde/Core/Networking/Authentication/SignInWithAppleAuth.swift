@@ -57,7 +57,7 @@ class SignInWithAppleAuth: NSObject, ASAuthorizationControllerDelegate {
         let userDic: [String:Any] = ["displayName": fullName, "email": email, "photoURL": "", "providerID": user.providerID]
         Database.database().reference().child("Users").child(user.uid).setValue(userDic)
         CurrentUser.addCurrentUser(name: appUser.name, photoURL: appUser.photoURL, email: appUser.email)
-        self.currentVC.performSegue(withIdentifier: "goToInitialPage", sender: nil)
+        self.currentVC.performSegue(withIdentifier: UnwindIdentifier.identifier(for: .InitialPage), sender: nil)
     }
     
     // Adapted from https://auth0.com/docs/api-auth/tutorials/nonce#generate-a-cryptographically-random-nonce
@@ -142,7 +142,7 @@ extension SignInWithAppleAuth {
                         let name = self.defaults.string(forKey: "AppleDisplayName")
                         let email = self.defaults.string(forKey: "AppleEmail")
                         CurrentUser.addCurrentUser(name: name ?? "", photoURL: "", email: email ?? "")
-                        self.currentVC.performSegue(withIdentifier: "goToInitialPage", sender: nil)
+                        self.currentVC.performSegue(withIdentifier: UnwindIdentifier.identifier(for: .InitialPage), sender: nil)
                     }
                 }
             }

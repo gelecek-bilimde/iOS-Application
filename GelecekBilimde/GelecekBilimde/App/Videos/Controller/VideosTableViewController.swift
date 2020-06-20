@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VideosTableViewController: UITableViewController {
+final class VideosTableViewController: UITableViewController {
     
     var videosViewModel: VideosViewModel!
     private var fetchingMore = false
@@ -28,7 +28,8 @@ class VideosTableViewController: UITableViewController {
         self.tableView.backgroundColor = UIColor.tableViewBgColor
         
         videosViewModel.getVideos {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 self.videosViewModel.loadVideosCache()
                 self.tableView.reloadData()
             }
@@ -44,10 +45,12 @@ class VideosTableViewController: UITableViewController {
             }
         }
     }
-    func getMoreVideos(){
+    
+    func getMoreVideos() {
         fetchingMore = true
         videosViewModel.getVideos {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 self.fetchingMore = false
                 self.videosViewModel.loadVideosCache()
                 self.tableView.reloadData()
@@ -55,10 +58,16 @@ class VideosTableViewController: UITableViewController {
         }
     }
     
-    @objc func refreshVideos(){
+    @objc func refreshVideos() {
          videosViewModel.loadVideosCache()
          tableView.reloadData()
-     }
+    }
+    
+    func didTapBookmark(video: VideoCache) {
+        videosViewModel.changeVideoBookmark(video: video, state: !video.bookmarked)
+        videosViewModel.loadVideosCache()
+        tableView.reloadData()
+    }
 }
 
 
@@ -71,29 +80,9 @@ extension VideosTableViewController {
         navigationItem.backBarButtonItem = backItem
         if let destinationVC = segue.destination as? VideoContentViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let video = videosViewModel.videosCache?[indexPath.row]
-                
-                guard let videoContent = video else { return }
-                
-                destinationVC.currentVideo = videoContent
+                guard let video = videosViewModel.videosCache?[indexPath.row] else { return }
+                destinationVC.currentVideo = video
             }
-        }
-    }
-}
-
-//MARK: Video Cell Delegate
-extension VideosTableViewController: VideoCellDelegate {
-    func didTapBookmark(video: VideoCache) {
-        if video.bookmarked {
-            //Set False
-            videosViewModel.changeVideoBookmark(video: video, state: false)
-            videosViewModel.loadVideosCache()
-            tableView.reloadData()
-        } else {
-            //Set True
-            videosViewModel.changeVideoBookmark(video: video, state: true)
-            videosViewModel.loadVideosCache()
-            tableView.reloadData()
         }
     }
 }
