@@ -9,11 +9,7 @@
 import UIKit
 import SDWebImage
 
-protocol VideoCellDelegate {
-    func didTapBookmark(video: VideoCache)
-}
-
-class VideoTableViewCell: UITableViewCell {
+final class VideoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var videoThumbnailImageView: UIImageView!
     @IBOutlet weak var videoBookmarkImageView: UIImageView!
@@ -21,7 +17,7 @@ class VideoTableViewCell: UITableViewCell {
     @IBOutlet weak var videoDateLabel: UILabel!
     
     var currentVideo: VideoCache!
-    var delegate: VideoCellDelegate?
+    var didVideoBookmarked: ((VideoCache) -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,7 +43,7 @@ class VideoTableViewCell: UITableViewCell {
                 self.videoBookmarkImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
         }) { (finished) in
-            self.delegate?.didTapBookmark(video: self.currentVideo)
+            self.didVideoBookmarked?(self.currentVideo)
         }
     }
     

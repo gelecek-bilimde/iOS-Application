@@ -47,21 +47,22 @@ class OnboardingViewController: UIViewController {
     func checkIsAuthenticate(){
         if Auth.auth().currentUser != nil {
             getUserData()
-        } else{
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0 ){
-                self.performSegue(withIdentifier: "goToLoginPage", sender: nil)
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0 ) { [weak self] in
+                self?.performSegue(withIdentifier: UnwindIdentifier.identifier(for: .LoginPage), sender: nil)
             }
         }
     }
-    func getUserData(){
+    func getUserData() {
         guard let currentUserUid = Auth.auth().currentUser?.uid else { return }
-        Database.database().reference().child("Users").child(currentUserUid).observe(.value) { (snapshot) in
-            guard let userDic = snapshot.value as? NSDictionary else { return }
-            guard let displayName = userDic["displayName"] as? String else { return }
-            guard let email = userDic["email"] as? String else { return }
-            guard let photoURL = userDic["photoURL"] as? String else { return }
+        Database.database().reference().child("Users").child(currentUserUid).observe(.value) { [weak self] (snapshot) in
+            guard let self = self,
+                let userDic = snapshot.value as? NSDictionary,
+                let displayName = userDic["displayName"] as? String,
+                let email = userDic["email"] as? String,
+                let photoURL = userDic["photoURL"] as? String else { return }
             CurrentUser.addCurrentUser(name: displayName, photoURL: photoURL, email: email)
-            self.performSegue(withIdentifier: "goToApp", sender: nil)
+            self.performSegue(withIdentifier: UnwindIdentifier.identifier(for: .App), sender: nil)
         }
     }
     

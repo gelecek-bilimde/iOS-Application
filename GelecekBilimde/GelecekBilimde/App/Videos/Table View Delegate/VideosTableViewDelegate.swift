@@ -23,11 +23,13 @@ extension VideosTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let currentVideo = videosViewModel.videosCache?[indexPath.row] else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as! VideoTableViewCell
-        cell.delegate = self
+        cell.didVideoBookmarked = { [weak self] video in
+            self?.didTapBookmark(video: video)
+        }
         cell.setVideo(videoCache: currentVideo)
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToVideoContent", sender: nil)
+        performSegue(withIdentifier: UnwindIdentifier.identifier(for: .VideoContent), sender: nil)
     }
 }

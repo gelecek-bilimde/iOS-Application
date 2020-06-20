@@ -9,10 +9,6 @@
 import UIKit
 import SDWebImage
 
-protocol ArticleCellDelegate {
-    func didTapBookmark(article: ArticleCache)
-}
-
 class ArticleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var articleBookmarkImageView: UIImageView!
@@ -22,9 +18,8 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var articleAddedDateLabel: UILabel!
     
     var currentArticle: ArticleCache!
-    var delegate: ArticleCellDelegate?
+    var didArticleBookmarked: ((ArticleCache) -> ())?
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -45,16 +40,12 @@ class ArticleTableViewCell: UITableViewCell {
     func setArticle(article: ArticleCache) {
         currentArticle = article
         articleMainImageView.image = UIImage(named: "GelecekBilimdeLogo")
-        articleTitleLabel.text = convertHTMLEntities(stringToConvert: article.title)
+        articleTitleLabel.text = article.title.convertHTMLEntities()
         articleDescriptionLabel.text = "\(String(cleanString(from: article.excrpt).prefix(75)))..."
         let calender = Calendar.current
         let dateComponent = calender.dateComponents([.year, .month, .day], from: article.date)
         articleAddedDateLabel.text = "\(String(describing: dateComponent.day!))/\(String(describing: dateComponent.month!))/\(String(describing: dateComponent.year!))"
-        if article.bookmarked {
-            articleBookmarkImageView.image = UIImage(named: "bookmarked")
-        } else {
-            articleBookmarkImageView.image = UIImage(named: "unbookmarked")
-        }
+        articleBookmarkImageView.image = UIImage(named: article.bookmarked ? "bookmarked" : "unbookmarked")
         guard let url = URL(string: article.imageURL) else { return }
         articleMainImageView.sd_setImage(with: url)
     }
@@ -64,30 +55,14 @@ class ArticleTableViewCell: UITableViewCell {
         return cleanString
     }
     
-    func convertHTMLEntities(stringToConvert: String) -> String{
-        guard let data = stringToConvert.data(using: .utf8) else {
-            return ""
-        }
-
-        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
-            .documentType: NSAttributedString.DocumentType.html,
-            .characterEncoding: String.Encoding.utf8.rawValue
-        ]
-
-        guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else {
-            return ""
-        }
-        return attributedString.string
-    }
-    
-    @objc func bookmarkClicked(){
+    @objc func bookmarkClicked() {
         UIView.animate(withDuration: 0.2, delay: 0,  options: [], animations: {
             self.articleBookmarkImageView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
             DispatchQueue.main.async {
                 self.articleBookmarkImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
         }) { (finished) in
-            self.delegate?.didTapBookmark(article: self.currentArticle)
+            self.didArticleBookmarked?(self.currentArticle)
         }
     }
     

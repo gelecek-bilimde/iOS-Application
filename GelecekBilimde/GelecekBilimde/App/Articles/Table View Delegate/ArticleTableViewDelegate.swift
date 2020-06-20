@@ -21,13 +21,17 @@ extension ArticlesTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentArticle = articleViewModel.articlesCache?[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleTableViewCell
-        guard let article = currentArticle else { return UITableViewCell() }
-        cell.delegate = self
+        guard let article = currentArticle,
+            let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as? ArticleTableViewCell
+            else { return UITableViewCell() }
+        cell.didArticleBookmarked = { [weak self] article in
+            self?.didTapBookmark(article: article)
+        }
         cell.setArticle(article: article)
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToArticleContent", sender: nil)
+        performSegue(withIdentifier: UnwindIdentifier.identifier(for: .ArticleContent), sender: nil)
     }
 }

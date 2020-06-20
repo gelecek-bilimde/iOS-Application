@@ -43,15 +43,30 @@ extension BookmarkedArticlesTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let currentArticle = bookmarkArticleVM.bookmarkedArticles?[indexPath.row] else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarkArticleCell", for: indexPath) as! ArticleTableViewCell
-        cell.delegate = self
+        cell.didArticleBookmarked? = { [weak self] article in
+            self?.didTapBookmark(article: article)
+        }
         cell.setArticle(article: currentArticle)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToArticleContentFromBookmark", sender: nil)
+        performSegue(withIdentifier: UnwindIdentifier.identifier(for: .ArticleContentFromBookMark), sender: nil)
     }
     
+    func didTapBookmark(article: ArticleCache) {
+        if article.bookmarked {
+            //Set False
+            bookmarkArticleVM.changeArticleBookmark(article: article, state: false)
+            bookmarkArticleVM.loadBookmarkedArticles()
+            tableView.reloadData()
+        } else {
+            //Set True
+            bookmarkArticleVM.changeArticleBookmark(article: article, state: true)
+            bookmarkArticleVM.loadBookmarkedArticles()
+            tableView.reloadData()
+        }
+    }
 }
 
 //MARK: Prepare for Segue
@@ -68,23 +83,6 @@ extension BookmarkedArticlesTableViewController {
                 
                 destinationVC.currentArticle = content
             }
-        }
-    }
-}
-
-//MARK: Article Cell Delegate
-extension BookmarkedArticlesTableViewController: ArticleCellDelegate {
-    func didTapBookmark(article: ArticleCache) {
-        if article.bookmarked {
-            //Set False
-            bookmarkArticleVM.changeArticleBookmark(article: article, state: false)
-            bookmarkArticleVM.loadBookmarkedArticles()
-            tableView.reloadData()
-        } else {
-            //Set True
-            bookmarkArticleVM.changeArticleBookmark(article: article, state: true)
-            bookmarkArticleVM.loadBookmarkedArticles()
-            tableView.reloadData()
         }
     }
 }

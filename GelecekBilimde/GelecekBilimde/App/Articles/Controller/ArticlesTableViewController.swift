@@ -45,7 +45,20 @@ class ArticlesTableViewController: UITableViewController {
                 }
             }
         }
-        
+    }
+    
+    func didTapBookmark(article: ArticleCache) {
+        if article.bookmarked {
+            //Set False
+            articleViewModel.changeArticleBookmark(article: article, state: false)
+            articleViewModel.loadArticlesCache()
+            tableView.reloadData()
+        } else {
+            //Set True
+            articleViewModel.changeArticleBookmark(article: article, state: true)
+            articleViewModel.loadArticlesCache()
+            tableView.reloadData()
+        }
     }
 }
 // MARK: - Auxiliary Methods
@@ -106,22 +119,6 @@ extension ArticlesTableViewController {
                 
                 destinationVC.currentArticle = content
             }
-        }
-    }
-}
-//MARK: Article Cell Delegate
-extension ArticlesTableViewController: ArticleCellDelegate {
-    func didTapBookmark(article: ArticleCache) {
-        if article.bookmarked {
-            //Set False
-            articleViewModel.changeArticleBookmark(article: article, state: false)
-            articleViewModel.loadArticlesCache()
-            tableView.reloadData()
-        } else {
-            //Set True
-            articleViewModel.changeArticleBookmark(article: article, state: true)
-            articleViewModel.loadArticlesCache()
-            tableView.reloadData()
         }
     }
 }
