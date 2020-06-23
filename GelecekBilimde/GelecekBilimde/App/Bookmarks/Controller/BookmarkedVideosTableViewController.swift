@@ -8,15 +8,19 @@
 
 import UIKit
 
+// Bookmarked articles or videos seems like same page. You could consider use one tableviewcontroller.
 class BookmarkedVideosTableViewController: UITableViewController {
 
     private var bookmarkVideoVM: BookmarkVideoViewModel!
+    private lazy var emptyMessageView: EmptyStateView = {
+        // TODO: Baris - Here we need a specific empty message.
+        return EmptyStateView(frame: tableView.frame, message: "Henüz bir videoyu favorilerinize eklemediniz.")
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         bookmarkVideoVM = BookmarkVideoViewModel()
-        bookmarkVideoVM.loadBookmarkedVideos()
-        tableView.reloadData()
+        refreshArticles()
         //This is for setting table view's background color
         self.tableView.backgroundColor = UIColor.tableViewBgColor
         NotificationCenter.default.addObserver(self, selector: #selector(refreshArticles), name: NSNotification.Name(rawValue: "videoBookmarkChange"), object: nil)
@@ -40,6 +44,19 @@ class BookmarkedVideosTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+    
+    private func numberOfRows() -> Int {
+        guard let count = bookmarkVideoVM.bookmarkedVideos?.count, count > 0 else {
+            configureEmptyMessage(true)
+            return 0 }
+        configureEmptyMessage()
+        return count
+    }
+    
+    private func configureEmptyMessage(_ isShow: Bool = false) {
+        tableView.separatorStyle = isShow ? .none : .singleLine
+        tableView.backgroundView = isShow ? emptyMessageView : nil
+    }
 }
 
 // MARK: - Table view data source
@@ -51,7 +68,7 @@ extension BookmarkedVideosTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return bookmarkVideoVM.bookmarkedVideos?.count ?? 0
+        numberOfRows()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
