@@ -11,22 +11,37 @@ import UIKit
 class BookmarkedArticlesTableViewController: UITableViewController {
     
     private var bookmarkArticleVM: BookmarkArticleViewModel!
+    private lazy var emptyMessageView: EmptyStateView = {
+        // TODO: Baris - Here we need a specific empty message.
+        return EmptyStateView(frame: tableView.frame, message: "Henüz bir makaleyi favorilerinize eklemediniz.")
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         bookmarkArticleVM = BookmarkArticleViewModel()
-        bookmarkArticleVM.loadBookmarkedArticles()
-        tableView.reloadData()
+        refreshArticles()
         //This is for setting table view's background color
-        self.tableView.backgroundColor = UIColor.tableViewBgColor
+        tableView.backgroundColor = .tableViewBgColor
+        tableView.separatorStyle = .none
         NotificationCenter.default.addObserver(self, selector: #selector(refreshArticles), name: NSNotification.Name(rawValue: "articleBookmarkChange"), object: nil)
     }
     
-    @objc func refreshArticles(){
+    @objc private func refreshArticles(){
         bookmarkArticleVM.loadBookmarkedArticles()
         tableView.reloadData()
     }
     
+    private func numberOfRows() -> Int {
+        guard let count = bookmarkArticleVM.bookmarkedArticles?.count, count > 0 else {
+            tableView.backgroundView = emptyMessageView
+            return 0 }
+        tableView.backgroundView = nil
+        return count
+    }
+    
+    private func configureEmptyMessage(_ isShow: Bool = false) {
+        
+    }
 }
 // MARK: - Table view data source
 extension BookmarkedArticlesTableViewController {
@@ -37,7 +52,7 @@ extension BookmarkedArticlesTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return bookmarkArticleVM.bookmarkedArticles?.count ?? 0
+        numberOfRows()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

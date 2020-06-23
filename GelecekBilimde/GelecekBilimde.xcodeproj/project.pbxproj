@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1632CA4BB3BF58BB962C3CE6 /* Pods_GelecekBilimde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71FBA494C8441007AD0CC3C /* Pods_GelecekBilimde.framework */; };
 		5F1D17B2249EA261009C5040 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D17B1249EA261009C5040 /* String+Extensions.swift */; };
+		5F1D17B524A22440009C5040 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D17B424A22440009C5040 /* EmptyStateView.swift */; };
 		840E7F1123F5E4BE008DE850 /* ArticleContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E7F1023F5E4BE008DE850 /* ArticleContentViewController.swift */; };
 		841B3D0423F2F7040007A75E /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 841B3D0323F2F7040007A75E /* JGProgressHUD */; };
 		843A3F0824339EBA00356947 /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = 843A3F0724339EBA00356947 /* Siren */; };
@@ -99,6 +100,7 @@
 		19B127585DC0CFF2E3463C79 /* Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig"; path = "Target Support Files/Pods-GelecekBilimde-GelecekBilimdeUITests/Pods-GelecekBilimde-GelecekBilimdeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57767462EFE4EB65822407F7 /* Pods-GelecekBilimde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelecekBilimde.release.xcconfig"; path = "Target Support Files/Pods-GelecekBilimde/Pods-GelecekBilimde.release.xcconfig"; sourceTree = "<group>"; };
 		5F1D17B1249EA261009C5040 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		5F1D17B424A22440009C5040 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		840E7F1023F5E4BE008DE850 /* ArticleContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentViewController.swift; sourceTree = "<group>"; };
 		843A86902337E86500D35507 /* VideosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewController.swift; sourceTree = "<group>"; };
 		843A86922337EE7300D35507 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
@@ -212,6 +214,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F1D17B324A2242F009C5040 /* EmptyStateView */ = {
+			isa = PBXGroup;
+			children = (
+				5F1D17B424A22440009C5040 /* EmptyStateView.swift */,
+			);
+			path = EmptyStateView;
+			sourceTree = "<group>";
+		};
 		69DB0F34BD0E5519637A321E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +723,7 @@
 		EA99567323426890006C91FE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5F1D17B324A2242F009C5040 /* EmptyStateView */,
 				843D086423F3091D00DBF6E8 /* CustomHUD */,
 				84B77A42236728E700AF81D2 /* Networking */,
 				847FFCD82336A3C30013363F /* Fonts */,
@@ -1041,6 +1052,7 @@
 			files = (
 				84DA9C6D244F0A8D007C11D3 /* ProfileDelegate.swift in Sources */,
 				84823E1F23F6BD9F00AC832D /* VideoContentViewController.swift in Sources */,
+				5F1D17B524A22440009C5040 /* EmptyStateView.swift in Sources */,
 				84A1A9E824336F3A0063FD05 /* RealmProvider.swift in Sources */,
 				84823E1823F6992B00AC832D /* VideoCache.swift in Sources */,
 				840E7F1123F5E4BE008DE850 /* ArticleContentViewController.swift in Sources */,

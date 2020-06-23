@@ -9,15 +9,15 @@
 import UIKit
 import SDWebImage
 
-class ArticleTableViewCell: UITableViewCell {
+final class ArticleTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var articleBookmarkImageView: UIImageView!
-    @IBOutlet weak var articleMainImageView: UIImageView!
-    @IBOutlet weak var articleTitleLabel: UILabel!
-    @IBOutlet weak var articleDescriptionLabel: UILabel!
-    @IBOutlet weak var articleAddedDateLabel: UILabel!
+    @IBOutlet private weak var articleBookmarkImageView: UIImageView!
+    @IBOutlet private weak var articleMainImageView: UIImageView!
+    @IBOutlet private weak var articleTitleLabel: UILabel!
+    @IBOutlet private weak var articleDescriptionLabel: UILabel!
+    @IBOutlet private weak var articleAddedDateLabel: UILabel!
     
-    var currentArticle: ArticleCache!
+    private var currentArticle: ArticleCache!
     var didArticleBookmarked: ((ArticleCache) -> ())?
 
     override func awakeFromNib() {
