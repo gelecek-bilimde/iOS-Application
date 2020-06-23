@@ -26,7 +26,7 @@ class BookmarkedArticlesTableViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(refreshArticles), name: NSNotification.Name(rawValue: "articleBookmarkChange"), object: nil)
     }
     
-    @objc private func refreshArticles(){
+    @objc private func refreshArticles() {
         bookmarkArticleVM.loadBookmarkedArticles()
         tableView.reloadData()
     }
@@ -37,10 +37,6 @@ class BookmarkedArticlesTableViewController: UITableViewController {
             return 0 }
         tableView.backgroundView = nil
         return count
-    }
-    
-    private func configureEmptyMessage(_ isShow: Bool = false) {
-        
     }
 }
 // MARK: - Table view data source
@@ -70,17 +66,9 @@ extension BookmarkedArticlesTableViewController {
     }
     
     func didTapBookmark(article: ArticleCache) {
-        if article.bookmarked {
-            //Set False
-            bookmarkArticleVM.changeArticleBookmark(article: article, state: false)
-            bookmarkArticleVM.loadBookmarkedArticles()
-            tableView.reloadData()
-        } else {
-            //Set True
-            bookmarkArticleVM.changeArticleBookmark(article: article, state: true)
-            bookmarkArticleVM.loadBookmarkedArticles()
-            tableView.reloadData()
-        }
+        bookmarkArticleVM.changeArticleBookmark(article: article, state: !article.bookmarked)
+        bookmarkArticleVM.loadBookmarkedArticles()
+        tableView.reloadData()
     }
 }
 
