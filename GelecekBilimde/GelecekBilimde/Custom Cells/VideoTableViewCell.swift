@@ -11,22 +11,18 @@ import SDWebImage
 
 final class VideoTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var videoThumbnailImageView: UIImageView!
-    @IBOutlet weak var videoBookmarkImageView: UIImageView!
-    @IBOutlet weak var videoTitleLabel: UILabel!
-    @IBOutlet weak var videoDateLabel: UILabel!
+    @IBOutlet private weak var videoThumbnailImageView: UIImageView!
+    @IBOutlet private weak var videoBookmarkImageView: UIImageView!
+    @IBOutlet private weak var videoTitleLabel: UILabel!
+    @IBOutlet private weak var videoDateLabel: UILabel!
     
-    var currentVideo: VideoCache!
+    private var currentVideo: VideoCache!
     var didVideoBookmarked: ((VideoCache) -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         let tap = UITapGestureRecognizer(target: self, action: #selector(bookmarkClicked))
-        tap.numberOfTapsRequired = 1
-        
         videoBookmarkImageView.isUserInteractionEnabled = true
-        
         videoBookmarkImageView.addGestureRecognizer(tap)
     }
     
@@ -36,7 +32,7 @@ final class VideoTableViewCell: UITableViewCell {
         videoThumbnailImageView.clipsToBounds = true
     }
     
-    @objc func bookmarkClicked(){
+    @objc private func bookmarkClicked() {
         UIView.animate(withDuration: 0.2, delay: 0,  options: [], animations: {
             self.videoBookmarkImageView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
             DispatchQueue.main.async {
@@ -47,37 +43,28 @@ final class VideoTableViewCell: UITableViewCell {
         }
     }
     
-    func setVideo(videoCache: VideoCache){
+    func setVideo(videoCache: VideoCache) {
         currentVideo = videoCache
         videoThumbnailImageView.contentMode = .scaleAspectFill
-        let dateComponent = findDateFromString(dateString: videoCache.videoDate)
+        let dateComponent = findDateFromString(videoCache.videoDate)
+        
         videoTitleLabel.text = videoCache.videoTitle
         videoDateLabel.text = "\(String(describing: dateComponent.day!))/\(String(describing: dateComponent.month!))/\(String(describing: dateComponent.year!))"
-        if videoCache.bookmarked {
-            videoBookmarkImageView.image = UIImage(named: "bookmarked")
-        } else {
-            videoBookmarkImageView.image = UIImage(named: "unbookmarked")
-        }
+        videoBookmarkImageView.image = UIImage(named: videoCache.bookmarked ? "bookmarked" : "unbookmarked")
         guard let url = URL(string: videoCache.videoImageURL) else { return }
-        videoThumbnailImageView.sd_setImage(with: url){ (image, error, cache, urls) in
-            if (error != nil) {
-                self.videoThumbnailImageView.image = UIImage(named: "youtubePlaceHolder")
-            } else {
-                self.videoThumbnailImageView.image = image
-            }
+        videoThumbnailImageView.sd_setImage(with: url) { [weak self] (image, error, cache, urls) in
+            self?.videoThumbnailImageView.image = (error != nil) ? UIImage(named: "youtubePlaceHolder") : image
         }
     }
     
-    func findDateFromString(dateString: String) -> DateComponents {
+    func findDateFromString(_ dateString: String) -> DateComponents {
+        
         let dateFormatter = DateFormatter()
         let last4StringOfDate = String(dateString.suffix(4))
-        if last4StringOfDate == "000Z" {
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        } else {
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        }
+        dateFormatter.dateFormat = last4StringOfDate == "000Z" ? "yyyy-MM-dd'T'HH:mm:ss.SSSZ" : "yyyy-MM-dd'T'HH:mm:ssZ"
+        
         let calender = Calendar.current
-        guard let date = dateFormatter.date(from:dateString) else { return calender.dateComponents([.year, .month, .day], from: Date()) }
+        guard let date = dateFormatter.date(from: dateString) else { return calender.dateComponents([.year, .month, .day], from: Date()) }
         let dateComponent = calender.dateComponents([.year, .month, .day], from: date)
         return dateComponent
     }

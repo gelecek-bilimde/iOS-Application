@@ -15,41 +15,29 @@ class BookmarksViewController: UIViewController {
     
     private lazy var bookmarkedArticlesController: BookmarkedArticlesTableViewController = {
         let viewController = Destination().BookmarkedArticles
-        self.add(asChildViewController: viewController)
+        add(asChildViewController: viewController)
         
         return viewController
     }()
     
     private lazy var bookmarkedVideosController: BookmarkedVideosTableViewController = {
         let viewController = Destination().BookmarkedVideos
-        self.add(asChildViewController: viewController)
+        add(asChildViewController: viewController)
         
         return viewController
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //NavBar title customizations
-        navigationController?.navigationBar.barTintColor = UIColor.barTintColor
-        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = attributes
-        //This function is setting bookmarked article and video table views in the container view
-        self.setupView()
-        
-        //This is for changing segmented control text color
+        configureNavigationBar()
+        setupView()
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
-        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.barTintColor = .barTintColor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
 }
 
 // MARK: - Actions
@@ -112,6 +100,4 @@ extension BookmarksViewController {
         // Notify Child View Controller
         viewController.removeFromParent()
     }
-    
-    
 }

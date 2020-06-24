@@ -24,10 +24,7 @@ final class ArticleTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         let tap = UITapGestureRecognizer(target: self, action: #selector(bookmarkClicked))
-        tap.numberOfTapsRequired = 1
-        
         articleBookmarkImageView.isUserInteractionEnabled = true
-        
         articleBookmarkImageView.addGestureRecognizer(tap)
     }
     
