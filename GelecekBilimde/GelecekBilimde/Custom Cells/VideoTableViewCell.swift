@@ -48,7 +48,7 @@ final class VideoTableViewCell: UITableViewCell {
         videoThumbnailImageView.contentMode = .scaleAspectFill
         let dateComponent = findDateFromString(videoCache.videoDate)
         
-        videoTitleLabel.text = videoCache.videoTitle
+        videoTitleLabel.text = videoCache.videoTitle.convertHTMLEntities()
         videoDateLabel.text = "\(String(describing: dateComponent.day!))/\(String(describing: dateComponent.month!))/\(String(describing: dateComponent.year!))"
         videoBookmarkImageView.image = UIImage(named: videoCache.bookmarked ? "bookmarked" : "unbookmarked")
         guard let url = URL(string: videoCache.videoImageURL) else { return }

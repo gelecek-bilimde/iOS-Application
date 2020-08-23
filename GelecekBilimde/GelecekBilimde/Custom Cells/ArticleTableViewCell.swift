@@ -32,6 +32,8 @@ final class ArticleTableViewCell: UITableViewCell {
         super.layoutSubviews()
         articleMainImageView.layer.cornerRadius = articleMainImageView.bounds.height / 2
         articleMainImageView.clipsToBounds = true
+        articleMainImageView.layer.borderColor = UIColor.customGreen.cgColor
+        articleMainImageView.layer.borderWidth = 2.0
     }
     
     func setArticle(article: ArticleCache) {
@@ -44,7 +46,9 @@ final class ArticleTableViewCell: UITableViewCell {
         articleAddedDateLabel.text = "\(String(describing: dateComponent.day!))/\(String(describing: dateComponent.month!))/\(String(describing: dateComponent.year!))"
         articleBookmarkImageView.image = UIImage(named: article.bookmarked ? "bookmarked" : "unbookmarked")
         guard let url = URL(string: article.imageURL) else { return }
-        articleMainImageView.sd_setImage(with: url)
+        articleMainImageView.sd_setImage(with: url) { [weak self] (image, error, cache, urls) in
+            self?.articleMainImageView.image = (error != nil) ? UIImage(named: "GelecekBilimdeLogo") : image
+        }
     }
     
     func cleanString(from text: String) -> String {

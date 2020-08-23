@@ -28,8 +28,18 @@ extension AppDelegate: UIApplicationDelegate {
         
         UIApplication.shared.applicationIconBadgeNumber = 0
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-        
-        Siren.shared.wail()
+        Siren.shared.presentationManager = PresentationManager(forceLanguageLocalization: .turkish)
+        Siren.shared.wail { results in
+            switch results {
+            case .success(let updateResults):
+                print("AlertAction ", updateResults.alertAction)
+                print("Localization ", updateResults.localization)
+                print("Model ", updateResults.model)
+                print("UpdateType ", updateResults.updateType)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
@@ -53,6 +63,7 @@ extension AppDelegate: UIApplicationDelegate {
         setUserAgentForGoogleSignIn()
         return true
     }
+    
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
       // If you are receiving a notification message while your app is in the background,

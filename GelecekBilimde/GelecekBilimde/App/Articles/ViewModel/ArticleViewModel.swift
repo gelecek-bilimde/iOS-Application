@@ -26,9 +26,13 @@ class ArticleViewModel {
         DispatchQueue.main.async {
             self.articles.removeAll()
         }
+        let networkAttempt = 0
         networkManager.getArticles(page: page) { (articles, error) in
             if let error = error {
                 print(error)
+                if networkAttempt < 3 {
+                    self.getArticles(page: page) {}
+                }
             } else {
                 DispatchQueue.main.async {
                     guard let articles = articles else { return }

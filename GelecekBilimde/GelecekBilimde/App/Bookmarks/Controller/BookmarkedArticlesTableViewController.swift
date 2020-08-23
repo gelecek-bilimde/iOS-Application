@@ -62,7 +62,7 @@ extension BookmarkedArticlesTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: UnwindIdentifier.identifier(for: .ArticleContentFromBookMark), sender: nil)
+        performSegue(withIdentifier: UnwindIdentifier.identifier(for: .ArticleContentFromBookmark), sender: nil)
     }
     
     func didTapBookmark(article: ArticleCache) {

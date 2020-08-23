@@ -15,11 +15,8 @@ final class VideosTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //NavBar title customizations
-        navigationController?.navigationBar.barTintColor = UIColor.barTintColor
-        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = attributes
         
+        configurationForNavBar()
         NotificationCenter.default.addObserver(self, selector: #selector(refreshVideos), name: NSNotification.Name(rawValue: "videoBookmarkChangeFromBookmark"), object: nil)
         videosViewModel = VideosViewModel()
         videosViewModel.loadVideosCache()
@@ -34,6 +31,13 @@ final class VideosTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    func configurationForNavBar() {
+        //NavBar title customizations
+        navigationController?.navigationBar.barTintColor = UIColor.barTintColor
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = attributes
     }
     
     override func scrollViewDidScroll(_ scrollView:UIScrollView) {

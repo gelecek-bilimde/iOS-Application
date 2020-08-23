@@ -82,7 +82,7 @@ extension BookmarkedVideosTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: UnwindIdentifier.identifier(for: .VideoContentFromBookMark), sender: nil)
+        performSegue(withIdentifier: UnwindIdentifier.identifier(for: .VideoContentFromBookmark), sender: nil)
     }
     
 }

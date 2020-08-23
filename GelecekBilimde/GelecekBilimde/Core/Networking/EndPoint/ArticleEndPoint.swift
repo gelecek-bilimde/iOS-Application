@@ -22,7 +22,7 @@ extension ArticleAPI: EndPointType {
     
     var environmentBaseURL : String {
         switch NetworkManager.environment {
-        case .production: return "https://www.bilimtreni.com/wp-json/wp/v2/"
+        case .production: return "https://www.gelecekbilimde.net/wp-json/wp/v2/"
         case .qa: return ""
         case .staging: return ""
         }

@@ -37,8 +37,8 @@ struct UnwindIdentifier {
     enum Route: String {
         case LoginPage
         case App
-        case ArticleContentFromBookMark
-        case VideoContentFromBookMark
+        case ArticleContentFromBookmark
+        case VideoContentFromBookmark
         case ArticleContent
         case VideoContent
         case InitialPage
