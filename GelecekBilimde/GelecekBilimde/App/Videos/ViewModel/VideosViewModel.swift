@@ -32,50 +32,44 @@ class VideosViewModel {
         queryRef.observeSingleEvent(of: .value, with: { [weak self] (snapshot) in
             guard let self = self else { return }
             for child in snapshot.children {
-                guard let childDatasnapshot = child as? DataSnapshot else { return }
-                if let userDic = childDatasnapshot.value as? NSDictionary {
-                    guard let videoURLId = userDic["videoURLId"] as? String else { return }
-                    guard let videoDate = userDic["videoDate"] as? String else { return }
-                    guard let videoTitle = userDic["videoTitle"] as? String else { return }
-                    guard let videoImageURL = userDic["videoImageURL"] as? String else { return }
-                    let videoCache = VideoCache()
-                    videoCache.videoDate = videoDate
-                    videoCache.videoURLId = videoURLId
-                    videoCache.videoTitle = videoTitle
-                    videoCache.videoImageURL = videoImageURL
-                    self.lastVideo = videoCache
-                    self.addToCache(videoCache: videoCache)
-                }
+                guard let childDatasnapshot = child as? DataSnapshot,
+                      let userDic = childDatasnapshot.value as? NSDictionary,
+                      let videoURLId = userDic["videoURLId"] as? String,
+                      let videoDate = userDic["videoDate"] as? String,
+                      let videoTitle = userDic["videoTitle"] as? String,
+                      let videoImageURL = userDic["videoImageURL"] as? String else { return }
+                let videoCache = VideoCache()
+                videoCache.videoDate = videoDate
+                videoCache.videoURLId = videoURLId
+                videoCache.videoTitle = videoTitle
+                videoCache.videoImageURL = videoImageURL
+                self.lastVideo = videoCache
+                self.addToCache(videoCache: videoCache)
             }
             completion()
-        }, withCancel: { (error) in
+        }, withCancel: { error in
             DispatchQueue.main.async {
                 print(error)
             }
         })
     }
     
-    func addToCache(videoCache: VideoCache){
-        let existingVideo = realm.object(ofType: VideoCache.self, forPrimaryKey: videoCache.videoURLId)
-        
-        if let _ = existingVideo {
-        } else {
-            // Add video
-            do{
-                try realm.write {
-                    realm.add(videoCache)
-                }
-            }
-            catch{
-                print("Error: \(error)")
+    func addToCache(videoCache: VideoCache) {
+        guard realm.object(ofType: VideoCache.self, forPrimaryKey: videoCache.videoURLId) == nil else { return }
+        do {
+            try realm.write {
+                realm.add(videoCache)
             }
         }
+        catch{
+            print("Error: \(error)")
+        }
     }
-    func clearVideosCache(){
-        do{
+    
+    func clearVideosCache() {
+        do {
             try self.realm.write {
                 loadVideosCache()
-                //And delete main page contents in cache
                 realm.delete(videosCache!)
             }
         }
@@ -84,14 +78,15 @@ class VideosViewModel {
         }
     }
     
-    func changeVideoBookmark(video: VideoCache, state: Bool){
+    func changeVideoBookmark(video: VideoCache, state: Bool) {
         let video = realm.objects(VideoCache.self).filter("videoURLId == %@", video.videoURLId).first
         
-        do{
+        do {
             try realm.write {
                 video?.bookmarked = state
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "videoBookmarkChange"), object: nil,
-                userInfo: nil)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "videoBookmarkChange"),
+                                                object: nil,
+                                                userInfo: nil)
             }
         }
         catch{

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InitialTabBarViewController: UITabBarController {
+final class InitialTabBarViewController: UITabBarController {
     
     //This functions for tab bar item animation
     private var bounceAnimation: CAKeyframeAnimation = {

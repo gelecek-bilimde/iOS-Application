@@ -1,50 +1,53 @@
 //
-//  ArticleTableViewCell.swift
+//  ArticleCell.swift
 //  GelecekBilimde
 //
-//  Created by Alperen Ünal on 21.09.2019.
-//  Copyright © 2019 Burak Furkan Asilturk. All rights reserved.
+//  Created by BARIS UYAR on 5.02.2021.
+//  Copyright © 2021 Burak Furkan Asilturk. All rights reserved.
 //
 
 import UIKit
-import SDWebImage
 
-final class ArticleTableViewCell: UITableViewCell {
+final class ArticleCell: UITableViewCell, ReusableView, NibLoadableView {
 
-    @IBOutlet private weak var articleBookmarkImageView: UIImageView!
+    @IBOutlet private weak var articleBookmarkButton: UIButton!
     @IBOutlet private weak var articleMainImageView: UIImageView!
     @IBOutlet private weak var articleTitleLabel: UILabel!
     @IBOutlet private weak var articleDescriptionLabel: UILabel!
     @IBOutlet private weak var articleAddedDateLabel: UILabel!
+    @IBOutlet private weak var containerView: UIView!
     
     private var currentArticle: ArticleCache!
     var didArticleBookmarked: ((ArticleCache) -> ())?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectionStyle = .none
         let tap = UITapGestureRecognizer(target: self, action: #selector(bookmarkClicked))
-        articleBookmarkImageView.isUserInteractionEnabled = true
-        articleBookmarkImageView.addGestureRecognizer(tap)
+        articleBookmarkButton.addGestureRecognizer(tap)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        articleMainImageView.layer.cornerRadius = articleMainImageView.bounds.height / 2
+        articleMainImageView.layer.cornerRadius = 20
         articleMainImageView.clipsToBounds = true
-        articleMainImageView.layer.borderColor = UIColor.customGreen.cgColor
-        articleMainImageView.layer.borderWidth = 2.0
+        articleMainImageView.contentMode = .scaleAspectFill
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowOpacity = 0.5
+        containerView.layer.shadowRadius = 3
+        containerView.layer.shadowOffset = .zero
+        containerView.layer.cornerRadius = 10
     }
     
     func setArticle(article: ArticleCache) {
         currentArticle = article
         articleMainImageView.image = UIImage(named: "GelecekBilimdeLogo")
         articleTitleLabel.text = article.title.convertHTMLEntities()
-        articleDescriptionLabel.text = "\(String(cleanString(from: article.excrpt).prefix(75)))..."
-        let calender = Calendar.current
-        let dateComponent = calender.dateComponents([.year, .month, .day], from: article.date)
-        articleAddedDateLabel.text = "\(String(describing: dateComponent.day!))/\(String(describing: dateComponent.month!))/\(String(describing: dateComponent.year!))"
-        articleBookmarkImageView.image = UIImage(named: article.bookmarked ? "bookmarked" : "unbookmarked")
+        articleDescriptionLabel.text = article.excrpt.cleanString()
+        articleAddedDateLabel.text = article.date.gbComponent()
+        let image = UIImage(named: article.bookmarked ? "bookmarked" : "unbookmarked")?.withRenderingMode(.alwaysTemplate)
+        articleBookmarkButton.setImage(image, for: .normal)
+        articleBookmarkButton.tintColor = .gray
         guard let url = URL(string: article.imageURL) else { return }
         articleMainImageView.sd_setImage(with: url) { [weak self] (image, error, cache, urls) in
             self?.articleMainImageView.image = (error != nil) ? UIImage(named: "GelecekBilimdeLogo") : image
@@ -58,13 +61,13 @@ final class ArticleTableViewCell: UITableViewCell {
     
     @objc func bookmarkClicked() {
         UIView.animate(withDuration: 0.2, delay: 0,  options: [], animations: {
-            self.articleBookmarkImageView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.articleBookmarkButton.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
             DispatchQueue.main.async {
-                self.articleBookmarkImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                self.articleBookmarkButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
         }) { (finished) in
             self.didArticleBookmarked?(self.currentArticle)
         }
     }
-    
 }
+

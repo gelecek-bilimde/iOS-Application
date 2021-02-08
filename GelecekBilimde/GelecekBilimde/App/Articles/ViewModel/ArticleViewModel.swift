@@ -10,55 +10,73 @@ import Foundation
 import RealmSwift
 import FirebaseDatabase
 
-class ArticleViewModel {
+final class ArticleViewModel {
     
-    let networkManager = NetworkManager()
     let realm = try! Realm()
     var articlesCache: Results<ArticleCache>?
-    var articles = [ArticleResponse]()
-    
+    var articles = [Article]()
+    let resource = ArticleResource()
+    var selectedCategory: ArticleCategory?
+    var currentpage = 1
+    var selectedDate: Date?
     
     func loadArticlesCache() {
-        articlesCache = realm.objects(ArticleCache.self).sorted(byKeyPath: "date", ascending: false)
+        guard let categoryId = selectedCategory?.category.rawValue else {
+            guard let date = selectedDate else {
+                articlesCache = realm.objects(ArticleCache.self).sorted(byKeyPath: "date", ascending: false)
+                return
+            }
+            articlesCache = realm.objects(ArticleCache.self).filter("date > %@", date).sorted(byKeyPath: "date", ascending: false)
+            return }
+        
+        guard let date = selectedDate else {
+            articlesCache = realm.objects(ArticleCache.self).filter("category == %@", categoryId).sorted(byKeyPath: "date", ascending: false)
+            return
+        }
+        articlesCache = realm.objects(ArticleCache.self).filter("category == %@", categoryId).filter("date > %@", date).sorted(byKeyPath: "date", ascending: false)
     }
     
-    func getArticles(page: Int, completion: @escaping () -> ()) {
-        DispatchQueue.main.async {
-            self.articles.removeAll()
-        }
-        let networkAttempt = 0
-        networkManager.getArticles(page: page) { (articles, error) in
-            if let error = error {
-                print(error)
-                if networkAttempt < 3 {
-                    self.getArticles(page: page) {}
-                }
-            } else {
-                DispatchQueue.main.async {
-                    guard let articles = articles else { return }
-                    
-                    self.articles.append(contentsOf: articles)
-                    
-                    self.writeAll()
-                    self.updateArticleImages()
-                    completion()
-                }
-            }
+    func didSelect(category: ArticleCategory? = nil, date: Date?, completion: @escaping () -> ()) {
+        selectedCategory = category
+        selectedDate = date
+        getArticles {
+            completion()
         }
     }
-    func updateArticleImages(){
-        for article in articlesCache! {
-            Database.database().reference().child("Articles").child(String(article.id)).observe(.value) { (snapshot) in
-                if let userDic = snapshot.value as? NSDictionary {
-                    if let articleImageURL = userDic["articleImageURL"] as? String {
-                        do {
-                            try self.realm.write {
-                                article.imageURL = articleImageURL
-                            }
-                        } catch {
-                            print(error)
-                        }
+    
+    func getArticles(completion: @escaping () -> ()) {
+        articles.removeAll()
+        resource.retrieveArticleList(page: selectedCategory?.page ?? currentpage,
+                                     category: selectedCategory?.category.rawValue,
+                                     date: selectedDate) { [weak self] result in
+            if case .success(let articles) = result {
+                guard let self = self,
+                      let articles = articles! else { return }
+                if self.selectedCategory != nil {
+                    self.selectedCategory?.page += 1
+                } else {
+                    self.currentpage += 1
+                }
+                self.articles.append(contentsOf: articles)
+                self.writeAll()
+                self.updateArticleImages()
+            }
+            completion()
+        }
+    }
+    
+    func updateArticleImages() {
+        guard let articles = articlesCache else { return }
+        for article in articles {
+            Database.database().reference().child("Articles").child(String(article.id)).observe(.value) { [weak self] snapshot in
+                guard let userDic = snapshot.value as? NSDictionary,
+                      let articleImageURL = userDic["articleImageURL"] as? String else { return }
+                do {
+                    try self?.realm.write {
+                        article.imageURL = articleImageURL
                     }
+                } catch {
+                    print(error)
                 }
             }
         }
@@ -72,7 +90,7 @@ class ArticleViewModel {
                 
             } else {
                 // Add article
-                do{
+                do {
                     try realm.write {
                         let articleCache = ArticleCache()
                         articleCache.id = article.id
@@ -82,44 +100,14 @@ class ArticleViewModel {
                         articleCache.title = article.title.rendered
                         articleCache.imageURL = article.imageURL ?? ""
                         articleCache.excrpt = article.excerpt.rendered
+                        articleCache.category = selectedCategory?.category.rawValue ?? -1
                         realm.add(articleCache)
                     }
-                }
-                catch{
+                } catch {
                     print("Error: \(error)")
                 }
             }
         }
-        
-        
-    }
-    
-    func writeArticleToCache(article: ArticleResponse) {
-        
-            let existingPerson = realm.object(ofType: ArticleCache.self, forPrimaryKey: article.id)
-        
-            if let _ = existingPerson {
-                
-            } else {
-                // Add article
-                do{
-                    try realm.write {
-                        let articleCache = ArticleCache()
-                        articleCache.id = article.id
-                        articleCache.date = findDateFromString(dateString: article.date)
-                        articleCache.link = article.link
-                        articleCache.content = article.content.rendered
-                        articleCache.title = article.title.rendered
-                        articleCache.imageURL = article.imageURL ?? ""
-                        articleCache.excrpt = article.excerpt.rendered
-                        realm.add(articleCache)
-                    }
-                }
-                catch{
-                    print("Error: \(error)")
-                }
-            }
-        
     }
     
     func findDateFromString(dateString: String) -> Date {
@@ -128,6 +116,7 @@ class ArticleViewModel {
         let date = dateFormatter.date(from:dateString)!
         return date
     }
+    
     func clearArticleCache(){
           do{
               try self.realm.write {
@@ -152,6 +141,30 @@ class ArticleViewModel {
         }
         catch{
             print("Error: \(error)")
+        }
+    }
+}
+
+protocol ArticleResourceProtocol: QuaResponse {
+    func retrieveArticleList(page: Int, category: Int?, date: Date?, completion: @escaping Handler<Result<[Article]?>>)
+}
+
+class ArticleResource: ArticleResourceProtocol {
+    init() {
+    }
+    
+    func retrieveArticleList(page: Int, category: Int?, date: Date?, completion: @escaping Handler<Result<[Article]?>>) {
+        var queryItems: [URLQueryItem] = [
+            URLQueryItem(name: "page", value: "\(page)"),
+            URLQueryItem(name: "per_page", value: "\(10)")]
+        if let category = category {
+            queryItems.append(URLQueryItem(name: "categories", value: "\(category)"))
+        }
+        if let date = date {
+            queryItems.append(contentsOf: date.gbAPIComponent() ?? [])
+        }
+        retrieve(.init(path: "posts", queryItems: queryItems)) { result in
+            completion(result)
         }
     }
 }

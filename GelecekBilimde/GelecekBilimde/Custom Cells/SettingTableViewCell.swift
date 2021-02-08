@@ -14,7 +14,8 @@ final class SettingTableViewCell: UITableViewCell {
     @IBOutlet weak var settingNameLabel: UILabel!
     
     func setSetting(name: String, image: UIImage) {
-        settingImageView.image = image
+        settingImageView.image = image.withRenderingMode(.alwaysTemplate)
+        settingImageView.tintColor = .darkGray
         settingNameLabel.text = name
     }
 }

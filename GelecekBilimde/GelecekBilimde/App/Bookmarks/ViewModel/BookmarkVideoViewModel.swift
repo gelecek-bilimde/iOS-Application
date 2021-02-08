@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class BookmarkVideoViewModel {
+final class BookmarkVideoViewModel {
     let realm = try! Realm()
     var bookmarkedVideos: Results<VideoCache>?
     
@@ -17,10 +17,10 @@ class BookmarkVideoViewModel {
         bookmarkedVideos = realm.objects(VideoCache.self).filter("bookmarked == True")
     }
     
-    func changeVideoBookmark(video: VideoCache, state: Bool){
+    func changeVideoBookmark(video: VideoCache, state: Bool) {
         let video = realm.objects(VideoCache.self).filter("videoURLId == %@", video.videoURLId).first
         
-        do{
+        do {
             try realm.write {
                 video?.bookmarked = state
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "videoBookmarkChangeFromBookmark"), object: nil,

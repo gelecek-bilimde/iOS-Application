@@ -8,10 +8,10 @@
 
 import UIKit
 
-class BookmarksViewController: UIViewController {
+final class BookmarksViewController: UIViewController {
     
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var segmentedControl: UISegmentedControl!
     
     private lazy var bookmarkedArticlesController: BookmarkedArticlesTableViewController = {
         let viewController = Destination().BookmarkedArticles
@@ -46,7 +46,6 @@ extension BookmarksViewController {
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         updateView()
     }
-    
 }
 
 // MARK: - Auxiliary Methods

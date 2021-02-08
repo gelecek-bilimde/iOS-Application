@@ -33,7 +33,7 @@ final class EmptyStateView: UIView {
         messageLabel.textAlignment = .center
         messageLabel.numberOfLines = 0
         messageLabel.font = .boldSystemFont(ofSize: 18)
-        messageLabel.textColor = .white
+        messageLabel.textColor = .darkGray
         addSubview(messageLabel)
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         

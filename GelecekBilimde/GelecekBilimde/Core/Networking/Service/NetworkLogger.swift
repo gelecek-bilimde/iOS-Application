@@ -9,7 +9,7 @@
 import Foundation
 
 class NetworkLogger {
-    static func log(request: URLRequest) {
+    static func log(request: NSMutableURLRequest) {
         
         print("\n - - - - - - - - - - OUTGOING - - - - - - - - - - \n")
         defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
@@ -17,7 +17,7 @@ class NetworkLogger {
         let urlAsString = request.url?.absoluteString ?? ""
         let urlComponents = NSURLComponents(string: urlAsString)
         
-        let method = request.httpMethod != nil ? "\(request.httpMethod ?? "")" : ""
+        let method = request.httpMethod
         let path = "\(urlComponents?.path ?? "")"
         let query = "\(urlComponents?.query ?? "")"
         let host = "\(urlComponents?.host ?? "")"

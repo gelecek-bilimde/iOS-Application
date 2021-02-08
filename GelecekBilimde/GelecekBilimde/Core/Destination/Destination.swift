@@ -28,7 +28,7 @@ struct Destination {
     let BookmarkedVideos = _Storyboard.Bookmarks.instantiateViewController(withIdentifier: "bookmarkedVideos") as! BookmarkedVideosTableViewController
     let Login = _Storyboard.Login.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
     let InitialTabBar = _Storyboard.InitialTabBar.instantiateViewController(withIdentifier: "initialTabBarViewController") as! InitialTabBarViewController
-    let Articles = _Storyboard.Articles.instantiateViewController(withIdentifier: "articlesTableViewController") as! ArticlesTableViewController
+    let Articles = _Storyboard.Articles.instantiateViewController(withIdentifier: "articlesTableViewController") as! ArticleListVC
     let Videos = _Storyboard.Videos.instantiateViewController(withIdentifier: "videosTableViewController") as! VideosTableViewController
     let Profile = _Storyboard.Profile.instantiateViewController(withIdentifier: "profileViewController") as! ProfileViewController
 }

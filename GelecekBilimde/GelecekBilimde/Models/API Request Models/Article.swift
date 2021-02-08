@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ArticleResponse: Codable, Equatable {
+struct Article: Codable, Equatable {
     
     var id: Int
     var date: String
@@ -17,8 +17,9 @@ struct ArticleResponse: Codable, Equatable {
     var title: Title
     var excerpt: Excerpt
     var imageURL: String?
+    var categories: [Category]
     
-    static func == (lhs: ArticleResponse, rhs: ArticleResponse) -> Bool {
+    static func == (lhs: Article, rhs: Article) -> Bool {
         return lhs.id == rhs.id && lhs.date == rhs.date && lhs.link == rhs.link && lhs.content == rhs.content && lhs.title == rhs.title && lhs.excerpt == rhs.excerpt && lhs.imageURL == rhs.imageURL
     }
 }

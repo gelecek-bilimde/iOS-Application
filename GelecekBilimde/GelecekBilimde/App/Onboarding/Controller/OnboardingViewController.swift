@@ -11,30 +11,26 @@ import Lottie
 import FirebaseAuth
 import FirebaseDatabase
 
-class OnboardingViewController: UIViewController {
+final class OnboardingViewController: UIViewController {
 
     private var animationView: AnimationView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setAnimationView()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setAnimationView()
         checkIsAuthenticate()
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         animationView.stop()
         animationView.removeFromSuperview()
     }
     
-    func setAnimationView(){
+    private func setAnimationView() {
         animationView = AnimationView(name: "invites-sent")
-        animationView.frame = self.view.frame
-        animationView.center = self.view.center
+        animationView.frame = view.frame
+        animationView.center = view.center
         animationView.contentMode = .scaleAspectFill
         
         view.addSubview(animationView)
@@ -44,7 +40,7 @@ class OnboardingViewController: UIViewController {
         animationView.play()
     }
 
-    func checkIsAuthenticate(){
+    private func checkIsAuthenticate() {
         if Auth.auth().currentUser != nil {
             getUserData()
         } else {
@@ -53,7 +49,8 @@ class OnboardingViewController: UIViewController {
             }
         }
     }
-    func getUserData() {
+    
+    private func getUserData() {
         guard let currentUserUid = Auth.auth().currentUser?.uid else { return }
         Database.database().reference().child("Users").child(currentUserUid).observe(.value) { [weak self] (snapshot) in
             guard let self = self,
@@ -65,5 +62,4 @@ class OnboardingViewController: UIViewController {
             self.performSegue(withIdentifier: UnwindIdentifier.identifier(for: .App), sender: nil)
         }
     }
-    
 }
