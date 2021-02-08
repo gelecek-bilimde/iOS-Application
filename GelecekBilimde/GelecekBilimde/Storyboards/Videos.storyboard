@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1L-R5-uMI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1L-R5-uMI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
         <array key="SF-Pro-Display-Regular.otf">
             <string>SFProDisplay-Regular</string>
         </array>
@@ -20,7 +24,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sMg-Oj-Uea">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="350" id="A7Y-Rd-XfL" customClass="VideoTableViewCell" customModule="GelecekBilimde" customModuleProvider="target">
@@ -30,6 +34,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTn-LR-kKe">
+                                            <rect key="frame" x="0.0" y="348" width="414" height="2"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="E4G-wb-fIG"/>
+                                            </constraints>
+                                        </view>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtubePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="0YL-BN-Toh">
                                             <rect key="frame" x="32" y="25" width="350" height="200"/>
                                             <constraints>
@@ -38,50 +49,45 @@
                                                 <constraint firstAttribute="width" secondItem="0YL-BN-Toh" secondAttribute="height" multiplier="7:4" id="V8X-cY-8ae"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GelecekBilimdeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jjL-nz-MBf">
-                                            <rect key="frame" x="28" y="255" width="65" height="65"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="65" id="NTg-iO-qm1"/>
-                                                <constraint firstAttribute="height" constant="65" id="TWd-0c-g05"/>
-                                                <constraint firstAttribute="width" secondItem="jjL-nz-MBf" secondAttribute="height" multiplier="1:1" id="rtw-Z6-x2o"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcz-o7-mLo">
-                                            <rect key="frame" x="123" y="277.5" width="171" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcz-o7-mLo">
+                                            <rect key="frame" x="32" y="245" width="262" height="74"/>
                                             <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unbookmarked" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-sD-hZX">
-                                            <rect key="frame" x="342" y="241" width="40" height="40"/>
+                                            <rect key="frame" x="357" y="245" width="25" height="25"/>
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="Ip6-zB-PeQ"/>
-                                                <constraint firstAttribute="height" constant="40" id="ZxZ-dX-ABG"/>
-                                                <constraint firstAttribute="width" secondItem="Nfb-sD-hZX" secondAttribute="height" multiplier="1:1" id="i8m-Ta-dng"/>
+                                                <constraint firstAttribute="width" constant="25" id="ozh-HT-kqB"/>
+                                                <constraint firstAttribute="height" constant="25" id="qRS-vs-VKB"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2h-R3-dXZ">
-                                            <rect key="frame" x="315" y="309" width="79" height="21"/>
-                                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <rect key="frame" x="326.5" y="280" width="55.5" height="14.5"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="XTn-LR-kKe" secondAttribute="bottom" id="2aK-Ig-qpf"/>
                                         <constraint firstAttribute="trailing" secondItem="Nfb-sD-hZX" secondAttribute="trailing" constant="32" id="6CA-Ga-abM"/>
+                                        <constraint firstItem="Nfb-sD-hZX" firstAttribute="trailing" secondItem="0YL-BN-Toh" secondAttribute="trailing" id="6kQ-qk-6ov"/>
                                         <constraint firstItem="0YL-BN-Toh" firstAttribute="centerX" secondItem="PwW-bH-j2z" secondAttribute="centerX" id="98Z-eP-gFH"/>
-                                        <constraint firstItem="Nfb-sD-hZX" firstAttribute="top" secondItem="0YL-BN-Toh" secondAttribute="bottom" constant="16" id="DVX-CI-TAd"/>
-                                        <constraint firstItem="jjL-nz-MBf" firstAttribute="leading" secondItem="PwW-bH-j2z" secondAttribute="leading" constant="28" id="SxZ-xC-mTa"/>
-                                        <constraint firstItem="Xcz-o7-mLo" firstAttribute="leading" secondItem="jjL-nz-MBf" secondAttribute="trailing" constant="30" id="TF6-4B-6xl"/>
-                                        <constraint firstAttribute="trailing" secondItem="i2h-R3-dXZ" secondAttribute="trailing" constant="20" id="ZUl-XD-f6b"/>
+                                        <constraint firstItem="Nfb-sD-hZX" firstAttribute="top" secondItem="Xcz-o7-mLo" secondAttribute="top" id="9JH-jH-G2t"/>
+                                        <constraint firstItem="i2h-R3-dXZ" firstAttribute="trailing" secondItem="Nfb-sD-hZX" secondAttribute="trailing" id="IKx-Nn-gXf"/>
+                                        <constraint firstAttribute="trailing" secondItem="XTn-LR-kKe" secondAttribute="trailing" id="IZi-pV-7rx"/>
+                                        <constraint firstItem="Xcz-o7-mLo" firstAttribute="top" secondItem="0YL-BN-Toh" secondAttribute="bottom" constant="20" id="LXJ-Gl-Lge"/>
+                                        <constraint firstItem="i2h-R3-dXZ" firstAttribute="top" secondItem="Nfb-sD-hZX" secondAttribute="bottom" constant="10" id="cw1-mj-hcJ"/>
                                         <constraint firstItem="0YL-BN-Toh" firstAttribute="top" secondItem="PwW-bH-j2z" secondAttribute="top" constant="25" id="dea-L4-3eM"/>
-                                        <constraint firstItem="Xcz-o7-mLo" firstAttribute="centerY" secondItem="jjL-nz-MBf" secondAttribute="centerY" id="kdu-I7-Jyc"/>
-                                        <constraint firstAttribute="bottom" secondItem="i2h-R3-dXZ" secondAttribute="bottom" constant="20" id="nmy-Pu-HcR"/>
-                                        <constraint firstItem="jjL-nz-MBf" firstAttribute="top" secondItem="0YL-BN-Toh" secondAttribute="bottom" constant="30" id="ugQ-tj-pY6"/>
+                                        <constraint firstItem="Xcz-o7-mLo" firstAttribute="leading" secondItem="0YL-BN-Toh" secondAttribute="leading" id="l62-R7-Rrs"/>
+                                        <constraint firstItem="XTn-LR-kKe" firstAttribute="leading" secondItem="PwW-bH-j2z" secondAttribute="leading" id="ul6-7O-LOT"/>
                                         <constraint firstAttribute="trailing" secondItem="Xcz-o7-mLo" secondAttribute="trailing" constant="120" id="xlu-W4-ea4"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Xcz-o7-mLo" secondAttribute="bottom" constant="20" id="yh7-id-j1H"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="videoBookmarkImageView" destination="Nfb-sD-hZX" id="fY6-pc-6m1"/>
                                     <outlet property="videoDateLabel" destination="i2h-R3-dXZ" id="1Pc-Vq-plB"/>
@@ -104,7 +110,7 @@
             </objects>
             <point key="canvasLocation" x="1066.6666666666667" y="159.375"/>
         </scene>
-        <!--Video Ismi-->
+        <!--Video Content View Controller-->
         <scene sceneID="YiC-Vv-evS">
             <objects>
                 <viewController storyboardIdentifier="VideoContentViewController" id="lQY-n1-WrU" customClass="VideoContentViewController" customModule="GelecekBilimde" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,8 +118,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWJ-Er-A3M">
+                                <rect key="frame" x="20" y="98" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssA-fv-ULl">
-                                <rect key="frame" x="0.0" y="188" width="414" height="325"/>
+                                <rect key="frame" x="0.0" y="178" width="414" height="325"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="325" id="HeP-rc-Ckp"/>
@@ -124,16 +136,19 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6jo-xt-rBF"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ssA-fv-ULl" firstAttribute="leading" secondItem="6jo-xt-rBF" secondAttribute="leading" id="2qK-m0-BNZ"/>
                             <constraint firstItem="6jo-xt-rBF" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ssA-fv-ULl" secondAttribute="bottom" constant="20" id="Qoa-a8-MYG"/>
+                            <constraint firstItem="ssA-fv-ULl" firstAttribute="top" secondItem="UWJ-Er-A3M" secondAttribute="bottom" constant="80" id="bKD-MZ-DKp"/>
                             <constraint firstItem="ssA-fv-ULl" firstAttribute="trailing" secondItem="6jo-xt-rBF" secondAttribute="trailing" id="bgW-9h-TqR"/>
-                            <constraint firstItem="ssA-fv-ULl" firstAttribute="top" secondItem="6jo-xt-rBF" secondAttribute="top" constant="100" id="mtJ-kX-4M3"/>
+                            <constraint firstItem="UWJ-Er-A3M" firstAttribute="top" secondItem="6jo-xt-rBF" secondAttribute="top" constant="10" id="h1D-4D-Ewu"/>
+                            <constraint firstItem="UWJ-Er-A3M" firstAttribute="leading" secondItem="6jo-xt-rBF" secondAttribute="leading" constant="20" id="pLP-Jk-qhB"/>
+                            <constraint firstItem="6jo-xt-rBF" firstAttribute="trailing" secondItem="UWJ-Er-A3M" secondAttribute="trailing" constant="20" id="sr4-l4-PFM"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6jo-xt-rBF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Video Ismi" id="QV9-zh-9bq">
+                    <navigationItem key="navigationItem" id="QV9-zh-9bq">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="aHD-se-56m"/>
                         <barButtonItem key="rightBarButtonItem" image="share" id="E45-D2-mxP">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,6 +158,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="titleLabel" destination="UWJ-Er-A3M" id="0QR-kU-MCj"/>
                         <outlet property="webView" destination="ssA-fv-ULl" id="YU1-nv-0t5"/>
                     </connections>
                 </viewController>
@@ -173,10 +189,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GelecekBilimdeLogo" width="1000" height="1000"/>
         <image name="icons8-play-button" width="25" height="25"/>
         <image name="share" width="30" height="30"/>
         <image name="unbookmarked" width="96" height="96"/>
         <image name="youtubePlaceHolder" width="1200" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -11,10 +11,6 @@ import UIKit
 // MARK: - Table view data source
 extension VideosTableViewController {
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 350
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return videosViewModel.videosCache?.count ?? 0

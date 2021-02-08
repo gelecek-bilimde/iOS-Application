@@ -11,14 +11,17 @@ import JGProgressHUD
 
 struct CustomProgressHUD {
     var progressHUD: JGProgressHUD
+    
     init() {
         self.progressHUD = JGProgressHUD(style: .dark)
         self.progressHUD.textLabel.text = "Yükleniyor"
     }
-    func play(view: UIView){
+    
+    func play(view: UIView) {
         self.progressHUD.show(in: view)
     }
-    func stop(){
+    
+    func stop() {
         self.progressHUD.dismiss(animated: true)
     }
 }

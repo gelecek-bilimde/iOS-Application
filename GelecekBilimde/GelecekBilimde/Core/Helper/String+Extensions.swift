@@ -24,4 +24,6 @@ extension String {
         }
         return attributedString.string
     }
+    
+    func cleanString() -> String { replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil) }
 }

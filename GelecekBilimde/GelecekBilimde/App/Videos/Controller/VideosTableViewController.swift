@@ -22,7 +22,7 @@ final class VideosTableViewController: UITableViewController {
         videosViewModel.loadVideosCache()
         
         //This is for setting table view's background color
-        self.tableView.backgroundColor = UIColor.tableViewBgColor
+        tableView.backgroundColor = .white
         
         videosViewModel.getVideos {
             DispatchQueue.main.async { [weak self] in
@@ -74,13 +74,11 @@ final class VideosTableViewController: UITableViewController {
     }
 }
 
-
-
 //MARK: Prepare for Segue
 extension VideosTableViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
-        backItem.title = "Geri"
+        backItem.title = ""
         navigationItem.backBarButtonItem = backItem
         if let destinationVC = segue.destination as? VideoContentViewController {
             if let indexPath = tableView.indexPathForSelectedRow {

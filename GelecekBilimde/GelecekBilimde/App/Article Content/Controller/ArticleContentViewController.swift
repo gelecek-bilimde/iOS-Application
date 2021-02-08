@@ -9,36 +9,36 @@
 import UIKit
 import WebKit
 
-class ArticleContentViewController: UIViewController, UIDocumentInteractionControllerDelegate {
+final class ArticleContentViewController: UIViewController, UIDocumentInteractionControllerDelegate {
     
-    private var webView: WKWebView!
-    var currentArticle: ArticleCache!
-    private var hud: CustomProgressHUD!
-    
-    override func loadView() {
-        webView = WKWebView()
-        webView.backgroundColor = UIColor.tableViewBgColor
-        view = webView
+    @IBOutlet private weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text = currentArticle.title.convertHTMLEntities()
+        }
     }
-
+    @IBOutlet private var webView: WKWebView!
+    private var hud: CustomProgressHUD!
+    var currentArticle: ArticleCache!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = currentArticle.title.convertHTMLEntities()
+        webView.backgroundColor = .white
+        webView.scrollView.showsVerticalScrollIndicator = false
         hud = CustomProgressHUD()
         loadHTML()
     }
     
-    func loadHTML(){
+    private func loadHTML() {
         hud.play(view: view)
         let html = """
         <html>
         <head>
         <meta name="viewport" content="width=device-width, initial scale=1">
-        <style> p { color: white; } figcaption { color: white; } img { height: 200; width: 300; } a { color: white; }
-        li { color: white; } h1 { color: white; } h2 { color: white; } h3 { color: white; } h4 { color: white; }
+        <style> p { color: black; } figcaption { color: black; } img { height: 200; width: 300; } a { color: black; }
+        li { color: black; } h1 { color: black; } h2 { color: black; } h3 { color: black; } h4 { color: black; }
         </style>
         </head>
-        <body style="background-color:#0B3762;font-family:Arial">
+        <body style="background-color: white;font-family:Arial">
         \(currentArticle.content)
         </body>
         </html>
@@ -47,8 +47,7 @@ class ArticleContentViewController: UIViewController, UIDocumentInteractionContr
         hud.stop()
     }
     
-    
-    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction private func shareButtonTapped(_ sender: UIBarButtonItem) {
         let activityController = UIActivityViewController(activityItems: [currentArticle.link], applicationActivities: nil)
         present(activityController, animated: true)
     }

@@ -12,11 +12,11 @@ import GoogleSignIn
 import SDWebImage
 import SafariServices
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
     
-    @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var userImageView: UIImageView!
+    @IBOutlet private weak var usernameLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
     
     private var profileDataSourceAndDelegate: ProfileDataSourceAndDelegate!
     
@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
 
 // MARK: - Auxiliary Methods
 extension ProfileViewController {
-    func setView(){
+    func setView() {
         //NavBar title customizations
         navigationController?.navigationBar.barTintColor = UIColor.barTintColor
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
