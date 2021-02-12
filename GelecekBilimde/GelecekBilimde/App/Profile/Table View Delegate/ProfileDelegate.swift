@@ -21,8 +21,8 @@ class ProfileDataSourceAndDelegate: NSObject, UITableViewDataSource, UITableView
         currentVC = vc
     }
     
-    var settingNames = ["Bizi Destekle", "Twitch", "Youtube", "Twitter", "Instagram", "Spotify", "Geliştirici Bilgileri", "Çıkış Yap"]
-    var settingImages = ["supportIcon", "twitchIcon", "youtubeWhiteIcon", "twitterIcon", "instagramIcon", "spotifyIcon", "developerIcon", "logoutIcon"]
+    var settingNames = ["Twitch", "Youtube", "Twitter", "Instagram", "Spotify", "Geliştirici Bilgileri", "Çıkış Yap"]
+    var settingImages = ["twitchIcon", "youtubeWhiteIcon", "twitterIcon", "instagramIcon", "spotifyIcon", "developerIcon", "logoutIcon"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settingNames.count
@@ -43,8 +43,6 @@ class ProfileDataSourceAndDelegate: NSObject, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentSetting = settingNames[indexPath.row]
         switch currentSetting {
-        case "Bizi Destekle":
-            openSiteOnSafari(url: "https://www.gelecekbilimde.net/destek")
         case "Instagram":
             if !openInAppIsExist(url: "instagram://user?username=gelecekbilimde") {
                 openSiteOnSafari(url: "https://www.instagram.com/gelecekbilimde")
