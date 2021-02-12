@@ -1,0 +1,120 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+### Swift ###
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+#
+# Pods/
+
+
+### Xcode ###
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.xcuserstate
+GelecekBilimde/Pods/Target Support Files/AppAuth/AppAuth.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/AppAuth/AppAuth.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/Firebase/Firebase.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/Firebase/Firebase.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseAnalyticsInterop/FirebaseAnalyticsInterop.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseAnalyticsInterop/FirebaseAnalyticsInterop.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseAuth/FirebaseAuth.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseAuth/FirebaseAuth.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseAuthInterop/FirebaseAuthInterop.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseAuthInterop/FirebaseAuthInterop.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseCore/FirebaseCore.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseCore/FirebaseCore.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseCoreDiagnosticsInterop/FirebaseCoreDiagnosticsInterop.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseCoreDiagnosticsInterop/FirebaseCoreDiagnosticsInterop.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseMessaging/FirebaseMessaging.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/FirebaseMessaging/FirebaseMessaging.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/GoogleSignIn/GoogleSignIn.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/GoogleSignIn/GoogleSignIn.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/GoogleUtilities/GoogleUtilities.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/GoogleUtilities/GoogleUtilities.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/GTMAppAuth/GTMAppAuth.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/GTMAppAuth/GTMAppAuth.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/leveldb-library/leveldb-library.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/leveldb-library/leveldb-library.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/nanopb/nanopb.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/nanopb/nanopb.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/PromisesObjC/PromisesObjC.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/PromisesObjC/PromisesObjC.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/Protobuf/Protobuf.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/Protobuf/Protobuf.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/Realm/Realm.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/Realm/Realm.release.xcconfig
+GelecekBilimde/Pods/Target Support Files/RealmSwift/RealmSwift.debug.xcconfig
+GelecekBilimde/Pods/Target Support Files/RealmSwift/RealmSwift.release.xcconfig

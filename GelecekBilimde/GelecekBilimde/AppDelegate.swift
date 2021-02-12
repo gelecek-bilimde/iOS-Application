@@ -109,12 +109,12 @@ extension AppDelegate {
         let config = Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used
             // version (if you've never set a schema version before, the version is 0).
-            schemaVersion: 1,
+            schemaVersion: 2,
             // Set the block which will be called automatically when opening a Realm with
             // a schema version lower than the one set above
             migrationBlock: { migration, oldSchemaVersion in
                 // We haven’t migrated anything yet, so oldSchemaVersion == 0
-                if (oldSchemaVersion < 1) {
+                if (oldSchemaVersion < 2) {
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties
                     // And will update the schema on disk automatically
@@ -139,6 +139,7 @@ extension AppDelegate {
         let dictionary = NSDictionary(object: "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36", forKey: "UserAgent" as NSCopying)
         UserDefaults.standard.register(defaults: dictionary as! [String : Any])
     }
+    
     func getTopMostViewController() -> UIViewController? {
           var topMostViewController = UIApplication.shared.keyWindow?.rootViewController
 
@@ -193,7 +194,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
 
         let vc = SFSafariViewController(url: url, configuration: config)
         vc.preferredBarTintColor = UIColor.barTintColor
-        vc.preferredControlTintColor = UIColor.customGreen
+        vc.preferredControlTintColor = UIColor.white
         self.getTopMostViewController()?.present(vc, animated: true)
     }
 

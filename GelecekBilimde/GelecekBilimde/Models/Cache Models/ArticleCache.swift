@@ -18,6 +18,7 @@ class ArticleCache: Object {
     @objc dynamic var imageURL: String = ""
     @objc dynamic var excrpt: String = ""
     @objc dynamic var bookmarked: Bool = false
+    @objc dynamic var category: Int = -1
     
     override static func primaryKey() -> String? {
         return "id"

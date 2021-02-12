@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookmarkedArticlesTableViewController: UITableViewController {
+final class BookmarkedArticlesTableViewController: UITableViewController {
     
     private var bookmarkArticleVM: BookmarkArticleViewModel!
     private lazy var emptyMessageView: EmptyStateView = {
@@ -18,10 +18,11 @@ class BookmarkedArticlesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(ArticleCell.self)
         bookmarkArticleVM = BookmarkArticleViewModel()
         refreshArticles()
         //This is for setting table view's background color
-        tableView.backgroundColor = .tableViewBgColor
+        tableView.backgroundColor = .white
         tableView.separatorStyle = .none
         NotificationCenter.default.addObserver(self, selector: #selector(refreshArticles), name: NSNotification.Name(rawValue: "articleBookmarkChange"), object: nil)
     }
@@ -42,22 +43,17 @@ class BookmarkedArticlesTableViewController: UITableViewController {
 // MARK: - Table view data source
 extension BookmarkedArticlesTableViewController {
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { UITableView.automaticDimension }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        numberOfRows()
-    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { numberOfRows() }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let currentArticle = bookmarkArticleVM.bookmarkedArticles?[indexPath.row] else { return UITableViewCell() }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarkArticleCell", for: indexPath) as! ArticleTableViewCell
+        guard let article = bookmarkArticleVM.bookmarkedArticles?[indexPath.row] else { return UITableViewCell() }
+        let cell: ArticleCell = tableView.dequeueReusableCell()
         cell.didArticleBookmarked? = { [weak self] article in
             self?.didTapBookmark(article: article)
         }
-        cell.setArticle(article: currentArticle)
+        cell.setArticle(article: article)
         return cell
     }
     
@@ -76,7 +72,7 @@ extension BookmarkedArticlesTableViewController {
 extension BookmarkedArticlesTableViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
-        backItem.title = "Geri"
+        backItem.title = ""
         navigationItem.backBarButtonItem = backItem
         if let destinationVC = segue.destination as? ArticleContentViewController {
             if let indexPath = tableView.indexPathForSelectedRow {

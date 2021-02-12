@@ -8,8 +8,7 @@
 
 import UIKit
 
-// Bookmarked articles or videos seems like same page. You could consider use one tableviewcontroller.
-class BookmarkedVideosTableViewController: UITableViewController {
+final class BookmarkedVideosTableViewController: UITableViewController {
 
     private var bookmarkVideoVM: BookmarkVideoViewModel!
     private lazy var emptyMessageView: EmptyStateView = {
@@ -22,27 +21,18 @@ class BookmarkedVideosTableViewController: UITableViewController {
         bookmarkVideoVM = BookmarkVideoViewModel()
         refreshArticles()
         //This is for setting table view's background color
-        self.tableView.backgroundColor = UIColor.tableViewBgColor
+        self.tableView.backgroundColor = .white
         NotificationCenter.default.addObserver(self, selector: #selector(refreshArticles), name: NSNotification.Name(rawValue: "videoBookmarkChange"), object: nil)
     }
     
-    @objc func refreshArticles(){
+    @objc func refreshArticles() {
         bookmarkVideoVM.loadBookmarkedVideos()
         tableView.reloadData()
     }
     
     func didTapBookmark(video: VideoCache) {
-        if video.bookmarked {
-            //Set False
-            bookmarkVideoVM.changeVideoBookmark(video: video, state: false)
-            bookmarkVideoVM.loadBookmarkedVideos()
-            tableView.reloadData()
-        } else {
-            //Set True
-            bookmarkVideoVM.changeVideoBookmark(video: video, state: true)
-            bookmarkVideoVM.loadBookmarkedVideos()
-            tableView.reloadData()
-        }
+        bookmarkVideoVM.changeVideoBookmark(video: video, state: !video.bookmarked)
+        refreshArticles()
     }
     
     private func numberOfRows() -> Int {
@@ -91,7 +81,7 @@ extension BookmarkedVideosTableViewController {
 extension BookmarkedVideosTableViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
-        backItem.title = "Geri"
+        backItem.title = ""
         navigationItem.backBarButtonItem = backItem
         if let destinationVC = segue.destination as? VideoContentViewController {
             if let indexPath = tableView.indexPathForSelectedRow {

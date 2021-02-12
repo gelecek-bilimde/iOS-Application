@@ -9,28 +9,28 @@
 import UIKit
 import WebKit
 
-class VideoContentViewController: UIViewController {
+final class VideoContentViewController: UIViewController {
     
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet private weak var webView: WKWebView!
+    @IBOutlet private weak var titleLabel: UILabel!
     
     var currentVideo: VideoCache!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = currentVideo.videoTitle
+        titleLabel.text = currentVideo.videoTitle
         loadVideo()
     }
     
-    func loadVideo(){
+    private func loadVideo() {
         let myURL = URL(string: "https://www.youtube.com/embed/\(currentVideo.videoURLId)")
         let youtubeRequest = URLRequest(url: myURL!)
         webView.load(youtubeRequest)
     }
     
-    @IBAction func shareButtonClicked(_ sender: UIBarButtonItem) {
+    @IBAction private func shareButtonClicked(_ sender: UIBarButtonItem) {
         let videoURL = "https://www.youtube.com/watch?v=\(currentVideo.videoURLId)"
         let activityController = UIActivityViewController(activityItems: [videoURL], applicationActivities: nil)
         present(activityController, animated: true)
     }
-    
 }

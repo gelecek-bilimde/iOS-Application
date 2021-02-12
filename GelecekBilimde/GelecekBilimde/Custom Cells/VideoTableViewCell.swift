@@ -50,7 +50,8 @@ final class VideoTableViewCell: UITableViewCell {
         
         videoTitleLabel.text = videoCache.videoTitle.convertHTMLEntities()
         videoDateLabel.text = "\(String(describing: dateComponent.day!))/\(String(describing: dateComponent.month!))/\(String(describing: dateComponent.year!))"
-        videoBookmarkImageView.image = UIImage(named: videoCache.bookmarked ? "bookmarked" : "unbookmarked")
+        videoBookmarkImageView.image = UIImage(named: videoCache.bookmarked ? "bookmarked" : "unbookmarked")?.withRenderingMode(.alwaysTemplate)
+        videoBookmarkImageView.tintColor = .gray
         guard let url = URL(string: videoCache.videoImageURL) else { return }
         videoThumbnailImageView.sd_setImage(with: url) { [weak self] (image, error, cache, urls) in
             self?.videoThumbnailImageView.image = (error != nil) ? UIImage(named: "youtubePlaceHolder") : image
