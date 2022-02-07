@@ -10,27 +10,20 @@ import Foundation
 
 struct Article: Codable, Equatable {
     
-    var id: Int
-    var date: String
-    var link: String
-    var content: Content
-    var title: Title
-    var excerpt: Excerpt
+    var id: Int?
+    var date: String?
+    var link: String?
+    var content: RenderedModel?
+    var title: RenderedModel?
+    var excerpt: RenderedModel?
     var imageURL: String?
-    var categories: [Category]
+    var categories: [Category]?
     
     static func == (lhs: Article, rhs: Article) -> Bool {
         return lhs.id == rhs.id && lhs.date == rhs.date && lhs.link == rhs.link && lhs.content == rhs.content && lhs.title == rhs.title && lhs.excerpt == rhs.excerpt && lhs.imageURL == rhs.imageURL
     }
 }
 
-struct Content: Codable, Equatable {
-    var rendered: String
-}
-
-struct Title: Codable, Equatable {
-    var rendered: String
-}
-struct Excerpt: Codable, Equatable {
-    var rendered: String
+struct RenderedModel: Codable, Equatable {
+    var rendered: String?
 }

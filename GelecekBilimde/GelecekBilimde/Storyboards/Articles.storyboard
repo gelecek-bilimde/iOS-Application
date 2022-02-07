@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fAU-wF-KDl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fAU-wF-KDl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,13 +63,7 @@
                             <constraint firstItem="0pO-NW-Wx5" firstAttribute="bottom" secondItem="BJx-e7-7vD" secondAttribute="bottom" id="w8v-v4-6z7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mhX-ut-pxw">
-                        <barButtonItem key="rightBarButtonItem" image="calendar.circle.fill" catalog="system" id="p4d-0Q-DPw">
-                            <connections>
-                                <action selector="didTapCalendar:" destination="cms-h8-B87" id="1dR-O0-A9s"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="mhX-ut-pxw"/>
                     <connections>
                         <outlet property="articleTableView" destination="BJx-e7-7vD" id="Luc-xO-tNq"/>
                         <outlet property="categoryCollectionView" destination="Dl4-tC-fsC" id="0N3-tl-XIi"/>
@@ -156,7 +150,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>
         <image name="icons8-news" width="25" height="25"/>
         <image name="share" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">

@@ -37,6 +37,7 @@ enum Category: Int, Codable, CustomStringConvertible, CaseIterable {
     case podcast = 33
     case video = 41
     case replays = 1652
+    case unknown
     
     var description: String {
         switch self {
@@ -96,7 +97,17 @@ enum Category: Int, Codable, CustomStringConvertible, CaseIterable {
             return "Video"
         case .replays:
             return "Yayın Tekrarları"
+        case .unknown:
+            return ""
         }
+    }
+
+    init(from decoder: Decoder) throws {
+        guard let rawValue = try? decoder.singleValueContainer().decode(Int.self) else {
+            self = .unknown
+            return
+        }
+        self = Category(rawValue: rawValue) ?? .unknown
     }
 }
 
