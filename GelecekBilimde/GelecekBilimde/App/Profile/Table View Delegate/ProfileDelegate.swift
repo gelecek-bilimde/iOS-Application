@@ -133,5 +133,4 @@ final class ProfileDataSourceAndDelegate: NSObject, UITableViewDataSource, UITab
         CurrentUser.clearCurrentUser()
         currentVC.dismiss(animated: true)
     }
-    
 }

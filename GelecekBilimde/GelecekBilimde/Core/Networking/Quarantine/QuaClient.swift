@@ -42,7 +42,7 @@ public class QuaClient: QuaClientProtocol {
                             let result = try JSONDecoder().decode(T.self, from: data)
                             completion(Result.success(result))
                         } else {
-                            completion(Result.success(nil))
+                            completion(Result.failure(.noData))
                         }
                     } catch(let error) {
                         completion(Result.failure(QuaError.decoding(reason: error.localizedDescription)))

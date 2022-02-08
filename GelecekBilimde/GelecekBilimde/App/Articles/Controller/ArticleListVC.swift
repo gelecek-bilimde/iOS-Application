@@ -49,16 +49,20 @@ final class ArticleListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor.barTintColor
-        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = attributes
-        
         NotificationCenter.default.addObserver(self, selector: #selector(refreshArticles), name: NSNotification.Name(rawValue: "articleBookmarkChangeFromBookmark"), object: nil)
         categoryViewModel = CategoryViewModel()
         articleViewModel = ArticleViewModel()
         cached()
-        select()
         articleTableView.backgroundColor = .white
+        let image = UIImage(named: "calendar")
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: image, style: .plain, target: self, action: #selector(didTapCalendar(_:)))
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        DispatchQueue.main.async {
+            self.categoryCollectionView.collectionViewLayout.invalidateLayout()
+        }
     }
     
     func select(category: ArticleCategory? = nil) {
@@ -85,7 +89,7 @@ final class ArticleListVC: UIViewController {
         cached()
     }
     
-    @IBAction private func didTapCalendar(_ sender: UIBarButtonItem) {
+    @objc private func didTapCalendar(_ sender: UIBarButtonItem) {
         transparentView = .init(frame: view.frame)
         transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         

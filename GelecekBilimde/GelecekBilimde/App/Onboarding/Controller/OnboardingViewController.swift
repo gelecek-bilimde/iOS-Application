@@ -32,11 +32,8 @@ final class OnboardingViewController: UIViewController {
         animationView.frame = view.frame
         animationView.center = view.center
         animationView.contentMode = .scaleAspectFill
-        
         view.addSubview(animationView)
-        
         animationView.loopMode = .loop
-        
         animationView.play()
     }
 
@@ -57,7 +54,11 @@ final class OnboardingViewController: UIViewController {
                 let userDic = snapshot.value as? NSDictionary,
                 let displayName = userDic["displayName"] as? String,
                 let email = userDic["email"] as? String,
-                let photoURL = userDic["photoURL"] as? String else { return }
+                let photoURL = userDic["photoURL"] as? String else {
+                    try? Auth.auth().signOut()
+                    self?.performSegue(withIdentifier: UnwindIdentifier.identifier(for: .LoginPage), sender: nil)
+                    return
+                }
             CurrentUser.addCurrentUser(name: displayName, photoURL: photoURL, email: email)
             self.performSegue(withIdentifier: UnwindIdentifier.identifier(for: .App), sender: nil)
         }
