@@ -43,7 +43,8 @@ class GoogleSignInAuth: NSObject, GIDSignInDelegate {
         let credential = GoogleAuthProvider.credential(withIDToken: idToken,
                                                        accessToken: accessToken)
         
-        Auth.auth().signIn(with: credential) { (authUser, error) in
+        Auth.auth().signIn(with: credential) { [weak self] (authUser, error) in
+            guard let self = self else { return }
             if let err = error {
                 hud.stop()
                 print("Error about sign in with google Error:\(err)")
@@ -56,15 +57,18 @@ class GoogleSignInAuth: NSObject, GIDSignInDelegate {
             }
         }
     }
+
     func authenticationWithGoogleSignIn() {
         GIDSignIn.sharedInstance()?.signIn()
     }
+
     func writeUserToDB(user: User) {
-        // Baris: Force unwrap.
-        let appUser = AppUser(name: user.displayName!, photoURL: user.photoURL!.absoluteString, email: user.email!)
-        let userDic: [String:Any] = ["displayName": user.displayName!, "email": user.email!, "photoURL": user.photoURL!.absoluteString, "providerID": user.providerID]
+        let displayName = user.displayName ?? ""
+        let photoUrl = user.photoURL?.absoluteString ?? ""
+        let email = user.email ?? ""
+        let userDic: [String:Any] = ["displayName": displayName, "email": email, "photoURL": photoUrl, "providerID": user.providerID]
         Database.database().reference().child("Users").child(user.uid).setValue(userDic)
-        CurrentUser.addCurrentUser(name: appUser.name, photoURL: appUser.photoURL, email: appUser.email)
-        self.currentVC.performSegue(withIdentifier: UnwindIdentifier.identifier(for: .InitialPage), sender: nil)
+        CurrentUser.addCurrentUser(name: displayName, photoURL: photoUrl, email: email)
+        currentVC.performSegue(withIdentifier: UnwindIdentifier.identifier(for: .InitialPage), sender: nil)
     }
 }

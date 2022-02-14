@@ -39,6 +39,7 @@ enum Category: Int, Codable, CustomStringConvertible, CaseIterable {
     case replays = 1652
 	case covid = 2616
 	case weekly_science = 2060
+    case unknown
     
     var description: String {
         switch self {
@@ -102,7 +103,17 @@ enum Category: Int, Codable, CustomStringConvertible, CaseIterable {
 			return "Covid 19"
 		case .weekly_science:
 			return "Bilimde Bu Hafta"
+        case .unknown:
+            return ""
         }
+    }
+
+    init(from decoder: Decoder) throws {
+        guard let rawValue = try? decoder.singleValueContainer().decode(Int.self) else {
+            self = .unknown
+            return
+        }
+        self = Category(rawValue: rawValue) ?? .unknown
     }
 }
 

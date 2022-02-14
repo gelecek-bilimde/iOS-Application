@@ -9,11 +9,11 @@
 import Foundation
 
 protocol QuaResponse {
-    func retrieve<T: Codable>(_ request: QuaRequest, completion: @escaping Handler<Result<T?>>)
+    func retrieve<T: Codable>(_ request: QuaRequest, completion: @escaping Handler<Result<T>>)
 }
 
 extension QuaResponse {
-    func retrieve<T: Codable>(_ request: QuaRequest, completion: @escaping Handler<Result<T?>>) {
+    func retrieve<T: Codable>(_ request: QuaRequest, completion: @escaping Handler<Result<T>>) {
         QuaClient.shared.retrieve(request) { (result) in
             completion(result)
         }

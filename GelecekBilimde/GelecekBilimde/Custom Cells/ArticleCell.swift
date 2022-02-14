@@ -41,7 +41,6 @@ final class ArticleCell: UITableViewCell, ReusableView, NibLoadableView {
     
     func setArticle(article: ArticleCache) {
         currentArticle = article
-        articleMainImageView.image = UIImage(named: "GelecekBilimdeLogo")
         articleTitleLabel.text = article.title.convertHTMLEntities()
         articleDescriptionLabel.text = article.excrpt.cleanString()
         articleAddedDateLabel.text = article.date.gbComponent()

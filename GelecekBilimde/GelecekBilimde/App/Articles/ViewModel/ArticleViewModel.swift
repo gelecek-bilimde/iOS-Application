@@ -28,7 +28,7 @@ final class ArticleViewModel {
             }
             articlesCache = realm.objects(ArticleCache.self).filter("date > %@", date).sorted(byKeyPath: "date", ascending: false)
             return }
-        
+
         guard let date = selectedDate else {
             articlesCache = realm.objects(ArticleCache.self).filter("category == %@", categoryId).sorted(byKeyPath: "date", ascending: false)
             return
@@ -50,8 +50,8 @@ final class ArticleViewModel {
                                      category: selectedCategory?.category.rawValue,
                                      date: selectedDate) { [weak self] result in
             if case .success(let articles) = result {
-                guard let self = self,
-                      let articles = articles ?? [] else { return }
+                guard let self = self else { return }
+				let articles = articles ?? []
                 if self.selectedCategory != nil {
                     self.selectedCategory?.page += 1
                 } else {
@@ -89,17 +89,16 @@ final class ArticleViewModel {
             if let _ = existingPerson {
                 
             } else {
-                // Add article
                 do {
                     try realm.write {
                         let articleCache = ArticleCache()
-                        articleCache.id = article.id
-                        articleCache.date = findDateFromString(dateString: article.date)
-                        articleCache.link = article.link
-                        articleCache.content = article.content.rendered
-                        articleCache.title = article.title.rendered
+                        articleCache.id = article.id ?? -1
+                        articleCache.date = findDateFromString(dateString: article.date ?? .init())
+                        articleCache.link = article.link ?? ""
+                        articleCache.content = article.content?.rendered ?? ""
+                        articleCache.title = article.title?.rendered ?? ""
                         articleCache.imageURL = article.imageURL ?? ""
-                        articleCache.excrpt = article.excerpt.rendered
+                        articleCache.excrpt = article.excerpt?.rendered ?? ""
                         articleCache.category = selectedCategory?.category.rawValue ?? -1
                         realm.add(articleCache)
                     }

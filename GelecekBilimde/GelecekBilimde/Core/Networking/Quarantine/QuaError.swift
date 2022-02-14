@@ -18,6 +18,6 @@ enum QuaError: Error {
 }
 
 enum Result<T: Codable> {
-    case success(_ response: T?)
+    case success(_ response: T)
     case failure(_ type: QuaError)
 }
