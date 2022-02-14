@@ -13,7 +13,12 @@ final class CategoryViewModel {
     private var categoryList: [ArticleCategory]
     
     init() {
-        categoryList = Category.allCases.map { ArticleCategory(category: $0, page: 1, shouldRetrieve: true) }
+		categoryList = Category.allCases.compactMap { category in
+			if category != .covid {
+				return ArticleCategory(category: category, page: 1, shouldRetrieve: true)
+			}
+			return nil
+		}
     }
     
     var count: Int { categoryList.count }
