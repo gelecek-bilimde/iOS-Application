@@ -51,7 +51,7 @@ final class ArticleViewModel {
                                      date: selectedDate) { [weak self] result in
             if case .success(let articles) = result {
                 guard let self = self,
-                      let articles = articles! else { return }
+                      let articles = articles ?? [] else { return }
                 if self.selectedCategory != nil {
                     self.selectedCategory?.page += 1
                 } else {
