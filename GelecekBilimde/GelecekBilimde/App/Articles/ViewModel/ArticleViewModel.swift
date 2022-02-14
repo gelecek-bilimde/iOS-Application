@@ -51,12 +51,15 @@ final class ArticleViewModel {
                                      date: selectedDate) { [weak self] result in
             if case .success(let articles) = result {
                 guard let self = self,
-                      let articles = articles else { return }
+                      var articles = articles else { return }
                 if self.selectedCategory != nil {
                     self.selectedCategory?.page += 1
                 } else {
                     self.currentpage += 1
                 }
+                articles.removeAll(where: { article in
+                    article.categories?.contains(.covid) == true
+                })
                 self.articles.append(contentsOf: articles)
                 self.writeAll()
                 self.updateArticleImages()

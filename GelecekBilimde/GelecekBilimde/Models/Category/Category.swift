@@ -37,6 +37,7 @@ enum Category: Int, Codable, CustomStringConvertible, CaseIterable {
     case podcast = 33
     case video = 41
     case replays = 1652
+    case covid = 2616
     case unknown
     
     var description: String {
@@ -98,6 +99,8 @@ enum Category: Int, Codable, CustomStringConvertible, CaseIterable {
         case .replays:
             return "Yayın Tekrarları"
         case .unknown:
+            return "Genel"
+        default:
             return ""
         }
     }

@@ -13,7 +13,9 @@ final class CategoryViewModel {
     private var categoryList: [ArticleCategory]
     
     init() {
-        categoryList = Category.allCases.map { ArticleCategory(category: $0, page: 1, shouldRetrieve: true) }
+        var list = Category.allCases.map { ArticleCategory(category: $0, page: 1, shouldRetrieve: true) }
+        list.removeAll(where: { $0.category == .covid })
+        categoryList = list
     }
     
     var count: Int { categoryList.count }
