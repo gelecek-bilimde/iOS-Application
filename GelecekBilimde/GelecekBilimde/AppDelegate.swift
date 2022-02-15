@@ -13,6 +13,7 @@ import UserNotifications
 import FirebaseMessaging
 import Siren
 import SafariServices
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder {
