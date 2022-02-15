@@ -96,7 +96,7 @@ final class ProfileDataSourceAndDelegate: NSObject, UITableViewDataSource, UITab
             if item.name.contains("Alperen") {
                 openSiteOnSafari(url: "https://alperen-homepage.now.sh")
             } else {
-                openSiteOnSafari(url: "https://barisuyar.com/about/")
+                openSiteOnSafari(url: "https://medium.com/@barisuyar")
             }
         case .signOut:
             signOut()
