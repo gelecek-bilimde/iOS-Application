@@ -51,7 +51,11 @@ final class ArticleViewModel {
                                      date: selectedDate) { [weak self] result in
             if case .success(let articles) = result {
                 guard let self = self else { return }
-				let articles = articles ?? []
+
+				let articles = (articles ?? []).filter { article in
+					!(article.categories?.contains(.covid) ?? false)
+				}
+
                 if self.selectedCategory != nil {
                     self.selectedCategory?.page += 1
                 } else {
